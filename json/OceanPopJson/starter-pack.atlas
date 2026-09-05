@@ -1,0 +1,34 @@
+
+starter-pack.png
+size: 492,178
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+STARTERPACK
+  rotate: false
+  xy: 179, 81
+  size: 214, 95
+  orig: 214, 95
+  offset: 0, 0
+  index: -1
+STARTERPACK1bg
+  rotate: false
+  xy: 2, 2
+  size: 175, 174
+  orig: 175, 174
+  offset: 0, 0
+  index: -1
+ribbon
+  rotate: false
+  xy: 179, 16
+  size: 183, 63
+  orig: 183, 63
+  offset: 0, 0
+  index: -1
+treasure
+  rotate: true
+  xy: 395, 42
+  size: 134, 95
+  orig: 134, 95
+  offset: 0, 0
+  index: -1

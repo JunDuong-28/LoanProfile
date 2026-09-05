@@ -1,0 +1,48 @@
+
+new best.png
+size: 564,261
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ellipse 1
+  rotate: false
+  xy: 365, 57
+  size: 199, 204
+  orig: 203, 208
+  offset: 3, 3
+  index: -1
+New best
+  rotate: false
+  xy: 298, 0
+  size: 266, 57
+  orig: 268, 59
+  offset: 1, 1
+  index: -1
+Ribbon
+  rotate: false
+  xy: 0, 111
+  size: 365, 150
+  orig: 365, 150
+  offset: 0, 0
+  index: -1
+Vector Smart Object copy
+  rotate: false
+  xy: 198, 4
+  size: 100, 107
+  orig: 100, 107
+  offset: 0, 0
+  index: -1
+leaf
+  rotate: false
+  xy: 298, 92
+  size: 34, 19
+  orig: 36, 21
+  offset: 1, 1
+  index: -1
+light
+  rotate: true
+  xy: 0, 32
+  size: 79, 198
+  orig: 83, 206
+  offset: 1, 1
+  index: -1

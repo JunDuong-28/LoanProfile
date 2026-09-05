@@ -1,0 +1,139 @@
+
+ChuyenBan.png
+size: 1420,1044
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Additive_Ring2
+  rotate: false
+  xy: 241, 13
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+chuyen-ban/ic-CoTuong
+  rotate: true
+  xy: 544, 274
+  size: 216, 198
+  orig: 216, 198
+  offset: 0, 0
+  index: -1
+door
+  rotate: true
+  xy: 544, 492
+  size: 547, 736
+  orig: 547, 736
+  offset: 0, 0
+  index: -1
+in-game-toast/Luot-cua-ban
+  rotate: false
+  xy: 2, 22
+  size: 237, 55
+  orig: 237, 55
+  offset: 0, 0
+  index: -1
+in-game-toast/text-bg
+  rotate: false
+  xy: 831, 14
+  size: 216, 111
+  orig: 216, 111
+  offset: 0, 0
+  index: -1
+ingame2
+  rotate: false
+  xy: 2, 79
+  size: 540, 960
+  orig: 540, 960
+  offset: 0, 0
+  index: -1
+start/1
+  rotate: true
+  xy: 1267, 172
+  size: 95, 125
+  orig: 95, 125
+  offset: 0, 0
+  index: -1
+start/1-ef
+  rotate: false
+  xy: 831, 127
+  size: 149, 180
+  orig: 149, 180
+  offset: 0, 0
+  index: -1
+start/2
+  rotate: false
+  xy: 1166, 52
+  size: 93, 126
+  orig: 93, 126
+  offset: 0, 0
+  index: -1
+start/2-ef
+  rotate: true
+  xy: 982, 161
+  size: 146, 182
+  orig: 146, 182
+  offset: 0, 0
+  index: -1
+start/3
+  rotate: false
+  xy: 1049, 33
+  size: 93, 126
+  orig: 93, 126
+  offset: 0, 0
+  index: -1
+start/3-ef
+  rotate: false
+  xy: 899, 309
+  size: 147, 181
+  orig: 147, 181
+  offset: 0, 0
+  index: -1
+start/4
+  rotate: false
+  xy: 1166, 180
+  size: 99, 127
+  orig: 99, 127
+  offset: 0, 0
+  index: -1
+start/4-ef
+  rotate: false
+  xy: 744, 309
+  size: 153, 181
+  orig: 153, 181
+  offset: 0, 0
+  index: -1
+start/5
+  rotate: true
+  xy: 1261, 78
+  size: 92, 126
+  orig: 92, 126
+  offset: 0, 0
+  index: -1
+start/5-ef
+  rotate: false
+  xy: 1048, 309
+  size: 145, 181
+  orig: 145, 181
+  offset: 0, 0
+  index: -1
+start/drump
+  rotate: false
+  xy: 544, 2
+  size: 285, 265
+  orig: 285, 265
+  offset: 0, 0
+  index: -1
+start/text-bg
+  rotate: true
+  xy: 1282, 269
+  size: 377, 123
+  orig: 377, 123
+  offset: 0, 0
+  index: -1
+start/text-start
+  rotate: true
+  xy: 1282, 648
+  size: 391, 133
+  orig: 391, 133
+  offset: 0, 0
+  index: -1

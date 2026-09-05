@@ -1,0 +1,48 @@
+
+tresure.png
+size: 429,219
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+base
+  rotate: false
+  xy: 219, 13
+  size: 121, 69
+  orig: 125, 73
+  offset: 2, 2
+  index: -1
+bg-shinning
+  rotate: false
+  xy: 2, 2
+  size: 215, 215
+  orig: 218, 218
+  offset: 2, 1
+  index: -1
+cup
+  rotate: false
+  xy: 342, 5
+  size: 74, 78
+  orig: 77, 80
+  offset: 1, 1
+  index: -1
+star
+  rotate: true
+  xy: 333, 85
+  size: 36, 38
+  orig: 36, 38
+  offset: 0, 0
+  index: -1
+tresuare
+  rotate: false
+  xy: 333, 123
+  size: 94, 94
+  orig: 96, 97
+  offset: 1, 2
+  index: -1
+tresuare-top
+  rotate: true
+  xy: 219, 84
+  size: 133, 112
+  orig: 136, 115
+  offset: 2, 2
+  index: -1

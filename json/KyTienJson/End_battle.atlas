@@ -1,0 +1,153 @@
+
+End_battle.png
+size: 1416,532
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+draw/IMPACT_L2
+  rotate: false
+  xy: 608, 9
+  size: 22, 28
+  orig: 22, 28
+  offset: 0, 0
+  index: -1
+draw/IMPACT_R1
+  rotate: true
+  xy: 830, 10
+  size: 39, 50
+  orig: 39, 50
+  offset: 0, 0
+  index: -1
+draw/IMPACT_R2
+  rotate: false
+  xy: 589, 2
+  size: 17, 35
+  orig: 17, 35
+  offset: 0, 0
+  index: -1
+draw/JIANG
+  rotate: false
+  xy: 1208, 148
+  size: 149, 149
+  orig: 149, 149
+  offset: 0, 0
+  index: -1
+draw/SHADOW1
+  rotate: false
+  xy: 1208, 59
+  size: 85, 87
+  orig: 85, 87
+  offset: 0, 0
+  index: -1
+draw/SHADOW2
+  rotate: true
+  xy: 1295, 61
+  size: 85, 87
+  orig: 85, 87
+  offset: 0, 0
+  index: -1
+draw/SHUAI
+  rotate: true
+  xy: 830, 51
+  size: 159, 154
+  orig: 159, 154
+  offset: 0, 0
+  index: -1
+draw/STROKE
+  rotate: true
+  xy: 861, 267
+  size: 263, 86
+  orig: 263, 86
+  offset: 0, 0
+  index: -1
+draw/TEXT_DRAW
+  rotate: true
+  xy: 487, 8
+  size: 194, 100
+  orig: 194, 100
+  offset: 0, 0
+  index: -1
+lose/CHES2
+  rotate: true
+  xy: 2, 8
+  size: 171, 239
+  orig: 171, 239
+  offset: 0, 0
+  index: -1
+lose/CHES2_GRAY
+  rotate: true
+  xy: 589, 39
+  size: 171, 239
+  orig: 171, 239
+  offset: 0, 0
+  index: -1
+lose/CHESS1
+  rotate: false
+  xy: 1067, 37
+  size: 139, 242
+  orig: 139, 243
+  offset: 0, 0
+  index: -1
+lose/CHESS1_GRAY
+  rotate: true
+  xy: 243, 5
+  size: 188, 242
+  orig: 188, 243
+  offset: 0, 0
+  index: -1
+lose/CLOUD_L
+  rotate: true
+  xy: 986, 33
+  size: 246, 79
+  orig: 247, 79
+  offset: 0, 0
+  index: -1
+lose/CLOUD_R
+  rotate: true
+  xy: 986, 33
+  size: 246, 79
+  orig: 247, 79
+  offset: 0, 0
+  index: -1
+lose/LOSS
+  rotate: true
+  xy: 209, 195
+  size: 335, 104
+  orig: 335, 104
+  offset: 0, 0
+  index: -1
+lose/chess
+  rotate: true
+  xy: 949, 281
+  size: 249, 241
+  orig: 249, 242
+  offset: 0, 0
+  index: -1
+lwin/CLOUD1
+  rotate: true
+  xy: 2, 181
+  size: 349, 205
+  orig: 349, 205
+  offset: 0, 0
+  index: -1
+lwin/GLOW
+  rotate: true
+  xy: 1192, 299
+  size: 231, 220
+  orig: 231, 221
+  offset: 0, 0
+  index: -1
+lwin/TEXT_WIN
+  rotate: true
+  xy: 315, 204
+  size: 326, 224
+  orig: 326, 224
+  offset: 0, 0
+  index: -1
+lwin/THIEP
+  rotate: false
+  xy: 541, 212
+  size: 318, 318
+  orig: 318, 318
+  offset: 0, 0
+  index: -1

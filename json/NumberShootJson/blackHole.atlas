@@ -1,0 +1,55 @@
+
+blackHole.png
+size: 530,230
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ad/ad-bar
+  rotate: false
+  xy: 230, 0
+  size: 119, 41
+  orig: 130, 52
+  offset: 5, 6
+  index: -1
+ad/ad-board
+  rotate: true
+  xy: 419, 109
+  size: 121, 111
+  orig: 131, 121
+  offset: 4, 5
+  index: -1
+ad/ad-dot
+  rotate: false
+  xy: 381, 28
+  size: 13, 13
+  orig: 15, 16
+  offset: 1, 2
+  index: -1
+ad/attack-file
+  rotate: false
+  xy: 349, 5
+  size: 32, 36
+  orig: 32, 36
+  offset: 0, 0
+  index: -1
+blackhole/bl-center
+  rotate: false
+  xy: 230, 41
+  size: 189, 189
+  orig: 199, 199
+  offset: 5, 5
+  index: -1
+blackhole/bl-center-yellow
+  rotate: true
+  xy: 419, 7
+  size: 102, 101
+  orig: 113, 113
+  offset: 5, 7
+  index: -1
+blackhole/bl-outlight
+  rotate: false
+  xy: 0, 0
+  size: 230, 230
+  orig: 240, 240
+  offset: 5, 5
+  index: -1

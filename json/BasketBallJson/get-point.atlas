@@ -1,0 +1,34 @@
+
+get-point.png
+size: 1145,619
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+17
+  rotate: false
+  xy: 0, 0
+  size: 897, 186
+  orig: 942, 209
+  offset: 26, 10
+  index: -1
+dote
+  rotate: true
+  xy: 800, 247
+  size: 372, 345
+  orig: 372, 345
+  offset: 0, 0
+  index: -1
+ray
+  rotate: false
+  xy: 0, 186
+  size: 430, 433
+  orig: 437, 438
+  offset: 3, 1
+  index: -1
+star
+  rotate: true
+  xy: 430, 232
+  size: 387, 370
+  orig: 388, 370
+  offset: 0, 0
+  index: -1

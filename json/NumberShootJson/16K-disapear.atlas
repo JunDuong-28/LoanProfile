@@ -1,0 +1,41 @@
+
+16K-disapear.png
+size: 466,146
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Additive_Burst0
+  rotate: false
+  xy: 146, 18
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Group 1
+  rotate: false
+  xy: 0, 0
+  size: 146, 146
+  orig: 146, 146
+  offset: 0, 0
+  index: -1
+bomb_Explosion/16-8_0-7_Additive_Star4
+  rotate: false
+  xy: 402, 82
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+bomb_Explosion/16-8_2-2_Additive_Star4
+  rotate: false
+  xy: 402, 18
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+bomb_Explosion/Additive_Ring1
+  rotate: false
+  xy: 274, 18
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

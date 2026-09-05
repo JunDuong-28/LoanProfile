@@ -1,0 +1,174 @@
+
+ProfileAvatar.png
+size: 1858,745
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Cloud
+  rotate: true
+  xy: 1507, 296
+  size: 447, 345
+  orig: 447, 345
+  offset: 0, 0
+  index: -1
+Cloud1
+  rotate: false
+  xy: 505, 340
+  size: 556, 403
+  orig: 559, 405
+  offset: 2, 1
+  index: -1
+Cloud2
+  rotate: false
+  xy: 1010, 18
+  size: 562, 276
+  orig: 565, 283
+  offset: 1, 5
+  index: -1
+Cloudvector
+  rotate: false
+  xy: 2, 111
+  size: 486, 155
+  orig: 490, 155
+  offset: 2, 0
+  index: -1
+Flower
+  rotate: false
+  xy: 1574, 34
+  size: 118, 260
+  orig: 118, 260
+  offset: 0, 0
+  index: -1
+Potrait
+  rotate: true
+  xy: 505, 11
+  size: 327, 503
+  orig: 332, 507
+  offset: 4, 2
+  index: -1
+Rock2
+  rotate: true
+  xy: 2, 2
+  size: 107, 106
+  orig: 109, 109
+  offset: 2, 0
+  index: -1
+Rock3
+  rotate: false
+  xy: 249, 60
+  size: 39, 49
+  orig: 42, 50
+  offset: 2, 0
+  index: -1
+Rock4
+  rotate: false
+  xy: 1767, 185
+  size: 50, 52
+  orig: 50, 52
+  offset: 0, 0
+  index: -1
+back
+  rotate: true
+  xy: 1063, 306
+  size: 437, 442
+  orig: 441, 447
+  offset: 2, 3
+  index: -1
+body
+  rotate: false
+  xy: 1574, 2
+  size: 59, 30
+  orig: 59, 30
+  offset: 0, 0
+  index: -1
+cloud8
+  rotate: true
+  xy: 1694, 79
+  size: 215, 71
+  orig: 217, 73
+  offset: 1, 1
+  index: -1
+cloud9
+  rotate: false
+  xy: 1767, 239
+  size: 62, 55
+  orig: 62, 56
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 1635, 16
+  size: 39, 16
+  orig: 39, 16
+  offset: 0, 0
+  index: -1
+land
+  rotate: false
+  xy: 2, 268
+  size: 501, 475
+  orig: 513, 484
+  offset: 11, 9
+  index: -1
+leg1
+  rotate: true
+  xy: 1819, 176
+  size: 61, 37
+  orig: 61, 37
+  offset: 0, 0
+  index: -1
+leg2
+  rotate: false
+  xy: 110, 11
+  size: 61, 23
+  orig: 61, 23
+  offset: 0, 0
+  index: -1
+neck
+  rotate: false
+  xy: 192, 40
+  size: 19, 17
+  orig: 19, 17
+  offset: 0, 0
+  index: -1
+rock1
+  rotate: false
+  xy: 110, 36
+  size: 80, 73
+  orig: 86, 77
+  offset: 0, 0
+  index: -1
+rock5
+  rotate: false
+  xy: 192, 59
+  size: 55, 50
+  orig: 58, 53
+  offset: 3, 0
+  index: -1
+wing-1
+  rotate: true
+  xy: 1010, 296
+  size: 42, 44
+  orig: 42, 44
+  offset: 0, 0
+  index: -1
+wing-1a
+  rotate: true
+  xy: 1694, 35
+  size: 42, 62
+  orig: 42, 62
+  offset: 0, 0
+  index: -1
+wing-2
+  rotate: true
+  xy: 1812, 137
+  size: 37, 44
+  orig: 37, 44
+  offset: 0, 0
+  index: -1
+wing-2a
+  rotate: false
+  xy: 1767, 142
+  size: 43, 41
+  orig: 43, 41
+  offset: 0, 0
+  index: -1

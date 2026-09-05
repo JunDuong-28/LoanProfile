@@ -1,0 +1,223 @@
+
+KyTien.png
+size: 1888,132
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+CHESS BOARD
+  rotate: false
+  xy: 1240, 2
+  size: 156, 58
+  orig: 156, 58
+  offset: 0, 0
+  index: -1
+CHESS BOARD 2
+  rotate: false
+  xy: 1494, 4
+  size: 155, 57
+  orig: 155, 57
+  offset: 0, 0
+  index: -1
+CLOUD
+  rotate: false
+  xy: 1651, 15
+  size: 155, 50
+  orig: 156, 50
+  offset: 0, 0
+  index: -1
+CLOUD2
+  rotate: false
+  xy: 918, 10
+  size: 73, 26
+  orig: 74, 26
+  offset: 0, 0
+  index: -1
+CLOUD3
+  rotate: false
+  xy: 1595, 67
+  size: 277, 62
+  orig: 278, 63
+  offset: 1, 0
+  index: -1
+CLOUD4
+  rotate: false
+  xy: 711, 38
+  size: 391, 91
+  orig: 393, 92
+  offset: 1, 0
+  index: -1
+Logo
+  rotate: true
+  xy: 323, 7
+  size: 122, 151
+  orig: 122, 151
+  offset: 0, 0
+  index: -1
+STICK
+  rotate: false
+  xy: 714, 4
+  size: 146, 32
+  orig: 146, 32
+  offset: 0, 0
+  index: -1
+cu1/Arm
+  rotate: true
+  xy: 1398, 2
+  size: 58, 46
+  orig: 71, 47
+  offset: 0, 1
+  index: -1
+cu1/Arm - Copy
+  rotate: true
+  xy: 1446, 2
+  size: 58, 46
+  orig: 71, 47
+  offset: 0, 1
+  index: -1
+cu1/Body
+  rotate: true
+  xy: 476, 8
+  size: 121, 105
+  orig: 121, 127
+  offset: 0, 0
+  index: -1
+cu1/Body - Copy
+  rotate: true
+  xy: 583, 8
+  size: 121, 105
+  orig: 121, 127
+  offset: 0, 0
+  index: -1
+cu1/Hand
+  rotate: true
+  xy: 862, 5
+  size: 31, 26
+  orig: 31, 29
+  offset: 0, 1
+  index: -1
+cu1/Hand - Copy
+  rotate: true
+  xy: 890, 5
+  size: 31, 26
+  orig: 31, 29
+  offset: 0, 1
+  index: -1
+cu1/Hand2
+  rotate: false
+  xy: 1463, 63
+  size: 64, 66
+  orig: 64, 66
+  offset: 0, 0
+  index: -1
+cu1/Hand2 - Copy
+  rotate: false
+  xy: 1529, 63
+  size: 64, 66
+  orig: 64, 66
+  offset: 0, 0
+  index: -1
+cu1/Head
+  rotate: false
+  xy: 1104, 56
+  size: 47, 73
+  orig: 47, 76
+  offset: 0, 0
+  index: -1
+cu1/Head - Copy
+  rotate: false
+  xy: 1153, 56
+  size: 47, 73
+  orig: 47, 76
+  offset: 0, 0
+  index: -1
+cu2/arm
+  rotate: true
+  xy: 1104, 3
+  size: 51, 66
+  orig: 51, 66
+  offset: 0, 0
+  index: -1
+cu2/arm - Copy
+  rotate: true
+  xy: 1172, 3
+  size: 51, 66
+  orig: 51, 66
+  offset: 0, 0
+  index: -1
+cu2/body
+  rotate: true
+  xy: 2, 2
+  size: 127, 125
+  orig: 127, 125
+  offset: 0, 0
+  index: -1
+cu2/body - Copy
+  rotate: true
+  xy: 129, 2
+  size: 127, 125
+  orig: 127, 125
+  offset: 0, 0
+  index: -1
+cu2/hand
+  rotate: false
+  xy: 993, 14
+  size: 19, 22
+  orig: 20, 24
+  offset: 1, 0
+  index: -1
+cu2/hand - Copy
+  rotate: false
+  xy: 1035, 16
+  size: 18, 20
+  orig: 20, 24
+  offset: 1, 2
+  index: -1
+cu2/head
+  rotate: false
+  xy: 1808, 19
+  size: 38, 46
+  orig: 38, 46
+  offset: 0, 0
+  index: -1
+cu2/head - Copy
+  rotate: false
+  xy: 1848, 20
+  size: 38, 45
+  orig: 38, 46
+  offset: 0, 1
+  index: -1
+may1
+  rotate: false
+  xy: 1202, 62
+  size: 259, 67
+  orig: 259, 67
+  offset: 0, 0
+  index: -1
+may2
+  rotate: true
+  xy: 256, 3
+  size: 126, 65
+  orig: 126, 65
+  offset: 0, 0
+  index: -1
+may3
+  rotate: true
+  xy: 690, 11
+  size: 118, 19
+  orig: 118, 19
+  offset: 0, 0
+  index: -1
+shakura
+  rotate: true
+  xy: 1014, 16
+  size: 20, 19
+  orig: 20, 19
+  offset: 0, 0
+  index: -1
+smoke2
+  rotate: true
+  xy: 690, 2
+  size: 7, 22
+  orig: 7, 22
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,27 @@
+
+comet.png
+size: 471,50
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+star-comet
+  rotate: false
+  xy: 0, 0
+  size: 411, 50
+  orig: 417, 51
+  offset: 6, 1
+  index: -1
+star1
+  rotate: false
+  xy: 411, 13
+  size: 36, 37
+  orig: 36, 38
+  offset: 0, 1
+  index: -1
+star12
+  rotate: true
+  xy: 447, 23
+  size: 27, 24
+  orig: 27, 24
+  offset: 0, 0
+  index: -1

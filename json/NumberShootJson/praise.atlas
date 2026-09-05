@@ -1,0 +1,41 @@
+
+praise.png
+size: 472,155
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+HoanHao
+  rotate: false
+  xy: 266, 18
+  size: 206, 43
+  orig: 206, 43
+  offset: 0, 0
+  index: -1
+aura
+  rotate: false
+  xy: 216, 11
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+avatar
+  rotate: true
+  xy: 77, 13
+  size: 142, 139
+  orig: 142, 139
+  offset: 0, 0
+  index: -1
+cat paw
+  rotate: false
+  xy: 0, 0
+  size: 77, 155
+  orig: 77, 155
+  offset: 0, 0
+  index: -1
+text-bg
+  rotate: false
+  xy: 216, 61
+  size: 255, 94
+  orig: 261, 100
+  offset: 3, 3
+  index: -1

@@ -1,0 +1,62 @@
+
+ingame-toast.png
+size: 1740,244
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+in-game-toast/Chieu-dai
+  rotate: false
+  xy: 803, 2
+  size: 353, 108
+  orig: 353, 108
+  offset: 0, 0
+  index: -1
+in-game-toast/Lo-tuong
+  rotate: false
+  xy: 838, 128
+  size: 329, 112
+  orig: 329, 112
+  offset: 0, 0
+  index: -1
+in-game-toast/Loi-het-co
+  rotate: false
+  xy: 435, 2
+  size: 366, 108
+  orig: 366, 108
+  offset: 0, 0
+  index: -1
+in-game-toast/Luot-cua-ban
+  rotate: false
+  xy: 1169, 131
+  size: 474, 109
+  orig: 474, 109
+  offset: 0, 0
+  index: -1
+in-game-toast/lap-nuoc-di
+  rotate: false
+  xy: 1169, 18
+  size: 423, 111
+  orig: 423, 111
+  offset: 0, 0
+  index: -1
+in-game-toast/text
+  rotate: false
+  xy: 435, 112
+  size: 401, 128
+  orig: 401, 128
+  offset: 0, 0
+  index: -1
+in-game-toast/text-bg
+  rotate: false
+  xy: 2, 18
+  size: 431, 222
+  orig: 431, 222
+  offset: 0, 0
+  index: -1
+in-game-toast/Đi sai
+  rotate: true
+  xy: 1645, 18
+  size: 222, 91
+  orig: 222, 91
+  offset: 0, 0
+  index: -1

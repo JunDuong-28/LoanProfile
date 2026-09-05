@@ -1,0 +1,97 @@
+
+Home.png
+size: 1315,379
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+AvaBg
+  rotate: true
+  xy: 666, 4
+  size: 375, 70
+  orig: 375, 71
+  offset: 0, 0
+  index: -1
+Ball
+  rotate: false
+  xy: 1234, 21
+  size: 44, 44
+  orig: 44, 44
+  offset: 0, 0
+  index: -1
+BallBack
+  rotate: true
+  xy: 736, 4
+  size: 375, 48
+  orig: 375, 52
+  offset: 0, 0
+  index: -1
+Basket
+  rotate: false
+  xy: 828, 34
+  size: 222, 345
+  orig: 222, 345
+  offset: 0, 0
+  index: -1
+Music
+  rotate: true
+  xy: 1100, 7
+  size: 58, 48
+  orig: 59, 50
+  offset: 0, 1
+  index: -1
+Play
+  rotate: true
+  xy: 1243, 222
+  size: 157, 72
+  orig: 157, 72
+  offset: 0, 0
+  index: -1
+PlayWitchFriends
+  rotate: true
+  xy: 1243, 65
+  size: 157, 72
+  orig: 157, 72
+  offset: 0, 0
+  index: -1
+Rope
+  rotate: true
+  xy: 0, 0
+  size: 4, 204
+  orig: 4, 204
+  offset: 0, 0
+  index: -1
+YourrBest
+  rotate: true
+  xy: 1050, 5
+  size: 96, 50
+  orig: 97, 51
+  offset: 1, 0
+  index: -1
+ava friend
+  rotate: true
+  xy: 1148, 23
+  size: 78, 86
+  orig: 79, 86
+  offset: 0, 0
+  index: -1
+background
+  rotate: true
+  xy: 0, 4
+  size: 375, 666
+  orig: 375, 666
+  offset: 0, 0
+  index: -1
+ballsFront
+  rotate: true
+  xy: 784, 4
+  size: 375, 44
+  orig: 375, 48
+  offset: 0, 0
+  index: -1
+title_basketHit
+  rotate: true
+  xy: 1050, 101
+  size: 278, 193
+  orig: 278, 193
+  offset: 0, 0
+  index: -1

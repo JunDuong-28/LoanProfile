@@ -1,0 +1,27 @@
+
+newskin.png
+size: 368,120
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Character
+  rotate: true
+  xy: 149, 12
+  size: 103, 135
+  orig: 105, 137
+  offset: 1, 1
+  index: -1
+character_back
+  rotate: true
+  xy: 2, 2
+  size: 113, 145
+  orig: 115, 147
+  offset: 1, 1
+  index: -1
+hole
+  rotate: true
+  xy: 286, 3
+  size: 112, 77
+  orig: 114, 79
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,104 @@
+
+watchvideo2.png
+size: 2033,1036
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Clock
+  rotate: true
+  xy: 1661, 52
+  size: 136, 158
+  orig: 136, 158
+  offset: 0, 0
+  index: -1
+Continue
+  rotate: true
+  xy: 1990, 846
+  size: 188, 41
+  orig: 188, 41
+  offset: 0, 0
+  index: -1
+Layer 0
+  rotate: true
+  xy: 2, 284
+  size: 750, 1382
+  orig: 750, 1382
+  offset: 0, 0
+  index: -1
+No, Thanks
+  rotate: false
+  xy: 1112, 2
+  size: 170, 33
+  orig: 170, 33
+  offset: 0, 0
+  index: -1
+Text time
+  rotate: true
+  xy: 1963, 553
+  size: 161, 53
+  orig: 161, 55
+  offset: 0, 1
+  index: -1
+Time is up
+  rotate: false
+  xy: 1661, 190
+  size: 296, 69
+  orig: 296, 71
+  offset: 0, 1
+  index: -1
+Vector Smart Object
+  rotate: false
+  xy: 1386, 261
+  size: 575, 773
+  orig: 575, 773
+  offset: 0, 0
+  index: -1
+Watch video to claim
+  rotate: true
+  xy: 1963, 716
+  size: 318, 25
+  orig: 318, 25
+  offset: 0, 0
+  index: -1
+button-3
+  rotate: false
+  xy: 637, 10
+  size: 359, 122
+  orig: 359, 122
+  offset: 0, 0
+  index: -1
+popup bg
+  rotate: false
+  xy: 637, 134
+  size: 552, 148
+  orig: 553, 157
+  offset: 1, 9
+  index: -1
+popup bg2
+  rotate: false
+  xy: 1191, 37
+  size: 468, 222
+  orig: 468, 222
+  offset: 0, 0
+  index: -1
+poup clock
+  rotate: false
+  xy: 998, 20
+  size: 112, 112
+  orig: 112, 112
+  offset: 0, 0
+  index: -1
+ribbon
+  rotate: false
+  xy: 2, 16
+  size: 633, 266
+  orig: 633, 266
+  offset: 0, 0
+  index: -1
+video
+  rotate: false
+  xy: 1821, 85
+  size: 101, 103
+  orig: 101, 103
+  offset: 0, 0
+  index: -1

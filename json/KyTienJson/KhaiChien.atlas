@@ -1,0 +1,34 @@
+
+KhaiChien.png
+size: 1460,536
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Additive_Ring2
+  rotate: false
+  xy: 1329, 136
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+start/drump
+  rotate: false
+  xy: 2, 2
+  size: 569, 529
+  orig: 569, 529
+  offset: 0, 0
+  index: -1
+start/text-bg
+  rotate: false
+  xy: 573, 18
+  size: 754, 246
+  orig: 754, 246
+  offset: 0, 0
+  index: -1
+start/text-start
+  rotate: false
+  xy: 573, 266
+  size: 781, 265
+  orig: 781, 265
+  offset: 0, 0
+  index: -1

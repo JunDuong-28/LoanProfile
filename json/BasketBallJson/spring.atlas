@@ -1,0 +1,27 @@
+
+spring.png
+size: 555,118
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ball1
+  rotate: true
+  xy: 442, 4
+  size: 114, 113
+  orig: 114, 113
+  offset: 0, 0
+  index: -1
+item_cushion
+  rotate: false
+  xy: 223, 24
+  size: 219, 94
+  orig: 219, 94
+  offset: 0, 0
+  index: -1
+item_steel_spring
+  rotate: true
+  xy: 0, 0
+  size: 118, 223
+  orig: 123, 235
+  offset: 2, 6
+  index: -1

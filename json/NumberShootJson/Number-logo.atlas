@@ -1,0 +1,48 @@
+
+Number-logo.png
+size: 1861,532
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Number
+  rotate: false
+  xy: 991, 0
+  size: 829, 200
+  orig: 835, 206
+  offset: 3, 3
+  index: -1
+ball1
+  rotate: false
+  xy: 828, 85
+  size: 71, 71
+  orig: 71, 71
+  offset: 0, 0
+  index: -1
+bubble-short
+  rotate: false
+  xy: 0, 29
+  size: 828, 127
+  orig: 831, 129
+  offset: 1, 1
+  index: -1
+light2
+  rotate: false
+  xy: 1820, 172
+  size: 28, 28
+  orig: 30, 30
+  offset: 1, 1
+  index: -1
+round-inside
+  rotate: false
+  xy: 991, 200
+  size: 870, 332
+  orig: 871, 332
+  offset: 1, 0
+  index: -1
+round-outside
+  rotate: false
+  xy: 0, 156
+  size: 991, 376
+  orig: 993, 378
+  offset: 1, 1
+  index: -1

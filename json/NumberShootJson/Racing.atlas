@@ -1,0 +1,62 @@
+
+Racing.png
+size: 718,90
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Rank 15
+  rotate: false
+  xy: 217, 3
+  size: 75, 16
+  orig: 75, 16
+  offset: 0, 0
+  index: -1
+ava
+  rotate: false
+  xy: 479, 0
+  size: 83, 90
+  orig: 83, 90
+  offset: 0, 0
+  index: -1
+defeated
+  rotate: false
+  xy: 562, 54
+  size: 156, 36
+  orig: 156, 36
+  offset: 0, 0
+  index: -1
+my-ava
+  rotate: false
+  xy: 0, 0
+  size: 217, 90
+  orig: 217, 90
+  offset: 0, 0
+  index: -1
+rank=bg
+  rotate: false
+  xy: 562, 29
+  size: 104, 25
+  orig: 104, 25
+  offset: 0, 0
+  index: -1
+score
+  rotate: false
+  xy: 562, 4
+  size: 103, 25
+  orig: 107, 29
+  offset: 2, 2
+  index: -1
+score-boder
+  rotate: false
+  xy: 217, 19
+  size: 173, 71
+  orig: 178, 76
+  offset: 3, 3
+  index: -1
+vs
+  rotate: true
+  xy: 390, 0
+  size: 90, 89
+  orig: 106, 141
+  offset: 6, 27
+  index: -1

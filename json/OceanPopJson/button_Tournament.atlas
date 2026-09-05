@@ -1,0 +1,62 @@
+
+button_Tournament.png
+size: 710,176
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ball_blue
+  rotate: false
+  xy: 531, 27
+  size: 94, 94
+  orig: 94, 94
+  offset: 0, 0
+  index: -1
+ball_red
+  rotate: false
+  xy: 627, 65
+  size: 44, 44
+  orig: 44, 44
+  offset: 0, 0
+  index: -1
+ball_yeallow
+  rotate: false
+  xy: 645, 111
+  size: 63, 63
+  orig: 63, 63
+  offset: 0, 0
+  index: -1
+button_background
+  rotate: false
+  xy: 2, 2
+  size: 255, 172
+  orig: 258, 198
+  offset: 3, 4
+  index: -1
+new
+  rotate: false
+  xy: 418, 123
+  size: 225, 51
+  orig: 225, 51
+  offset: 0, 0
+  index: -1
+ranking
+  rotate: true
+  xy: 418, 12
+  size: 109, 111
+  orig: 109, 111
+  offset: 0, 0
+  index: -1
+shinning
+  rotate: false
+  xy: 259, 18
+  size: 157, 156
+  orig: 157, 156
+  offset: 0, 0
+  index: -1
+text_tournament
+  rotate: false
+  xy: 531, 5
+  size: 177, 20
+  orig: 185, 26
+  offset: 4, 4
+  index: -1

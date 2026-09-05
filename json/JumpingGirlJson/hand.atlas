@@ -1,0 +1,27 @@
+
+hand.png
+size: 96,92
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tofu girl resize/hand
+  rotate: false
+  xy: 2, 2
+  size: 91, 70
+  orig: 91, 70
+  offset: 0, 0
+  index: -1
+tofu girl resize/hand-line
+  rotate: true
+  xy: 2, 81
+  size: 9, 57
+  orig: 9, 57
+  offset: 0, 0
+  index: -1
+tofu girl resize/light
+  rotate: false
+  xy: 61, 74
+  size: 33, 16
+  orig: 33, 16
+  offset: 0, 0
+  index: -1

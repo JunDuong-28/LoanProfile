@@ -1,0 +1,160 @@
+
+so close.png
+size: 2028,1404
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+17_0000_6
+  rotate: false
+  xy: 1850, 360
+  size: 156, 218
+  orig: 328, 267
+  offset: 86, 32
+  index: -1
+17_0001_0
+  rotate: false
+  xy: 1680, 402
+  size: 170, 218
+  orig: 328, 267
+  offset: 78, 32
+  index: -1
+17_0001_5
+  rotate: false
+  xy: 1841, 147
+  size: 144, 213
+  orig: 328, 267
+  offset: 94, 32
+  index: -1
+17_0002_4
+  rotate: false
+  xy: 1657, 189
+  size: 184, 213
+  orig: 328, 267
+  offset: 74, 34
+  index: -1
+17_0003_3
+  rotate: false
+  xy: 1500, 43
+  size: 146, 218
+  orig: 328, 267
+  offset: 89, 32
+  index: -1
+17_0004_2
+  rotate: true
+  xy: 1798, 3
+  size: 144, 213
+  orig: 328, 267
+  offset: 91, 37
+  index: -1
+17_0005_1
+  rotate: false
+  xy: 1904, 1191
+  size: 101, 213
+  orig: 328, 267
+  offset: 104, 34
+  index: -1
+Ball 2
+  rotate: false
+  xy: 1904, 1071
+  size: 120, 120
+  orig: 120, 120
+  offset: 0, 0
+  index: -1
+Ball2_shadow
+  rotate: true
+  xy: 1646, 43
+  size: 146, 152
+  orig: 148, 153
+  offset: 0, 1
+  index: -1
+Button_bg
+  rotate: true
+  xy: 1680, 620
+  size: 380, 174
+  orig: 380, 174
+  offset: 0, 0
+  index: -1
+Button_bg_grey
+  rotate: true
+  xy: 1854, 578
+  size: 380, 174
+  orig: 380, 174
+  offset: 0, 0
+  index: -1
+Cancel
+  rotate: false
+  xy: 802, 26
+  size: 130, 42
+  orig: 130, 42
+  offset: 0, 0
+  index: -1
+Continue
+  rotate: false
+  xy: 542, 25
+  size: 260, 43
+  orig: 260, 43
+  offset: 0, 0
+  index: -1
+Ellipse 2
+  rotate: false
+  xy: 1500, 1000
+  size: 404, 404
+  orig: 404, 404
+  offset: 0, 0
+  index: -1
+Playa
+  rotate: false
+  xy: 0, 68
+  size: 750, 1336
+  orig: 750, 1336
+  offset: 0, 0
+  index: -1
+Rectangle 1
+  rotate: false
+  xy: 750, 68
+  size: 750, 1336
+  orig: 750, 1336
+  offset: 0, 0
+  index: -1
+SO CLOSE
+  rotate: false
+  xy: 0, 5
+  size: 292, 63
+  orig: 292, 63
+  offset: 0, 0
+  index: -1
+Watch video to
+  rotate: false
+  xy: 542, 0
+  size: 246, 25
+  orig: 246, 25
+  offset: 0, 0
+  index: -1
+ball1
+  rotate: false
+  xy: 1904, 958
+  size: 114, 113
+  orig: 114, 113
+  offset: 0, 0
+  index: -1
+basket_grid
+  rotate: true
+  xy: 1500, 261
+  size: 220, 157
+  orig: 220, 157
+  offset: 0, 0
+  index: -1
+basket_ring
+  rotate: false
+  xy: 292, 10
+  size: 250, 58
+  orig: 250, 58
+  offset: 0, 0
+  index: -1
+title_bg
+  rotate: true
+  xy: 1500, 481
+  size: 519, 180
+  orig: 520, 180
+  offset: 1, 0
+  index: -1

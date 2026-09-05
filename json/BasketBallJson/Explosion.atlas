@@ -1,0 +1,167 @@
+
+Explosion.png
+size: 1681,1032
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_0000_1
+  rotate: false
+  xy: 1544, 188
+  size: 134, 135
+  orig: 600, 609
+  offset: 200, 284
+  index: -1
+1_0001_2
+  rotate: false
+  xy: 1022, 236
+  size: 208, 209
+  orig: 600, 609
+  offset: 172, 248
+  index: -1
+1_0002_3
+  rotate: false
+  xy: 595, 633
+  size: 388, 399
+  orig: 600, 609
+  offset: 96, 158
+  index: -1
+1_0003_4
+  rotate: false
+  xy: 0, 1
+  size: 423, 426
+  orig: 600, 609
+  offset: 63, 163
+  index: -1
+1_0004_5
+  rotate: false
+  xy: 0, 427
+  size: 595, 605
+  orig: 600, 609
+  offset: 3, 2
+  index: -1
+1_0005_6
+  rotate: false
+  xy: 423, 6
+  size: 321, 327
+  orig: 600, 609
+  offset: 140, 189
+  index: -1
+1_0006_7
+  rotate: true
+  xy: 983, 445
+  size: 248, 265
+  orig: 600, 609
+  offset: 171, 203
+  index: -1
+1_0007_8
+  rotate: true
+  xy: 1395, 292
+  size: 168, 149
+  orig: 600, 609
+  offset: 217, 265
+  index: -1
+5a_0000_5a
+  rotate: false
+  xy: 595, 333
+  size: 329, 300
+  orig: 365, 344
+  offset: 16, 16
+  index: -1
+5a_0001_4a
+  rotate: true
+  xy: 744, 32
+  size: 301, 278
+  orig: 365, 344
+  offset: 32, 34
+  index: -1
+5a_0002_3a
+  rotate: false
+  xy: 983, 693
+  size: 361, 339
+  orig: 365, 344
+  offset: 2, 3
+  index: -1
+5a_0003_Vector-Smart-Object
+  rotate: true
+  xy: 1344, 687
+  size: 345, 335
+  orig: 365, 344
+  offset: 8, 2
+  index: -1
+5a_0004_2a
+  rotate: false
+  xy: 1248, 460
+  size: 242, 227
+  orig: 365, 344
+  offset: 73, 50
+  index: -1
+5a_0005_1a
+  rotate: false
+  xy: 1413, 0
+  size: 140, 143
+  orig: 365, 344
+  offset: 123, 113
+  index: -1
+explosion-01
+  rotate: false
+  xy: 1395, 273
+  size: 18, 19
+  orig: 18, 19
+  offset: 0, 0
+  index: -1
+explosion-02
+  rotate: false
+  xy: 1544, 143
+  size: 46, 45
+  orig: 46, 45
+  offset: 0, 0
+  index: -1
+explosion-03
+  rotate: false
+  xy: 423, 358
+  size: 78, 69
+  orig: 78, 69
+  offset: 0, 0
+  index: -1
+explosion-04
+  rotate: true
+  xy: 1413, 143
+  size: 149, 131
+  orig: 149, 131
+  offset: 0, 0
+  index: -1
+explosion-05
+  rotate: true
+  xy: 1544, 323
+  size: 162, 137
+  orig: 162, 137
+  offset: 0, 0
+  index: -1
+explosion-06
+  rotate: true
+  xy: 1232, 69
+  size: 182, 181
+  orig: 182, 181
+  offset: 0, 0
+  index: -1
+explosion-07
+  rotate: true
+  xy: 1022, 37
+  size: 199, 210
+  orig: 199, 210
+  offset: 0, 0
+  index: -1
+explosion-08
+  rotate: false
+  xy: 1490, 485
+  size: 179, 202
+  orig: 179, 202
+  offset: 0, 0
+  index: -1
+explosion-09
+  rotate: false
+  xy: 1230, 251
+  size: 165, 194
+  orig: 165, 194
+  offset: 0, 0
+  index: -1

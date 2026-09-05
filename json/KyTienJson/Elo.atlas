@@ -1,0 +1,34 @@
+
+Elo.png
+size: 176,124
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ic-ello-chess
+  rotate: false
+  xy: 2, 52
+  size: 107, 70
+  orig: 107, 70
+  offset: 0, 0
+  index: -1
+ic-ello-chess2
+  rotate: true
+  xy: 111, 38
+  size: 84, 61
+  orig: 84, 61
+  offset: 0, 0
+  index: -1
+ic-popup-Elo-cotuong
+  rotate: false
+  xy: 104, 3
+  size: 53, 33
+  orig: 53, 33
+  offset: 0, 0
+  index: -1
+text
+  rotate: false
+  xy: 2, 2
+  size: 100, 48
+  orig: 100, 48
+  offset: 0, 0
+  index: -1

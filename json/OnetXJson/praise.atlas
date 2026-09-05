@@ -1,0 +1,48 @@
+
+praise.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Great
+  rotate: true
+  xy: 106, 73
+  size: 51, 15
+  orig: 51, 15
+  offset: 0, 0
+  index: -1
+avatar
+  rotate: false
+  xy: 38, 1
+  size: 38, 37
+  orig: 38, 37
+  offset: 0, 0
+  index: -1
+avatar_boder
+  rotate: false
+  xy: 0, 0
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+like
+  rotate: false
+  xy: 86, 41
+  size: 27, 29
+  orig: 27, 29
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 0, 70
+  size: 106, 54
+  orig: 106, 54
+  offset: 0, 0
+  index: -1
+text bg
+  rotate: false
+  xy: 0, 38
+  size: 86, 32
+  orig: 86, 32
+  offset: 0, 0
+  index: -1

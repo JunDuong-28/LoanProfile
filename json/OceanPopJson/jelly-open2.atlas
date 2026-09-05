@@ -1,0 +1,27 @@
+
+jelly-open2.png
+size: 126,96
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Jellyocean
+  rotate: false
+  xy: 2, 2
+  size: 100, 92
+  orig: 100, 92
+  offset: 0, 0
+  index: -1
+jelly 1
+  rotate: false
+  xy: 104, 14
+  size: 10, 80
+  orig: 10, 80
+  offset: 0, 0
+  index: -1
+jelly 5
+  rotate: false
+  xy: 116, 30
+  size: 8, 64
+  orig: 8, 64
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,76 @@
+
+octopus.png
+size: 336,107
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ball_blue
+  rotate: false
+  xy: 2, 11
+  size: 94, 94
+  orig: 94, 94
+  offset: 0, 0
+  index: -1
+down_tentacles1
+  rotate: false
+  xy: 234, 45
+  size: 49, 60
+  orig: 49, 60
+  offset: 0, 0
+  index: -1
+down_tentacles2
+  rotate: false
+  xy: 285, 45
+  size: 49, 60
+  orig: 49, 60
+  offset: 0, 0
+  index: -1
+down_tentacles3
+  rotate: true
+  xy: 147, 2
+  size: 31, 69
+  orig: 31, 69
+  offset: 0, 0
+  index: -1
+down_tentacles4
+  rotate: false
+  xy: 194, 35
+  size: 38, 70
+  orig: 38, 70
+  offset: 0, 0
+  index: -1
+eyes
+  rotate: false
+  xy: 218, 7
+  size: 58, 26
+  orig: 60, 28
+  offset: 1, 1
+  index: -1
+mouth
+  rotate: false
+  xy: 98, 3
+  size: 14, 14
+  orig: 16, 16
+  offset: 1, 1
+  index: -1
+up_tentacles1
+  rotate: false
+  xy: 98, 19
+  size: 47, 86
+  orig: 47, 86
+  offset: 0, 0
+  index: -1
+up_tentacles2
+  rotate: false
+  xy: 147, 35
+  size: 45, 70
+  orig: 45, 70
+  offset: 0, 0
+  index: -1
+up_tentacles3
+  rotate: true
+  xy: 278, 7
+  size: 36, 54
+  orig: 36, 54
+  offset: 0, 0
+  index: -1

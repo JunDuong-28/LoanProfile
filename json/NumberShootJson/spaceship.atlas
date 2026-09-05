@@ -1,0 +1,97 @@
+
+spaceship.png
+size: 416,749
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+16k
+  rotate: false
+  xy: 191, 0
+  size: 168, 168
+  orig: 190, 190
+  offset: 10, 12
+  index: -1
+astronaunt
+  rotate: true
+  xy: 0, 1
+  size: 183, 191
+  orig: 192, 200
+  offset: 5, 5
+  index: -1
+astronaunt-arm-back
+  rotate: false
+  xy: 271, 391
+  size: 139, 104
+  orig: 149, 114
+  offset: 5, 4
+  index: -1
+astronaunt-arm-front
+  rotate: false
+  xy: 271, 228
+  size: 103, 67
+  orig: 103, 67
+  offset: 0, 0
+  index: -1
+astronaunt-arm-right-back
+  rotate: false
+  xy: 271, 295
+  size: 128, 96
+  orig: 139, 107
+  offset: 6, 6
+  index: -1
+astronaunt-arm-right-front
+  rotate: false
+  xy: 271, 168
+  size: 93, 60
+  orig: 93, 60
+  offset: 0, 0
+  index: -1
+astronaut-head-back
+  rotate: true
+  xy: 271, 495
+  size: 153, 143
+  orig: 161, 150
+  offset: 4, 4
+  index: -1
+astronaut-head-front
+  rotate: false
+  xy: 302, 648
+  size: 111, 101
+  orig: 111, 101
+  offset: 0, 0
+  index: -1
+ball purple
+  rotate: false
+  xy: 364, 180
+  size: 48, 48
+  orig: 48, 49
+  offset: 0, 1
+  index: -1
+ball red
+  rotate: false
+  xy: 364, 133
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+ball-green
+  rotate: false
+  xy: 374, 254
+  size: 42, 41
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+spaceship front
+  rotate: false
+  xy: 0, 656
+  size: 302, 93
+  orig: 302, 93
+  offset: 0, 0
+  index: -1
+spaceship-back
+  rotate: true
+  xy: 0, 184
+  size: 472, 271
+  orig: 479, 280
+  offset: 4, 5
+  index: -1

@@ -1,0 +1,146 @@
+
+ic-co-tuong.png
+size: 2000,444
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bga
+  rotate: false
+  xy: 2, 9
+  size: 424, 431
+  orig: 424, 431
+  offset: 0, 0
+  index: -1
+Layer 90a
+  rotate: true
+  xy: 1091, 5
+  size: 170, 197
+  orig: 170, 203
+  offset: 0, 6
+  index: -1
+caya
+  rotate: false
+  xy: 1290, 17
+  size: 425, 177
+  orig: 425, 177
+  offset: 0, 0
+  index: -1
+cloud
+  rotate: false
+  xy: 428, 39
+  size: 416, 27
+  orig: 416, 27
+  offset: 0, 0
+  index: -1
+data
+  rotate: false
+  xy: 428, 175
+  size: 443, 265
+  orig: 443, 265
+  offset: 0, 0
+  index: -1
+grass1
+  rotate: true
+  xy: 1905, 159
+  size: 88, 90
+  orig: 88, 90
+  offset: 0, 0
+  index: -1
+grass2
+  rotate: true
+  xy: 963, 2
+  size: 85, 70
+  orig: 85, 70
+  offset: 0, 0
+  index: -1
+grass3
+  rotate: true
+  xy: 1035, 8
+  size: 79, 51
+  orig: 79, 51
+  offset: 0, 0
+  index: -1
+leaf
+  rotate: true
+  xy: 515, 21
+  size: 16, 14
+  orig: 16, 14
+  offset: 0, 0
+  index: -1
+leaf2
+  rotate: false
+  xy: 515, 4
+  size: 13, 15
+  orig: 13, 15
+  offset: 0, 0
+  index: -1
+leaf3a
+  rotate: false
+  xy: 873, 177
+  size: 380, 263
+  orig: 380, 263
+  offset: 0, 0
+  index: -1
+line
+  rotate: true
+  xy: 2, 3
+  size: 4, 26
+  orig: 4, 26
+  offset: 0, 0
+  index: -1
+may1
+  rotate: true
+  xy: 1869, 249
+  size: 191, 120
+  orig: 191, 120
+  offset: 0, 0
+  index: -1
+quanco1
+  rotate: false
+  xy: 1619, 199
+  size: 248, 241
+  orig: 248, 241
+  offset: 0, 0
+  index: -1
+quanco2
+  rotate: false
+  xy: 1717, 10
+  size: 186, 187
+  orig: 186, 187
+  offset: 0, 0
+  index: -1
+rivera
+  rotate: false
+  xy: 1255, 196
+  size: 362, 244
+  orig: 362, 244
+  offset: 0, 0
+  index: -1
+texCoTuong
+  rotate: false
+  xy: 846, 12
+  size: 115, 54
+  orig: 115, 54
+  offset: 0, 0
+  index: -1
+waterfalla
+  rotate: true
+  xy: 428, 68
+  size: 105, 452
+  orig: 105, 452
+  offset: 0, 0
+  index: -1
+wattera
+  rotate: true
+  xy: 882, 89
+  size: 86, 207
+  orig: 86, 207
+  offset: 0, 0
+  index: -1
+wave
+  rotate: false
+  xy: 428, 10
+  size: 85, 27
+  orig: 85, 27
+  offset: 0, 0
+  index: -1

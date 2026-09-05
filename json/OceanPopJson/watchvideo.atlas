@@ -1,0 +1,20 @@
+
+watchvideo.png
+size: 724,126
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+button-3
+  rotate: false
+  xy: 2, 2
+  size: 359, 122
+  orig: 359, 122
+  offset: 0, 0
+  index: -1
+button-3-grey
+  rotate: false
+  xy: 363, 2
+  size: 359, 122
+  orig: 359, 122
+  offset: 0, 0
+  index: -1

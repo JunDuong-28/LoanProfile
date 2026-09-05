@@ -1,0 +1,41 @@
+
+time is up.png
+size: 512,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Time is up
+  rotate: false
+  xy: 210, 37
+  size: 110, 26
+  orig: 110, 26
+  offset: 0, 0
+  index: -1
+board
+  rotate: false
+  xy: 0, 0
+  size: 210, 63
+  orig: 210, 63
+  offset: 0, 0
+  index: -1
+center
+  rotate: false
+  xy: 385, 57
+  size: 7, 6
+  orig: 7, 6
+  offset: 0, 0
+  index: -1
+clock
+  rotate: true
+  xy: 320, 4
+  size: 59, 65
+  orig: 59, 65
+  offset: 0, 0
+  index: -1
+long line
+  rotate: false
+  xy: 210, 18
+  size: 5, 19
+  orig: 5, 19
+  offset: 0, 0
+  index: -1

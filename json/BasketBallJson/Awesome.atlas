@@ -1,0 +1,48 @@
+
+Awesome.png
+size: 100,546
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+AWESOME
+  rotate: true
+  xy: 79, 396
+  size: 150, 21
+  orig: 150, 21
+  offset: 0, 0
+  index: -1
+avatar
+  rotate: false
+  xy: 0, 402
+  size: 79, 79
+  orig: 79, 79
+  offset: 0, 0
+  index: -1
+avatar copy
+  rotate: false
+  xy: 0, 214
+  size: 95, 95
+  orig: 95, 95
+  offset: 0, 0
+  index: -1
+boder
+  rotate: false
+  xy: 0, 309
+  size: 89, 87
+  orig: 89, 87
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 0, 481
+  size: 69, 65
+  orig: 69, 65
+  offset: 0, 0
+  index: -1
+text bg
+  rotate: true
+  xy: 0, 0
+  size: 214, 91
+  orig: 216, 92
+  offset: 1, 0
+  index: -1

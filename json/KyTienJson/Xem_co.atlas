@@ -1,0 +1,181 @@
+
+Xem_co.png
+size: 860,240
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+CHESS BOARD
+  rotate: false
+  xy: 2, 18
+  size: 156, 58
+  orig: 156, 58
+  offset: 0, 0
+  index: -1
+CHESS BOARD 2
+  rotate: false
+  xy: 627, 123
+  size: 155, 57
+  orig: 155, 57
+  offset: 0, 0
+  index: -1
+CLOUD
+  rotate: false
+  xy: 627, 71
+  size: 155, 50
+  orig: 156, 50
+  offset: 0, 0
+  index: -1
+CLOUD2
+  rotate: true
+  xy: 246, 3
+  size: 73, 26
+  orig: 74, 26
+  offset: 0, 0
+  index: -1
+CLOUD4
+  rotate: false
+  xy: 2, 147
+  size: 391, 91
+  orig: 393, 92
+  offset: 1, 0
+  index: -1
+STROKE
+  rotate: false
+  xy: 627, 182
+  size: 168, 56
+  orig: 168, 56
+  offset: 0, 0
+  index: -1
+TEXT
+  rotate: false
+  xy: 627, 24
+  size: 118, 45
+  orig: 119, 47
+  offset: 0, 1
+  index: -1
+XemCoaAvatar/Avatar
+  rotate: false
+  xy: 160, 3
+  size: 84, 73
+  orig: 84, 73
+  offset: 0, 0
+  index: -1
+XemCoaAvatar/Avatar2
+  rotate: true
+  xy: 784, 90
+  size: 84, 73
+  orig: 84, 74
+  offset: 0, 1
+  index: -1
+XemCoaAvatar/Clouda
+  rotate: false
+  xy: 335, 53
+  size: 41, 25
+  orig: 41, 25
+  offset: 0, 0
+  index: -1
+XemCoaAvatar/Ellipse 1
+  rotate: false
+  xy: 791, 16
+  size: 29, 29
+  orig: 29, 29
+  offset: 0, 0
+  index: -1
+XemCoaAvatar/Group 14
+  rotate: false
+  xy: 395, 8
+  size: 230, 230
+  orig: 230, 230
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 274, 48
+  size: 59, 30
+  orig: 59, 30
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 836, 49
+  size: 39, 16
+  orig: 39, 16
+  offset: 0, 0
+  index: -1
+leg1
+  rotate: false
+  xy: 797, 201
+  size: 61, 37
+  orig: 61, 37
+  offset: 0, 0
+  index: -1
+leg2
+  rotate: false
+  xy: 797, 176
+  size: 61, 23
+  orig: 61, 23
+  offset: 0, 0
+  index: -1
+may1
+  rotate: false
+  xy: 2, 78
+  size: 259, 67
+  orig: 259, 67
+  offset: 0, 0
+  index: -1
+may2
+  rotate: false
+  xy: 263, 80
+  size: 126, 65
+  orig: 126, 65
+  offset: 0, 0
+  index: -1
+may3
+  rotate: false
+  xy: 627, 3
+  size: 118, 19
+  orig: 118, 19
+  offset: 0, 0
+  index: -1
+neck
+  rotate: false
+  xy: 357, 12
+  size: 19, 17
+  orig: 19, 17
+  offset: 0, 0
+  index: -1
+shakura
+  rotate: true
+  xy: 357, 31
+  size: 20, 19
+  orig: 20, 19
+  offset: 0, 0
+  index: -1
+wing-1
+  rotate: false
+  xy: 274, 2
+  size: 42, 44
+  orig: 42, 44
+  offset: 0, 0
+  index: -1
+wing-1a
+  rotate: false
+  xy: 747, 7
+  size: 42, 62
+  orig: 42, 62
+  offset: 0, 0
+  index: -1
+wing-2
+  rotate: false
+  xy: 318, 2
+  size: 37, 44
+  orig: 37, 44
+  offset: 0, 0
+  index: -1
+wing-2a
+  rotate: false
+  xy: 791, 47
+  size: 43, 41
+  orig: 43, 41
+  offset: 0, 0
+  index: -1

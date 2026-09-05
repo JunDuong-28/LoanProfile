@@ -1,0 +1,160 @@
+
+Result.png
+size: 1953,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Coin2
+  rotate: false
+  xy: 1911, 639
+  size: 40, 40
+  orig: 42, 41
+  offset: 1, 0
+  index: -1
+Coin3
+  rotate: true
+  xy: 1911, 780
+  size: 42, 40
+  orig: 42, 42
+  offset: 0, 1
+  index: -1
+Coin4
+  rotate: true
+  xy: 1911, 736
+  size: 42, 40
+  orig: 42, 41
+  offset: 0, 0
+  index: -1
+OK
+  rotate: true
+  xy: 1911, 681
+  size: 53, 31
+  orig: 57, 35
+  offset: 2, 2
+  index: -1
+Tex_Pop_all_bubbles
+  rotate: true
+  xy: 1873, 535
+  size: 287, 36
+  orig: 287, 36
+  offset: 0, 0
+  index: -1
+Text_Score
+  rotate: true
+  xy: 1873, 824
+  size: 198, 61
+  orig: 198, 62
+  offset: 0, 1
+  index: -1
+Text_Score copy
+  rotate: true
+  xy: 1853, 231
+  size: 302, 89
+  orig: 302, 89
+  offset: 0, 0
+  index: -1
+Texxt_X2
+  rotate: false
+  xy: 1203, 163
+  size: 171, 107
+  orig: 171, 107
+  offset: 0, 0
+  index: -1
+Texxt_X2 copy
+  rotate: true
+  xy: 1042, 11
+  size: 259, 159
+  orig: 259, 159
+  offset: 0, 0
+  index: -1
+Title
+  rotate: false
+  xy: 2, 91
+  size: 557, 179
+  orig: 557, 180
+  offset: 0, 0
+  index: -1
+ball_Green
+  rotate: false
+  xy: 2, 5
+  size: 77, 77
+  orig: 77, 77
+  offset: 0, 0
+  index: -1
+ball_blue
+  rotate: false
+  xy: 1853, 135
+  size: 94, 94
+  orig: 94, 94
+  offset: 0, 0
+  index: -1
+ball_cyan
+  rotate: false
+  xy: 151, 23
+  size: 66, 66
+  orig: 66, 66
+  offset: 0, 0
+  index: -1
+ball_red
+  rotate: false
+  xy: 284, 45
+  size: 44, 44
+  orig: 44, 44
+  offset: 0, 0
+  index: -1
+ball_yeallow
+  rotate: false
+  xy: 219, 26
+  size: 63, 63
+  orig: 63, 63
+  offset: 0, 0
+  index: -1
+bg clear
+  rotate: true
+  xy: 2, 272
+  size: 750, 1382
+  orig: 750, 1382
+  offset: 0, 0
+  index: -1
+bubble
+  rotate: true
+  xy: 1386, 551
+  size: 471, 485
+  orig: 471, 485
+  offset: 0, 0
+  index: -1
+bubble_bg
+  rotate: false
+  xy: 1386, 84
+  size: 465, 465
+  orig: 465, 465
+  offset: 0, 0
+  index: -1
+button
+  rotate: true
+  xy: 1853, 4
+  size: 129, 67
+  orig: 129, 67
+  offset: 0, 0
+  index: -1
+coin1
+  rotate: true
+  xy: 81, 15
+  size: 74, 68
+  orig: 77, 69
+  offset: 0, 0
+  index: -1
+ranking
+  rotate: false
+  xy: 1203, 50
+  size: 109, 111
+  orig: 109, 111
+  offset: 0, 0
+  index: -1
+x2BG
+  rotate: false
+  xy: 561, 2
+  size: 479, 268
+  orig: 479, 268
+  offset: 0, 0
+  index: -1
