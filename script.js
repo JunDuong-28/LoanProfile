@@ -62,10 +62,10 @@ function initSpineArtwork(container) {
         premultipliedAlpha: false,
         // Add viewport setting:
         viewport: {
-          padLeft: "10%",
-          padRight: "10%",
-          padTop: "10%",
-          padBottom: "10%"
+          x: -841.19,
+          y: -697.97,
+          width: 1842.85,
+          height: 1547.69
         },
         success: (player) => {
           const skeleton = player.skeleton;
