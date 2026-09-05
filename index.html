@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Loan Nguyễn Portfolio</title>
+<link rel="stylesheet" href="styles.css" />
+<!-- Spine WebGL runtime, used to load and play the Spine skeleton referenced in the design -->
+<script src="https://cdn.jsdelivr.net/npm/@esotericsoftware/spine-player@4.2.*/dist/iife/spine-player.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@esotericsoftware/spine-player@4.2.*/dist/spine-player.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER / MENU ============ -->
+  <header class="menu">
+    <nav class="menu__left">
+      <button class="btn btn--solid">Loan Nguyễn Portfolio</button>
+      <a href="#nang-luc" class="btn btn--link">Năng Lực</a>
+      <a href="#san-pham" class="btn btn--link">Sản Phẩm</a>
+      <a href="#su-nghiep" class="btn btn--link">Sự Nghiệp</a>
+    </nav>
+    <div class="menu__right">
+      <a href="#" class="btn btn--link">English</a>
+      <span class="menu__divider"></span>
+      <button class="btn btn--solid">Tiếng Việt</button>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__avatar-wrap">
+        <img class="hero__avatar-bg" src="https://www.figma.com/api/mcp/asset/5be46fae-bd90-4fbb-8c95-f70db26180351.png" alt="" />
+
+        <!-- Spine Artwork 01 : json/ProfileWebJson/ProfileAvatar -->
+        <div id="spine-artwork-01"
+             class="spine-artwork"
+             data-spine-dir="json/ProfileWebJson/ProfileAvatar"
+             data-spine-json="ProfileAvatar.json"
+             data-spine-atlas="ProfileAvatar.atlas">
+          <!-- Spine canvas gets mounted here by script.js. Fallback label shown until assets are found. -->
+          <div class="spine-artwork__fallback">json/ProfileWebJson/ProfileAvatar</div>
+        </div>
+      </div>
+
+      <div class="hero__info">
+        <div class="hero__heading">
+          <h1>Loan Nguyễn Portfolio</h1>
+          <p class="hero__subtitle">The Magican - The Whell of Fortune</p>
+        </div>
+
+        <p class="hero__intro">20 năm gắn liền với các bước chuyển mình lớn của ngành nội dung số Việt nam. Tôi thấy mình thật may mắn, hạnh phúc khi được làm việc với đúng đam mê và bằng tất cả nhiệt huyết chưa từng nguội lạnh</p>
+
+        <div class="hero__cards">
+          <div class="hero__card">
+            <h3 class="hero__card-title">THÔNG TIN</h3>
+            <p class="hero__card-line hero__card-line--strong">Nguyễn Thị Thu Loan</p>
+            <p class="hero__card-line">26/10/1986</p>
+            <p class="hero__card-line hero__card-line--strong">0986.929.969</p>
+            <p class="hero__card-line">loannt2610.work@gmail.com</p>
+          </div>
+          <div class="hero__divider"></div>
+          <div class="hero__card">
+            <h3 class="hero__card-title">Con người - Sở thích</h3>
+            <p class="hero__card-line hero__card-line--italic">Tính trách nhiệm</p>
+            <p class="hero__card-line hero__card-line--italic">Thích nghi cao</p>
+            <p class="hero__card-line hero__card-line--italic">Khả năng học hỏi</p>
+            <p class="hero__card-line hero__card-line--italic">Chụp ảnh - Du lịch</p>
+            <p class="hero__card-line hero__card-line--italic">Sách - Thông tin</p>
+            <p class="hero__card-line hero__card-line--italic">DiY - Thủ công mỹ nghệ</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NĂNG LỰC ============ -->
+    <section id="nang-luc" class="section">
+      <h2 class="section__title section__title--green">NĂNG LỰC</h2>
+      <div class="capacity-grid">
+
+        <div class="capacity-card">
+          <h4>Tốt nghiệp đại học<br>Mỹ Thuật Công Nghiệp</h4>
+          <p>Nhận được quy trình giáo dục, tư duy nghiên cứu sâu về văn hoá từ các thầy cô đầu ngành của thời đại trước</p>
+        </div>
+
+        <div class="capacity-card">
+          <h4>Kinh nghiệm làm việc đa dạng</h4>
+          <p>Sự nghiệp gắn liền với những bước chuyển mình lớn của ngành nội dung số: từ webgame, mạng xã hội, game/app clone, game instant. Hiện nay tập trung phát triển năng lực game 3D, hướng tới sự dịch chuyển chất lượng ngành game trong tương lai</p>
+        </div>
+
+        <div class="capacity-card">
+          <h4>Tư duy quản lý<br>thực chiến</h4>
+          <p>Từng vận hành 3 mô hình kinh doanh cá nhân (F&amp;B, homestay, shop hoa lụa). Rèn được năng lực quản trị, nhân sự, vận hành và marketing từ góc độ chủ kinh doanh</p>
+        </div>
+
+        <div class="capacity-card">
+          <h4>Năng lực vận hành pipeline một người</h4>
+          <p>Một mình đảm nhiệm toàn bộ quy trình art trong nhiều dự án liên tiếp. Rút ngắn thời gian phát triển, tối ưu chi phí, đồng thời trực tiếp đào tạo nhân sự mới trong quá trình làm việc</p>
+        </div>
+
+        <div class="capacity-card">
+          <h4>Mạng lưới quan hệ ngành</h4>
+          <p>Gắn bó nhiều thế hệ công ty và nhân sự trong suốt 20 năm, có khả năng huy động đội ngũ chất lượng khi cần.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ CÔNG CỤ ============ -->
+    <section id="cong-cu" class="section">
+      <h2 class="section__title section__title--green">CÔNG CỤ</h2>
+      <p class="section__lede">Khả năng thích nghi và học hỏi nhanh giúp cho việc tiếp cận, sử dụng các công nghệ mới dễ dàng. Tạo điều kiện để kết hợp và tối ưu workflow trong mọi trường hợp</p>
+
+      <div class="tools-row">
+        <div class="tools-group">
+          <h3>2D</h3>
+          <div class="tools-icons">
+            <img src="https://www.figma.com/api/mcp/asset/f4a1ccc3-5908-42d2-85d5-6eec8cfb04c7.png" alt="Hand sketch" />
+            <img src="https://www.figma.com/api/mcp/asset/392f67c1-59de-4881-818c-c4650e83ec29.png" alt="Shop" />
+            <img src="https://www.figma.com/api/mcp/asset/8cfe77c8-f08a-42f3-9b2c-5b203363d702.png" alt="Illustrator" />
+            <img src="https://www.figma.com/api/mcp/asset/51436ec8-2c1b-4864-bdb2-11205e058f77.png" alt="Premium" />
+            <img src="https://www.figma.com/api/mcp/asset/85976774-c4af-45a2-ad21-e002c1dca00f.png" alt="Figma" />
+            <img src="https://www.figma.com/api/mcp/asset/86603d16-afd2-4d2a-80be-21ffe80af6a1.png" alt="Canva" />
+          </div>
+        </div>
+
+        <div class="tools-group">
+          <h3>AniMation</h3>
+          <div class="tools-icons">
+            <img src="https://www.figma.com/api/mcp/asset/4ae18a4e-87b8-4d90-84cc-10e475fc3ab4.png" alt="Spine" />
+          </div>
+        </div>
+
+        <div class="tools-group">
+          <h3>3D</h3>
+          <div class="tools-icons">
+            <img src="https://www.figma.com/api/mcp/asset/c7c68cef-e3df-498d-9d1e-4a3c7f42e70b.png" alt="Blender" />
+            <img src="https://www.figma.com/api/mcp/asset/8f49be9e-aa22-4c0f-bcba-2603b3894603.png" alt="Unreal" />
+            <img src="https://www.figma.com/api/mcp/asset/742f08b9-1ef0-4c61-8406-ab5230a3238a.png" alt="Marvelous Designer" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SẢN PHẨM ============ -->
+    <section id="san-pham" class="section">
+      <h2 class="section__title section__title--green">SẢN PHẨM</h2>
+      <p class="section__lede">Designer được đào tạo để thiết kế ra hình ảnh phản ánh đúng tinh thần mà sản phẩm nên có.<br>
+        Đây là những sản phẩm đem lại đóng góp cho doanh thu của công ty, và một số sản phẩm bản thân yêu thích trong 10 năm.<br>
+        Mỗi sản phẩm là một hành trình thú vị, nơi mà không một cá nhân nào có quyền quyết định hoàn toàn</p>
+
+      <!-- GAME / APP -->
+      <div class="subsection">
+        <h3 class="subsection__title">GAME / APP</h3>
+        <div class="product-row">
+          <div class="product">
+            <img src="https://www.figma.com/api/mcp/asset/3c4dfb4a-a1cc-4906-80c8-f99084b4528a.png" alt="Bắn Trứng" />
+            <div><p>Top 100 doanh thu Facebook<br>Top 50 chơi nhiều Facebook<br>1tr+ lượt tải trên google play</p><a href="#">Xem chi tiết &gt;&gt;</a></div>
+          </div>
+          <div class="product">
+            <img src="https://www.figma.com/api/mcp/asset/baa2d7b3-4c7c-43e0-a341-17e7d0ed1fa1.png" alt="Lịch Việt" />
+            <div><p>Doanh thu bền vững từ 2015<br>1tr+ lượt tải trên google play</p><a href="#">Xem chi tiết &gt;&gt;</a></div>
+          </div>
+          <div class="product">
+            <img src="https://www.figma.com/api/mcp/asset/05f06b0f-ac9c-4be2-8cfb-42adab1cd694.png" alt="Nội thất" />
+            <div><p>Top 100 chơi nhiều Facebook<br>Top 200 doanh thu Facebook</p><a href="#">Xem chi tiết &gt;&gt;</a></div>
+          </div>
+          <div class="product">
+            <img src="https://www.figma.com/api/mcp/asset/5f250d40-67f8-4ecd-be1e-4acc27449f3e.png" alt="Bắn bóng" />
+            <div><p>Top 100 chơi nhiều Facebook<br>Top 200 doanh thu Facebook</p><a href="#">Xem chi tiết &gt;&gt;</a></div>
+          </div>
+        </div>
+        <div class="product-row">
+          <div class="product">
+            <img src="https://www.figma.com/api/mcp/asset/d593ed7b-3967-40d4-942d-603a40b5ba32.png" alt="Cờ Tướng" />
+            <div><p>Cờ Tướng</p><a href="#">Xem chi tiết &gt;&gt;</a></div>
+          </div>
+          <div class="product">
+            <img src="https://www.figma.com/api/mcp/asset/c1ed9c4a-9d52-40f3-86fb-29540575f3ea.png" alt="Quiz Thách Đấu" />
+            <div><p>Quiz Thách Đấu</p><a href="#">Xem chi tiết &gt;&gt;</a></div>
+          </div>
+          <div class="product">
+            <img src="https://www.figma.com/api/mcp/asset/8ae4599c-03ec-4e63-9051-fc68f0b9ce22.png" alt="Jumping Girl" />
+            <div><p>Jumping Girl</p><a href="#">Xem chi tiết &gt;&gt;</a></div>
+          </div>
+          <div class="product">
+            <img src="https://www.figma.com/api/mcp/asset/6808e97e-401b-4b94-abfb-1e5dfe8f351d.png" alt="NumbleShooter" />
+            <div><p>NumbleShooter</p><a href="#">Xem chi tiết &gt;&gt;</a></div>
+          </div>
+          <div class="product">
+            <img src="https://www.figma.com/api/mcp/asset/079b2303-ef03-4448-96c2-f3a8219cc3d8.png" alt="BasketFall" />
+            <div><p>BasketFall</p><a href="#">Xem chi tiết &gt;&gt;</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TÀI LIỆU TRAINING -->
+      <div class="subsection">
+        <h3 class="subsection__title">TÀI LIỆU TRAINNING</h3>
+        <div class="training-row">
+          <a href="https://1drv.ms/p/c/0b9dfccafc81ba7f/IQB_uoH8yvydIIALDuwBAAAAAVnqqYoI_XYJICYYX_cWzIM?e=ZLhILH" target="_blank">
+            <img src="https://www.figma.com/api/mcp/asset/c2e57336-fc3d-4d38-a1ec-4184173da960.png" alt="HayHay Artist Training" />
+          </a>
+          <a href="https://docs.google.com/presentation/d/1QID8n1vhZQ3DR6w8GWo8TJqX8w_Aa1JmNuWKhY9Vdu8/present" target="_blank">
+            <img src="https://www.figma.com/api/mcp/asset/258d9769-62bf-4157-85e4-de02264b65d2.png" alt="Game Development System" />
+          </a>
+        </div>
+      </div>
+
+      <!-- GRAPHIC DESIGN -->
+      <div class="subsection">
+        <h3 class="subsection__title">GRAPHIC DESIGN</h3>
+        <div class="graphic-row">
+          <img src="https://www.figma.com/api/mcp/asset/b4e027b5-906c-45f2-92c4-89da957c5d42.png" alt="Viet Yatch" />
+          <img src="https://www.figma.com/api/mcp/asset/535e3367-5f31-477e-91c0-5b56bd5b4bc4.png" alt="Iron Hammer" />
+          <img src="https://www.figma.com/api/mcp/asset/48502a1c-6bdf-47d7-84b5-a23923262693.png" alt="Meko" />
+          <img src="https://www.figma.com/api/mcp/asset/1a54fda9-5acc-4a89-8479-0f325d3572ab.png" alt="Flora" />
+        </div>
+      </div>
+
+      <!-- 3D RESEARCH -->
+      <div class="subsection">
+        <h3 class="subsection__title">3D RESEARCH</h3>
+        <div class="video-row">
+          <div class="video-card">
+            <a class="video-placeholder" href="https://youtu.be/qf6Xivnj8Ec" target="_blank">https://youtu.be/qf6Xivnj8Ec</a>
+            <p>3D Cinematic</p>
+          </div>
+          <div class="video-card">
+            <a class="video-placeholder" href="https://youtu.be/j1a7yfGbgig" target="_blank">https://youtu.be/j1a7yfGbgig</a>
+            <p>Modeling</p>
+          </div>
+          <div class="video-card">
+            <a class="video-placeholder" href="https://youtu.be/XiHSk0XZwAo" target="_blank">https://youtu.be/XiHSk0XZwAo</a>
+            <p>Mocap Animation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SỰ NGHIỆP ============ -->
+    <section id="su-nghiep" class="section">
+      <h2 class="section__title section__title--green">SỰ NGHIỆP</h2>
+
+      <div class="timeline">
+
+        <div class="timeline__item">
+          <div class="timeline__years">2005<br>-<br>2007</div>
+          <div class="timeline__role"><h4>Timo</h4><span>Intern game Art</span></div>
+          <p class="timeline__desc">Thời điểm các dòng game online du nhập rất mạnh, chứng kiến sự bùng nổ của VNG với Võ Lâm Truyền Kỳ. Mở ra một con đường tài chính mới ở Việt Nam: Phát hành game. Cũng tạo ra đam mê cho thế hệ trẻ lúc đó: được làm game<br><br>Bản thân, với mong muốn cao được tham gia trong ngành, đã may mắn tiếp cận được ngành sản xuất game ngay từ năm nhất đại học, thông qua làm partime cho cty Hàn Quốc: Timo - một công ty phát triển game trên điện thoại đời cũ.</p>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__years">2007<br>-<br>2009</div>
+          <div class="timeline__role"><h4>VNB</h4><span>Game art</span></div>
+          <p class="timeline__desc">Google đưa ra một dòng tiền mới: dòng tiền quảng cáo. Đây là giai đoạn kiếm tiền từ quảng cáo nhanh, dễ và nhiều đến không thể ngờ. Giai đoạn thế giới phẳng đầy lạc quan. VNB ra đời ngay tại thời điểm phát triển web game bùng nổ tại Việt Nam.<br><br>Bản thân phụ trách thiết kế hình ảnh cho game flash, chủ đề thời trang. Game đầu tay tiếp cận khoảng 90.000 lượt chơi, gấp 3 lần mức trung bình (khoảng 30.000 lượt chơi) của các sản phẩm trong công ty cùng thời điểm. Dòng tiền từ mảng web game giúp công ty tích luỹ đủ nguồn lực để mở rộng sang lĩnh vực bất động sản trong giai đoạn thị trường quảng cáo web suy giảm do sự dịch chuyển dòng tiền sang điện thoại cảm ứng.</p>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__years">2009<br>-<br>2010</div>
+          <div class="timeline__role"><h4>S-game</h4><span>Web Design</span></div>
+          <p class="timeline__desc">Thời điểm game phát hành đang làm mưa làm gió tại Việt Nam. Các doanh nghiệp chủ yếu tham gia China joy tại Trung Quốc, đem game Trung Quốc về việt hoá và phát hành tại Việt Nam<br><br>Bản thân apply vào vị trí thiết kế, tuy nhiên được biệt phái sang cty khác học Css để làm web cho game. Từ đó học được cách giao tiếp với code</p>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__years">2010<br>-<br>2011</div>
+          <div class="timeline__role"><h4>CNC</h4><span>Content Artits</span></div>
+          <p class="timeline__desc">Mạng xã hội bắt đầu bùng nổ tại Việt nam, trên bối cảnh ngành CNTT ở VN đang phát triển mạnh do cơ sở hạ tầng internet được mở rộng, CNC với nền tảng outsource web cho các đơn vị nước ngoài, đã tiên phong phát triển mạng xã hội Việt Nam, đặt tên "Timbox"<br><br>Bản thân được điều động đến dự án mạng xã hội của CNC, thuộc phòng Content Marketing. Là người đầu tiên xây dựng các bộ sticker / emoji sử dụng cho nền tảng. Bộ sticker viral trong nội bộ ngành, dẫn đến nhiều lời mời làm việc từ các đơn vị khác trong ngành.</p>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__years">2011<br>-<br>2013</div>
+          <div class="timeline__role"><h4>TamTay</h4><span>Artits</span></div>
+          <p class="timeline__desc">Vào cty khi mạng xã hội TamTay đã phát triển và tạo được danh tiếng nhất đinh. Nhiệm vụ chính là thiết kế web/app và thiết kế marketing cho các sản phẩm của công ty. Banner bản thân làm ra được phía vận hành đánh giá cao do luôn nằm trong top banner hiệu quả nhất.</p>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__years">2013<br>-<br>2016</div>
+          <div class="timeline__role"><h4>5-Play</h4><span>Lead Art</span></div>
+          <p class="timeline__desc">Trong 7 năm kể từ khi Iphone đầu tiên được giới thiệu, cuộc đua công nghệ điện thoại diễn ra vô cùng mạnh mẽ. Dẫn theo đó là sự khai sinh của một thị trường mới: Thị trường game/app trên thiết bị thông minh: iOs / Android / Window.<br><br>Nhờ vào kinh nghiệm đã từng làm ở mạng xã hội và game điện thoại trước đó. Bản thân về 5-Play đảm nhiệm vị trí lead art - phát triển game / app phụ trợ hệ sinh thái cho công ty Phúc Nam. Hoạt động với mức độ tự chủ cao. Trong giai đoạn này, đội ngũ tạo ra nhiều sản phẩm có lượng người dùng lớn.</p>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__years">2016<br>-<br>2019</div>
+          <div class="timeline__role"><h4 class="timeline__role-wide">Vận hành và kinh doanh thực chiến</h4></div>
+          <p class="timeline__desc">Rời ngành game để trực tiếp vận hành 2 mô hình kinh doanh cá nhân: Home stay, shop hoa lụa, Fnb. Giai đoạn này bổ sung những năng lực không có được khi làm thuê thuần tuý:<br><br>
+          - Quản trị nhân sự thực tế: bao gồm giao tiếp với các nhóm nhân sự nhạy cảm thông qua vận hành homestay<br>
+          - Tự học và trực tiếp triển khai chạy quảng cáo, marketing - hình thành nền tảng tư duy marketing thực chiến + khả năng kết nối, cộng tác với những người ở chuyên môn khác<br>
+          - Bắt đầu quan tâm đến trải nghiệm văn hoá Việt Nam, xuất phát từ nhu cầu thực tế của khách lưu trú.<br>
+          - Nắm được phương pháp xây dựng quy trình vận hành cửa hàng ở quy mô nhỏ.</p>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__years">2019<br>-<br>2024</div>
+          <div class="timeline__role"><h4>HayHay</h4><span>Game Artits</span></div>
+          <p class="timeline__desc">Quay lại ngành game khi Phúc Nam thành lập công ty mới, chuyên sản xuất game instant trên Facebook, sau khi bản build thử nghiệm của Bắn Trứng (Game được bản thân làm ra năm 2015) trên nền tảng này cho kết quả khả quan. Đảm nhiệm vị trí Art duy nhất của công ty trong 2 năm, phụ trách toàn bộ pipeline art: concept/asset/animation/VFX và banner marketing, đồng thời đề xuất các giải pháp tối ưu thời gian và chi phí sản xuất.<br><br>Kết quả: Bắn Trứng đạt đỉnh khoảng 14tr lượt chơi trong năm 2020, duy trì top 50 game instant Fb liên tục trong 4 năm, có thời điểm vươn lên top 3. Cùng giai đoạn, đơn độc phụ trách phần art cho một số sản phẩm khác, đóng góp vào doanh thu chung của công ty.<br><br>Từ 2022, khi công ty mở rộng quy mô nhân sự, chuyển sang vai trò định hướng nghiên cứu - bắt đầu tìm hiểu công nghệ 3D nhằm mở ra hướng phát triển sản phẩm mới cho công ty</p>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__years">2024<br>-<br>Nay</div>
+          <div class="timeline__role"><h4>3D<br>Research</h4></div>
+          <p class="timeline__desc">Rời vị trí vào năm 2024 để tập trung toàn thời gian vào nghiên cứu quy trình phát triển game/cinematic 3D, xuất phát từ nhận định cá nhân rằng mô hình game clone truyền thống đang bão hoà và không còn tạo giá trị bền vững cho đội ngũ sản xuất.<br><br>Từ 2024 đến nay, chủ động xây dựng năng lực và pipeline làm việc với Blender / Marvelous Designer và Unreal Engine, hướng đến việc dẫn dắt phần art cho những dự án game văn hoá quy mô AA+</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ FOOTER CTA ============ -->
+    <section class="footer-cta">
+      <p class="footer-cta__enjoy">Enjoy every moments</p>
+      <h2 class="footer-cta__title">Hân Hạnh được kết nối</h2>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
