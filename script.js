@@ -36,7 +36,7 @@ function initSpineArtwork(container) {
 
   if (!baseDir || !jsonFile || !atlasFile) return;
 
-  const assetBase = `assets/${baseDir}/`; // local folder, resolved relative to index.html
+  const assetBase = `${baseDir}/`; // local folder, resolved relative to index.html
 
   if (typeof spine === 'undefined' || !spine.SpinePlayer) {
     // Spine runtime script hasn't loaded (e.g. offline) — keep the fallback label.
