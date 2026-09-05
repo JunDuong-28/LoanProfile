@@ -60,8 +60,14 @@ function initSpineArtwork(container) {
         showControls: false,
         backgroundColor: '#00000000',
         premultipliedAlpha: false,
+        // Add viewport setting:
+        viewport: {
+          padLeft: "10%",
+          padRight: "10%",
+          padTop: "10%",
+          padBottom: "10%"
+        },
         success: (player) => {
-          // Autoplay the first animation, if any.
           const skeleton = player.skeleton;
           if (skeleton && skeleton.data.animations.length) {
             player.setAnimation(skeleton.data.animations[0].name, true);
