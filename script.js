@@ -60,14 +60,8 @@ function initSpineArtwork(container) {
         showControls: false,
         backgroundColor: '#00000000',
         premultipliedAlpha: false,
-        // Add viewport setting:
-        viewport: {
-          x: -841.19,
-          y: -697.97,
-          width: 1842.85,
-          height: 1547.69
-        },
         success: (player) => {
+          // Autoplay the first animation, if any.
           const skeleton = player.skeleton;
           if (skeleton && skeleton.data.animations.length) {
             player.setAnimation(skeleton.data.animations[0].name, true);
