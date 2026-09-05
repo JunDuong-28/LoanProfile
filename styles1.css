@@ -153,12 +153,20 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   overflow: hidden;
   border-radius: 16px;
+  touch-action: pan-y;
 }
 
 .spine-artwork canvas {
   width: 100%;
   height: 100%;
   display: block;
+  /* Without this, the Spine player's own touch handling (for camera
+     drag/pan, even with showControls:false) can capture touch gestures and
+     call preventDefault() on them — which blocks the browser's native
+     vertical scroll if the gesture starts on this canvas. touch-action
+     tells the browser to always treat vertical drags here as page scroll,
+     regardless of what the player's JS tries to do. */
+  touch-action: pan-y;
 }
 
 .spine-artwork__fallback {
@@ -521,11 +529,30 @@ a { color: inherit; text-decoration: none; }
   }
 
   .hero__avatar-wrap {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
+    /* Bleeds slightly past the page's side padding to make the Spine
+       artwork bigger on mobile without touching the desktop rule above.
+       script.js reads this element's *rendered* width/height at load time,
+       so making the box bigger here is enough — no JS changes needed.
+       Tune the width % to make it larger/smaller; keep margin-left/right
+       at half the (width - 100%) so it stays centered. */
+    width: 122%;
+    margin-left: -11%;
+    margin-right: -11%;
     height: auto;
     aspect-ratio: 1112 / 902;
+  }
+
+  /* The Spine player auto-fits the whole animation's bounds into the box
+     ("contain"), so if any part of the animation (e.g. mist/particle
+     effects) reaches wider than the character itself, the player zooms out
+     to fit that too — leaving the character small in a mostly-empty frame.
+     Since .spine-artwork already clips overflow, we can crop back in with a
+     CSS zoom on the canvas instead of fighting Spine's own fit math.
+     Tune this scale value up/down until the character fills the frame the
+     way you want; overflow is simply cropped by the container. */
+  .spine-artwork canvas {
+    transform: scale(2.2);
+    transform-origin: 50% 50%;
   }
 
   .hero__info {
