@@ -11,9 +11,20 @@
 
 body {
   margin: 0;
+  min-height: 100vh; /* Ensures the body always covers the full screen height */
+  width: 100vw;
   font-family: var(--font-base);
-  background: var(--color-bg);
   color: var(--color-text);
+
+  background-color: var(--color-bg);
+    /* Fallback color and image */
+  background-color: var(--color-bg);
+  background-image: url("Image/Cut/bg-top.jpg"),
+                    url("Image/Cut/bg-bottom.jpg");
+  background-repeat: no-repeat,
+                    no-repeat;
+  background-position: center top,
+                      center bottom;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -70,9 +81,13 @@ a { color: inherit; text-decoration: none; }
 
 /* ============ LAYOUT ============ */
 .page {
-  max-width: 1738px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   margin: 0 auto;
-  padding: 60px 24px 0;
+  width: 100vw;
+  padding: 1% 5% 1% 5%;
 }
 
 .section {
@@ -81,16 +96,17 @@ a { color: inherit; text-decoration: none; }
 }
 
 .section__title {
-  font-size: 42px;
+  font-size: 55px;
   font-weight: 600;
-  margin: 0 0 30px;
+  margin: 0 0 50px;
 }
 
 .section__title--green { color: var(--color-green); }
 
 .section__lede {
-  max-width: 900px;
+  max-width: 1300px;
   margin: 0 auto 40px;
+  font-size: 20px;
   font-style: italic;
   font-weight: 500;
   color: var(--color-text);
@@ -109,23 +125,20 @@ a { color: inherit; text-decoration: none; }
 /* ============ HERO ============ */
 .hero {
   display: flex;
-  gap: 40px;
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 60px;
+  height: 720px;
 }
 
 .hero__avatar-wrap {
   position: relative;
-  flex: 1 1 480px;
+  flex: 1 1;
   min-width: 320px;
-}
-
-.hero__avatar-bg {
   width: 100%;
-  max-width: 720px;
-  display: block;
-  border-radius: 24px;
+  height: 100%;
+  margin-left: -20%;
+  margin-right: -50%;
 }
 
 #spine-artwork-01 {
@@ -135,11 +148,6 @@ a { color: inherit; text-decoration: none; }
 
 .spine-artwork {
   position: relative;
-  /*width: 100%;
-  max-width: 620px;
-  aspect-ratio: 1112 / 902;
-  margin-top: -60%;*/
-  background: rgba(255, 255, 255, 0.74);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,13 +170,15 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero__info {
-  flex: 1 1 520px;
+  flex: 1 1;
   min-width: 320px;
+  width: 50%;
+  height: 70%;
 }
 
 .hero__heading h1 {
   color: var(--color-terracotta);
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 700;
   margin: 0;
 }
@@ -206,7 +216,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 16px;
 }
 
-.hero__card-line { margin: 6px 0; }
+.hero__card-line { margin: 6px 0; text-align: center;}
 .hero__card-line--strong { font-weight: 600; font-size: 17px; }
 .hero__card-line--italic { font-style: italic; }
 
@@ -217,27 +227,65 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============ NĂNG LỰC ============ */
+.capacity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .capacity-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+  gap: 2%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+
+.capacity-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .capacity-card {
-  background: rgba(255,255,255,0.5);
-  border-radius: 12px;
+  position: relative;
   padding: 30px 20px;
+  height: 25.5vw;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.capacity-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;                   /* Stretches across top, right, bottom, left */
+  background-image: url("Image/Cut/bg-capacity.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.45;               /* Adjust image opacity here (0.0 to 1.0) */
+  z-index: -1;                /* Keeps the image behind your card content */
+}
+
+.capacity-icon {
+  position: relative;
+  width: 8vw;
+  margin-bottom: -15%;
+  z-index: 2;
 }
 
 .capacity-card h4 {
   color: var(--color-terracotta);
-  font-size: 18px;
+  font-size: clamp(1rem, 0.9vw + 0.2rem, 1.8rem);
   margin: 0 0 16px;
 }
 
 .capacity-card p {
   font-style: italic;
-  font-size: 15px;
+  font-size: clamp(1rem, 0.7vw + 0.3rem, 1.8rem);
   line-height: 1.6;
   margin: 0;
 }
@@ -246,7 +294,7 @@ a { color: inherit; text-decoration: none; }
 .tools-row {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 100px;
   flex-wrap: wrap;
 }
 
@@ -263,9 +311,13 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 
-.tools-icons img { width: 80px; height: auto; }
+.tools-icons img { width: 110px; height: auto; }
 
 /* ============ SẢN PHẨM ============ */
+#san-pham {
+  width: 90%;
+}
+
 .product-row {
   display: flex;
   flex-wrap: wrap;
@@ -277,10 +329,10 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   gap: 12px;
-  flex: 1 1 280px;
+  flex: 1 1 270px;
 }
 
-.product img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; }
+.product img { width: 130px; height: 130px; object-fit: cover; border-radius: 8px; }
 .product p { margin: 0 0 6px; font-size: 14px; }
 .product a { color: var(--color-terracotta); text-decoration: underline; font-style: italic; font-size: 14px; }
 
@@ -298,7 +350,7 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 
-.graphic-row img { flex: 1 1 220px; max-width: 300px; border-radius: 8px; }
+.graphic-row img { flex: 1 1 220px; max-width: 470px; border-radius: 8px; }
 
 .video-row {
   display: flex;
@@ -306,21 +358,19 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 
-.video-card { flex: 1 1 280px; text-align: center; }
-
-.video-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #bebebe;
-  height: 180px;
-  border-radius: 8px;
-  color: #000;
-  font-size: 12px;
-  margin-bottom: 12px;
+.video-wrapper {
+  width: 32%;
+  max-width: 800px; /* Adjust maximum width to fit your layout */
+  margin: 0 auto;
 }
 
-.video-card p { color: var(--color-green); font-weight: 500; }
+.video-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Automatically maintains proper video proportions */
+  border: none;
+  display: block;
+}
+
 
 /* ============ SỰ NGHIỆP TIMELINE ============ */
 .timeline {
@@ -331,8 +381,8 @@ a { color: inherit; text-decoration: none; }
 
 .timeline__item {
   display: grid;
-  grid-template-columns: 90px 200px 1fr;
-  gap: 20px;
+  grid-template-columns: 90px 3px 200px 1fr;
+  gap: 0px;
   align-items: center;
   text-align: left;
   padding: 10px 0;
@@ -343,24 +393,45 @@ a { color: inherit; text-decoration: none; }
   color: var(--color-terracotta);
   font-weight: 600;
   text-align: center;
+  font-size: 23px;
+  margin-top: -4px;
+}
+
+.timeline_separator {
+  width: 3px;
+  height: 100px;
+  border-left: 2px solid var(--color-green);
+}
+
+.timeline__role {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  border-right: 3px solid var(--color-green);
 }
 
 .timeline__role h4 {
   color: var(--color-green);
-  font-size: 26px;
+  font-size: 40px;
+  font-weight: 620;
   margin: 0 0 6px;
 }
 
-.timeline__role-wide { font-size: 20px !important; }
+.timeline__role-wide { font-size: 22px !important; }
 
 .timeline__role span {
   color: var(--color-terracotta);
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .timeline__desc {
-  font-size: 15px;
+  padding-left: 20px;
+  font-size: 17px;
   line-height: 1.6;
+  font-weight: 450;
   margin: 0;
 }
 
@@ -399,4 +470,8 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 700px) {
   .menu { padding: 16px 20px; flex-direction: column; align-items: flex-start; }
   .page { padding: 40px 16px 0; }
+}
+
+.project-link {
+  text-align: end;
 }
