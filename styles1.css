@@ -1,0 +1,634 @@
+:root {
+  --color-bg: #e6e4d8;
+  --color-terracotta: #a64d35;
+  --color-green: #5f9665;
+  --color-text: #49535d;
+  --color-white: #ffffff;
+  --font-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh; /* Ensures the body always covers the full screen height */
+  width: 100vw;
+  font-family: var(--font-base);
+  color: var(--color-text);
+
+  background-color: var(--color-bg);
+    /* Fallback color and image */
+  background-color: var(--color-bg);
+  background-image: url("Image/Cut/bg-top.jpg"),
+                    url("Image/Cut/bg-bottom.jpg");
+  background-repeat: no-repeat,
+                    no-repeat;
+  background-position: center top,
+                      center bottom;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ============ MENU ============ */
+.menu {
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.menu__left, .menu__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 18px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.btn--solid {
+  background: var(--color-green);
+  color: var(--color-white);
+  font-weight: 700;
+  border-radius: 15px;
+}
+
+.btn--link {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+.menu__divider {
+  width: 1px;
+  height: 28px;
+  background: var(--color-text);
+  opacity: .4;
+}
+
+/* ============ LAYOUT ============ */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 100vw;
+  padding: 1% 5% 1% 5%;
+}
+
+.section {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.section__title {
+  font-size: 55px;
+  font-weight: 600;
+  margin: 0 0 50px;
+}
+
+.section__title--green { color: var(--color-green); }
+
+.section__lede {
+  max-width: 1300px;
+  margin: 0 auto 40px;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.subsection { margin-top: 50px; text-align: left; }
+
+.subsection__title {
+  color: var(--color-terracotta);
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* ============ HERO ============ */
+.hero {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  height: 720px;
+}
+
+.hero__avatar-wrap {
+  position: relative;
+  flex: 1 1;
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  margin-left: -20%;
+  margin-right: -50%;
+}
+
+#spine-artwork-01 {
+  position: relative;
+  width: 100%;
+}
+
+.spine-artwork {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.spine-artwork canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.spine-artwork__fallback {
+  font-size: 12px;
+  text-align: justify;
+  color: #000;
+  padding: 12px;
+  word-break: break-word;
+}
+
+.hero__info {
+  flex: 1 1;
+  min-width: 320px;
+  width: 50%;
+  height: 70%;
+}
+
+.hero__heading h1 {
+  color: var(--color-terracotta);
+  font-size: 56px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hero__subtitle {
+  font-style: italic;
+  font-weight: 300;
+  margin: 8px 0 0;
+}
+
+.hero__intro {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: right;
+  margin: 30px 0;
+}
+
+.hero__cards {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.hero__card {
+  flex: 1;
+  text-align: right;
+}
+
+.hero__card-title {
+  color: var(--color-terracotta);
+  text-decoration: underline;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+
+.hero__card-line { margin: 6px 0; text-align: center;}
+.hero__card-line--strong { font-weight: 600; font-size: 17px; }
+.hero__card-line--italic { font-style: italic; }
+
+.hero__divider {
+  width: 1px;
+  background: var(--color-text);
+  opacity: .4;
+}
+
+/* ============ NĂNG LỰC ============ */
+.capacity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.capacity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+  gap: 2%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+
+.capacity-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.capacity-card {
+  position: relative;
+  padding: 30px 20px;
+  height: 25.5vw;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.capacity-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;                   /* Stretches across top, right, bottom, left */
+  background-image: url("Image/Cut/bg-capacity.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.45;               /* Adjust image opacity here (0.0 to 1.0) */
+  z-index: -1;                /* Keeps the image behind your card content */
+}
+
+.capacity-icon {
+  position: relative;
+  width: 8vw;
+  margin-bottom: -15%;
+  z-index: 2;
+}
+
+.capacity-card h4 {
+  color: var(--color-terracotta);
+  font-size: clamp(1rem, 0.9vw + 0.2rem, 1.8rem);
+  margin: 0 0 16px;
+}
+
+.capacity-card p {
+  font-style: italic;
+  font-size: clamp(1rem, 0.7vw + 0.3rem, 1.8rem);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============ CÔNG CỤ ============ */
+.tools-row {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.tools-group h3 {
+  color: var(--color-terracotta);
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+.tools-icons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tools-icons img { width: 110px; height: auto; }
+
+/* ============ SẢN PHẨM ============ */
+#san-pham {
+  width: 90%;
+}
+
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 1 270px;
+}
+
+.product img { width: 130px; height: 130px; object-fit: cover; border-radius: 8px; }
+.product p { margin: 0 0 6px; font-size: 14px; }
+.product a { color: var(--color-terracotta); text-decoration: underline; font-style: italic; font-size: 14px; }
+
+.training-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.training-row img { width: 100%; max-width: 420px; border-radius: 8px; }
+
+.graphic-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.graphic-row img { flex: 1 1 220px; max-width: 470px; border-radius: 8px; }
+
+.video-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.video-wrapper {
+  width: 32%;
+  max-width: 800px; /* Adjust maximum width to fit your layout */
+  margin: 0 auto;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Automatically maintains proper video proportions */
+  border: none;
+  display: block;
+}
+
+
+/* ============ SỰ NGHIỆP TIMELINE ============ */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 90px 3px 200px 1fr;
+  gap: 0px;
+  align-items: center;
+  text-align: left;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(73, 83, 93, 0.15);
+}
+
+.timeline__years {
+  color: var(--color-terracotta);
+  font-weight: 600;
+  text-align: center;
+  font-size: 23px;
+  margin-top: -4px;
+}
+
+.timeline_separator {
+  width: 3px;
+  height: 100px;
+  border-left: 2px solid var(--color-green);
+}
+
+.timeline__role {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  border-right: 3px solid var(--color-green);
+}
+
+.timeline__role h4 {
+  color: var(--color-green);
+  font-size: 40px;
+  font-weight: 620;
+  margin: 0 0 6px;
+}
+
+.timeline__role-wide { font-size: 22px !important; }
+
+.timeline__role span {
+  color: var(--color-terracotta);
+  font-size: 20px;
+}
+
+.timeline__desc {
+  padding-left: 20px;
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 450;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .timeline__item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero__intro, .hero__card { text-align: center; }
+}
+
+/* ============ FOOTER CTA ============ */
+.footer-cta {
+  text-align: center;
+  padding: 80px 0 100px;
+}
+
+.footer-cta__enjoy {
+  color: var(--color-terracotta);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.footer-cta__title {
+  color: var(--color-green);
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.menu {
+  flex-direction: row;
+}
+
+@media (max-width: 700px) {
+  .menu { padding: 16px 20px; flex-direction: column; align-items: flex-start; }
+  .page { padding: 40px 16px 0; }
+}
+
+.project-link {
+  text-align: end;
+}
+
+/* ======================================================================
+   MOBILE PHONE LAYOUT
+   ----------------------------------------------------------------------
+   Everything below only applies at phone-sized viewports. It overrides
+   several rules above that assume a wide desktop canvas: a fixed-height
+   hero with percentage-based negative margins, viewport-width-based card
+   heights, 3-across video embeds, and a couple of hardcoded pixel widths
+   set inline in index.html (those need !important to win over an inline
+   style attribute — that's expected and safe here, not a hack).
+   ====================================================================== */
+
+@media (max-width: 768px) {
+
+  html, body { overflow-x: hidden; }
+
+  /* ---------- General page rhythm ---------- */
+  .page { padding: 6% 5% 0; }
+
+  .section { padding: 48px 0; }
+
+  .section__title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  /* Overrides the hardcoded inline `style="width: 950px"` / `"width: 1200px"`
+     on .section__lede in index.html — inline styles need !important from a
+     stylesheet to be overridden. */
+  .section__lede {
+    width: auto !important;
+    max-width: 100% !important;
+    font-size: 16px;
+    padding: 0 4px;
+  }
+
+  .subsection__title { font-size: 21px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  .hero__avatar-wrap {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1112 / 902;
+  }
+
+  .hero__info {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Overrides the inline `padding-left: 35%; padding-right: 10%;` set on
+     this element in index.html. */
+  #hero__info_Block {
+    padding-left: 4% !important;
+    padding-right: 4% !important;
+    text-align: center;
+  }
+
+  .hero__heading h1 { font-size: 30px; }
+
+  .hero__intro {
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .hero__cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero__card { text-align: center; }
+
+  .hero__divider {
+    width: 60%;
+    height: 1px;
+    margin: 0 auto;
+  }
+
+  /* ---------- Năng Lực ---------- */
+  .capacity-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 24px;
+  }
+
+  .capacity-card {
+    height: auto;
+    padding: 24px 16px;
+  }
+
+  .capacity-icon { width: clamp(48px, 16vw, 90px); }
+
+  /* ---------- Công Cụ ---------- */
+  .tools-row { gap: 32px; }
+
+  .tools-icons img { width: 64px; }
+
+  /* ---------- Sản Phẩm ---------- */
+  #san-pham { width: 100%; }
+
+  .product {
+    flex: 1 1 100%;
+  }
+
+  .product img { width: 90px; height: 90px; }
+
+  .training-row img { max-width: 100%; }
+
+  .graphic-row img { flex: 1 1 100%; max-width: 100%; }
+
+  .video-row { flex-direction: column; }
+
+  .video-wrapper { width: 100%; }
+
+  /* ---------- Sự Nghiệp timeline ---------- */
+  /* Overrides the inline `style="width: 74%"` set on #su-nghiep in index.html. */
+  #su-nghiep { width: 100% !important; }
+
+  .timeline__item { padding: 16px 0; }
+
+  .timeline_separator { display: none; }
+
+  .timeline__role {
+    border-right: none;
+    border-bottom: 2px solid var(--color-green);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+
+  .timeline__role h4 { font-size: 26px; }
+  .timeline__role span { font-size: 16px; }
+
+  .timeline__years { font-size: 18px; }
+
+  .timeline__desc {
+    padding-left: 0;
+    font-size: 15px;
+  }
+
+  /* ---------- Footer ---------- */
+  .footer-cta__title { font-size: 24px; }
+}
+
+@media (max-width: 420px) {
+  .hero__heading h1 { font-size: 26px; }
+  .section__title { font-size: 26px; }
+  .product img { width: 72px; height: 72px; }
+}
