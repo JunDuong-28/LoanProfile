@@ -4,20 +4,455 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Loan Nguyễn Portfolio</title>
-<!-- Spine WebGL runtime, used to load and play the Spine skeleton referenced in the design 
-<script src="spine-player.js"></script>
-<link rel="stylesheet" href="spine-player.css" />-->
+<!-- Spine WebGL runtime, used to load and play the Spine skeleton referenced in the design -->
+<script src="../spine-player.js"></script>
+<link rel="stylesheet" href="../spine-player.css" />
 <style>
     body {
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 1700px;
+    }
+
+    .page-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .infobox {
+        position: relative;
+        color: #000000;
+        font-size: 20px;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        z-index: 10;
+    }
+
+    #firstgraph {
+        position: absolute;
+        top: 230px;
+        left: 970px;
+        width: 34%;
+    }
+    
+    #secondgraph {
+        position: absolute;
+        top: 1460px;
+        left: 350px;
+        width: 988px;
+    }
+    
+    #thirdgraph {
+        position: absolute;
+        top: 2090px;
+        left: 350px;
+        width: 988px;
+    }
+    
+    #forthgraph {
+        position: absolute;
+        top: 3310px;
+        left: 350px;
+        width: 988px;
+    }
+    
+    #fifthgraph {
+        position: absolute;
+        top: 5190px;
+        left: 350px;
+        width: 988px;
+    }
+
+    #sixthgraph {
+        position: absolute;
+        top: 5470px;
+        left: 900px;
+        width: 498px;
+    }
+    
+    #seventhgraph {
+        position: absolute;
+        top: 6055px;
+        left: 350px;
+        width: 988px;
+    }
+
+    .highlighttxt {
+        font-size: 32px;
+        font-weight: 700;
+        color: #608176;
+    }
+    
+    .spine-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    #spine-banner {
+        position: absolute;
+        top: 170px;
+        width: 1059px;
+        height: 693px;
+    }
+    
+    #spine-16 {
+        width: 1059px;
+        height: 693px;
+    }
+    
+    #spine-container-1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(479px, 1fr));
+        gap: 5px;
+        width: 57%;
+        position: absolute;
+        top: 1630px;
+        left: 50px;
+        transform: translateX(28%);
+        z-index: 99;
+    }
+    
+    .spine-group-1 {
+        width: 479px;
+        height: 463px;
+    }
+    
+    #spine-container-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+        gap: 5px;
+        width: 85%;
+        position: absolute;
+        top: 2220px;
+        left: 130px;
+        z-index: 99;
+    }
+    
+    .spine-group-2 {
+        width: 357px;
+        height: 309px;
+    }
+
+    #spine-20 {
+        margin: -20px -30px -30px -70px;
+        width: 450px;
+        height: 350px;
+    }
+    
+    #spine-xemco {
+        position: absolute;
+        top: 2550px;
+        left: 250px;
+        width: 764px;
+        height: 527px;
+    }
+
+    #spine-23 {
+        width: 764px;
+        height: 527px;
+    }
+    
+    #spine-chuyenban {
+        position: absolute;
+        top: 2120px;
+        left: 725px;
+        width: 800px;
+        height: 1450px;
+    }
+
+    #spine-24 {
+        width: 800px;
+        height: 1450px;
+    }
+    
+    #spine-container-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(203px, 1fr));
+        gap: 5px;
+        width: 651px;
+        position: absolute;
+        top: 3180px;
+        left: 450px;
+        z-index: 99;
+    }
+    
+    .spine-group-3 {
+        width: 203px;
+        height: 85px;
+    }
+    
+    #spine-container-4 {
+        display: grid;
+        grid-template-columns: 301px 261px;
+        gap: 35px;
+        width: 597px;
+        position: absolute;
+        top: 4820px;
+        left: 880px;
+        z-index: 99;
+    }
+    
+    #spine-29 {
+        width: 261px;
+        height: 141px;
+    }
+
+    #spine-28 {
+        width: 281px;
+        height: 141px;
     }
 </style>
 </head>
 <body>
-    <div>
-        <img style="width: 100%;" src="../Image/Bg/KyTien_bg.jpg" />
+    <div class="page-container">
+        <img class="bg" style="width: 100%;" src="../Image/Bg/KyTien_bg.jpg" />
+        <div class="infobox">
+            <div class="spine-box" id="spine-banner">
+                <div id="spine-16">
+                    <div id="spine-artwork-16"
+                        class="spine-artwork"
+                        data-spine-dir="json/KyTienJson/"
+                        data-spine-json="KyTien.json"
+                        data-spine-atlas="KyTien.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                    </div>
+                </div>
+            </div>
+            <p id="firstgraph">
+                Khi nhận project này, tôi đã nói: “Con game này sẽ mang tiên khí”<br><br>
+                Tại sao lại là tiên khí??<br>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>1: Trong văn hoá dân gian, hình tượng nhân vật gắn liền với cờ tướng luôn là các bậc trí giả, ẩn sĩ, tiên nhân. Họ đánh cờ ở những nơi có linh khí: non cao, suối biếc, dưới gốc cổ thụ trăm tuổi..<br><br>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>2: Những người chơi cờ tướng phần lớn là đàn ông, ở họ đều có một sự hoài cổ nhất định, thường có tư duy logic, thích phân tích, tính toán chiến thuật. Những người như vậy, họ thích ở trạng thái “tĩnh”, những cũng có nhu cầu thể hiện trí tuệ.<br><br>
+                Concept thần thoại với lối minh hoạ cổ gợi nhắc về văn hoá chơi cờ nguyên bản với tính lịch sử cô đọng, đưa người chơi thoát khỏi khói lửa nhân gian, trở thành 1 bậc trí giả trước mỗi bàn cờ. Nó đem lại cảm giác thoát tục, cũng giữ được cốt lõi trí tuệ - chiến thuật của 1 bàn cờ tướng.<br><br>
+                Hiện game đã xong nhưng chưa được release. Game thuộc bản quyền của Archer
+            </p>
+            <p id="secondgraph">
+                Vùng nhìn + độ sáng màn hình + tương phản sắc là một vấn đề lớn cần giải quyết. Mọi thứ phải được cân bằng ở mức độ thoải mái, vì vậy, nhiều khi phải đánh đổi vẻ rực rỡ để lấy cảm giác dễ chịu, an toàn cho mắt. Nhất là với 1 game có độ “tĩnh” và trạng thái dừng ở 1 screen tương đối lâu như Cờ tướng.
+            </p>
+            <div id="spine-container-1">
+                <div class="spine-box">
+                    <div id="spine-17" class="spine-group-1">
+                        <div id="spine-artwork-17"
+                            class="spine-artwork"
+                            data-spine-dir="json/KyTienJson/"
+                            data-spine-json="ic-co-tuong.json"
+                            data-spine-atlas="ic-co-tuong.atlas"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spine-box">
+                    <div id="spine-18" class="spine-group-1">
+                        <div id="spine-artwork-18"
+                            class="spine-artwork"
+                            data-spine-dir="json/KyTienJson/"
+                            data-spine-json="ic-coUp.json"
+                            data-spine-atlas="ic-coUp.atlas"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                        </div>
+                    </div>
+                </div class="spine-box">
+            </div>
+            <p id="thirdgraph">
+                Animation / Vfx là thứ không thể thiếu trong game. Nhưng cân bằng thời lượng animtion ở những user mới và user đã chơi một thời gian cũng là 1 vấn đề cần giải quyết. ở góc độ Art, đem lại cho user cảm giác thoải mái khi trải nghiệm UI và không gian gamet mới là mục tiêu hàng đầu.
+            </p>
+            <div id="spine-container-2">
+                <div class="spine-box">
+                    <div id="spine-19" class="spine-group-2">
+                        <div id="spine-artwork-19"
+                            class="spine-artwork"
+                            data-spine-dir="json/KyTienJson/"
+                            data-spine-json="KhaiChien.json"
+                            data-spine-atlas="KhaiChien.atlas"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spine-box">
+                    <div id="spine-20" class="spine-group-2">
+                        <div id="spine-artwork-20"
+                            class="spine-artwork"
+                            data-spine-dir="json/KyTienJson/"
+                            data-spine-json="End_battle.json"
+                            data-spine-atlas="End_battle.atlas"
+                            data-spine-anim="2"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                        </div>
+                    </div>
+                </div class="spine-box">
+                <div class="spine-box">
+                    <div id="spine-21" class="spine-group-2">
+                        <div id="spine-artwork-21"
+                            class="spine-artwork"
+                            data-spine-dir="json/KyTienJson/"
+                            data-spine-json="End_battle.json"
+                            data-spine-atlas="End_battle.atlas"
+                            data-spine-anim="0"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                        </div>
+                    </div>
+                </div class="spine-box">
+                <div class="spine-box">
+                    <div id="spine-22" class="spine-group-2">
+                        <div id="spine-artwork-22"
+                            class="spine-artwork"
+                            data-spine-dir="json/KyTienJson/"
+                            data-spine-json="End_battle.json"
+                            data-spine-atlas="End_battle.atlas"
+                            data-spine-anim="1"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                        </div>
+                    </div>
+                </div class="spine-box">
+            </div>
+            <div class="spine-box" id="spine-xemco">
+                <div id="spine-23">
+                    <div id="spine-artwork-23"
+                        class="spine-artwork"
+                        data-spine-dir="json/KyTienJson/"
+                        data-spine-json="Xem_co.json"
+                        data-spine-atlas="Xem_co.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-chuyenban">
+                <div id="spine-24">
+                    <div id="spine-artwork-24"
+                        class="spine-artwork"
+                        data-spine-dir="json/KyTienJson/"
+                        data-spine-json="ChuyenBan.json"
+                        data-spine-atlas="ChuyenBan.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div id="spine-container-3">
+                <div class="spine-box">
+                    <div id="spine-25" class="spine-group-3">
+                        <div id="spine-artwork-25"
+                            class="spine-artwork"
+                            data-spine-dir="json/KyTienJson/"
+                            data-spine-json="Elo.json"
+                            data-spine-atlas="Elo.atlas"
+                            data-spine-fit="cover"
+                            data-spine-skin="co-tuong"
+                        >   
+                            <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spine-box">
+                    <div id="spine-26" class="spine-group-3">
+                        <div id="spine-artwork-26"
+                            class="spine-artwork"
+                            data-spine-dir="json/KyTienJson/"
+                            data-spine-json="end-time.json"
+                            data-spine-atlas="end-time.atlas"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                        </div>
+                    </div>
+                </div class="spine-box">
+                <div class="spine-box">
+                    <div id="spine-27" class="spine-group-3">
+                        <div id="spine-artwork-27"
+                            class="spine-artwork"
+                            data-spine-dir="json/KyTienJson/"
+                            data-spine-json="Elo.json"
+                            data-spine-atlas="Elo.atlas"
+                            data-spine-fit="cover"
+                            data-spine-skin="co-up"
+                        >   
+                            <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                        </div>
+                    </div>
+                </div class="spine-box">
+            </div>
+            <p id="forthgraph">
+                UI: Asset cần được modul hoá và sử dụng lặp lại nhiều lần trong Ux của game. Ui cần đủ đơn giản để tránh rối mắt user, nhưng cũng cần vừa đủ chi tiết để đảm bảo đúng với concept, và lại càng cần rõ ràng hình thái để user nhận đúng chức năng.
+            </p>
+            <label class="highlighttxt" style="position: absolute; top: 3470px; left: 370px;">Hoạ tiết văn hoá</label>
+            <label class="highlighttxt" style="position: absolute; top: 3470px; left: 1020px;">Đưa hoạ tiết vào modul</label>
+            <label class="highlighttxt" style="position: absolute; top: 3830px; left: 370px;">Bộ icon chức năng</label>
+            <label class="highlighttxt" style="position: absolute; top: 4170px; left: 370px;">Bộ icon biểu tượng</label>
+            <label class="highlighttxt" style="position: absolute; top: 4170px; left: 1020px;">Ứng dụng icon biểu tượng</label>
+            <label class="highlighttxt" style="position: absolute; top: 4765px; left: 720px;">Text & Typo</label>
+            <div id="spine-container-4">
+                <div class="spine-box">
+                    <div id="spine-28" class="spine-group-4">
+                        <div id="spine-artwork-28"
+                            class="spine-artwork"
+                            data-spine-dir="json/KyTienJson/"
+                            data-spine-json="ingame-toast.json"
+                            data-spine-atlas="ingame-toast.atlas"
+                            data-spine-fit="cover"
+                            data-spine-anim="0"
+                            data-spine-skin="Luot-cua-ban"
+                        >   
+                            <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spine-box">
+                    <div id="spine-29" class="spine-group-4">
+                        <div id="spine-artwork-29"
+                            class="spine-artwork"
+                            data-spine-dir="json/KyTienJson/"
+                            data-spine-json="ingame-toast.json"
+                            data-spine-atlas="ingame-toast.atlas"
+                            data-spine-anim="1"
+                            data-spine-skin="chieu"
+                        >   
+                            <div class="spine-artwork__fallback">json/KyTienJson/</div>
+                        </div>
+                    </div>
+                </div class="spine-box">
+            </div>
+            <label class="highlighttxt" style="position: absolute; top: 5150px; left: 700px;">Tối ưu Assets</label>
+            <p id="fifthgraph">
+                Việc vẽ ra ra 1 concept phù hợp với game là sự sáng tạo của Art. Tuy nhiên, việc giao tiếp với front end để đưa concept đó thành game lại là câu chuyện lý trí hơn nhiều. Dev và Art luôn có 1 trận chiến về dung lượng và cách tạo compotnent.<br><br>
+                Tối ưu assets bao gồm: tạo ra asset hỗ trợ nguyên lý của engine / Giới hạn bộ màu và điểm màu trong asset / hạn chế lượng asset tồn tại trong game ít nhất có thể / giảm dung lượng asset ở mức tối đa, nhưng vẫn đảm bảo được hiệu quả khi hiển thị trên device. “Kỳ Tiên” phát triển trên cocos, hệ thống điều chỉnh assets có những đặc thù, hiểu engine là việc cần thiết để art có thể đưa ra phương án xử lý assets hiệu quả nhất
+            </p>
+            <p id="sixthgraph" style="color: #608176;">
+                Kỳ Tiên có khoảng 10 màn hình chính với 15 popup phụ cùng loạt hiệu ứng khá quanh co.<br><br>
+                Tổng lượng assets giới hạn và giao được cho phía dev là 11Mb, trong đó có cả file gif/json/jpeg
+            </p>
+            <p id="seventhgraph">
+                Kỳ Tiên có một quá trình phát triển mà ở đó, mỗi cá nhân tham gia vào đều có những thử nghiệm của riêng mình. Nó có th ể là một sản phẩm tiềm năng mãi mãi không được public, nó cũng có thể là thế hệ tiếp theo của một sản phẩm khác đang tạo ra doanh thu cho chủ sở hữu.<br><br>
+                Dù bất kể nó tồn tại ở dạng thức nào. Đây cũng là sản phẩm tôi thấy tự hào khi làm ra - đứa con út của tôi ở mảng 2D
+            </p>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

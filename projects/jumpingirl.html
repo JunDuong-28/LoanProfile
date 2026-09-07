@@ -4,20 +4,250 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Loan Nguyễn Portfolio</title>
-<!-- Spine WebGL runtime, used to load and play the Spine skeleton referenced in the design 
-<script src="spine-player.js"></script>
-<link rel="stylesheet" href="spine-player.css" />-->
+<!-- Spine WebGL runtime, used to load and play the Spine skeleton referenced in the design -->
+<script src="../spine-player.js"></script>
+<link rel="stylesheet" href="../spine-player.css" />
 <style>
     body {
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 1700px;
     }
+
+    .page-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .infobox {
+        position: relative;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        z-index: 10;
+    }
+
+    #firstgraph {
+        position: relative;
+        top: 260px;
+        width: 34%;
+        left: 53%;
+    }
+    
+    #secondgraph {
+        position: absolute;
+        top: 1380px;
+        left: 500px;
+        width: 755px;
+    }
+    
+    #redirectbtn {
+        display: flex;
+        position: relative;
+        top: 270px;
+        left: 64%;
+        width: 370px; 
+        height: 50px; 
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        cursor: pointer; 
+        border-radius: 1%;
+    }
+    
+    #fblink {
+        color: #1373AA;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .spine-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .spine-label {
+        color: #fff;
+        opacity: 0.5;
+    }
+
+    #spine-fairy {
+        position: absolute;
+        top: 1480px;
+        left: 600px;
+        width: 880px;
+        height: 517px;
+    }
+
+    #spine-30 {
+        width: 880px;
+        height: 517px;
+    }
+
+    #spine-clawn {
+        position: absolute;
+        top: 1780px;
+        left: 400px;
+        width: 750px;
+        height: 441px;
+    }
+
+    #spine-31 {
+        width: 750px;
+        height: 441px;
+    }
+
+    #spine-container-1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(246px, 1fr));
+        gap: 15px;
+        width: 65%;
+        position:relative;
+        top: 1430px;
+        transform: translateX(28%);
+        z-index: 99;
+    }
+
+    .spine-group-1 {
+        margin-top: 15px;
+        width: 246px;
+        height: 211px;
+    }
+
+    .spine-group-1 canvas {
+        transform: scale(1);
+    }
+
+    /*#spine-artwork-05 {
+        transform: scale(2);
+    }*/
+
+    
+
+    #spine-09 canvas {
+        transform: scale(1);
+    }
+
+    #spine-treasure {
+        position: relative;
+        top: 1660px;
+        left: 62%;
+        width: 152px;
+        height: 180px;
+    }
+
+    #spine-10 {
+        margin-top: -40px;
+        width: 152px;
+        height: 160px;
+    }
+
+    #spine-container-2 {
+        display: grid;
+        grid-template-columns: 90px 145px;
+        gap: 10px;
+        width: 17%;
+        position:relative;
+        top: 1675px;
+        left: 18%;
+        transform: translateX(28%);
+        z-index: 99;
+    }
+
+    #spine-11 {
+        width: 90px;
+        height: 203px;
+    }
+
+    #spine-12 {
+        width: 145px;
+        height: 169px;
+    }
+
+    #spine-container-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(339px, 1fr));
+        gap: 25px;
+        width: 68%;
+        position:relative;
+        top: 1740px;
+        transform: translateX(23.7%);
+        z-index: 99;
+    }
+
+    .spine-group-3 {
+        margin-top: 15px;
+        width: 339px;
+        height: 620px;
+    }
+    
 </style>
 </head>
 <body>
-    <div>
-        <img style="width: 100%;" src="../Image/Bg/jumping_girl_bg.jpg" />
+    <div class="page-container">
+        <img class="bg" style="width: 100%;" src="../Image/Bg/jumping_girl_bg.jpg" />
+        <div class="infobox">
+            <p id="firstgraph">
+                Năm sản xuất: 2020<br>
+                Thể loại: Hyper casual<br>
+                Nền tảng: Facebook<br>
+                Lượt active hiện tại: 5k active (Thống kê hiển thị trên fb)<br><br>
+                Bản thân phụ trách toàn bộ concept, Ui/Ux, animation cho game trong 4 năm đầu phát triển và vận hành (đến nay chưa thấy có vận hành mới). Đây là game duy nhất điều khiển character ở Hayhay. Mình đã nghĩ đến rất nhiều art style, tuy nhiên lựa chọn style này lại là quyết định của màn hình điện thoại.
+            </p>
+            <div id="redirectbtn">
+                <a 
+                    href="https://www.facebook.com/gaming/play/347909499499999/?source=www_games_hub_recently_played" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    style="display: block; text-decoration: none;"
+                >
+                    <div id="fblink">Chơi thử trên Facebook &gt;&gt;</div>
+                </a>
+            </div>
+            <p id="secondgraph">
+                Điều mình thích nhất và quyết định đưa game này vào profile là vì: mình được tạo human character, cùng các bộ skin của nó. Ngoài ra, bộ effect và animation trong game cũng là điều bản thân cảm thấy ưng ý. Vì một mình làm toàn bộ phần visual cho game, mình ko có nhiều thơn gian để demo, chủ yếu là tạo animation rồi trao đổi trực tiếp với code để game ra đúng ý tưởng.
+            </p>
+            <div class="spine-box" id="spine-fairy">
+                <div id="spine-30">
+                    <div id="spine-artwork-30"
+                        class="spine-artwork"
+                        data-spine-dir="json/JumpingGirlJson/"
+                        data-spine-json="SkinGirl.json"
+                        data-spine-atlas="SkinGirl.atlas"
+                        data-spine-fit="cover"
+                        data-spine-skin="Fairy2"
+                    >   
+                        <div class="spine-artwork__fallback">json/JumpingGirlJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-clawn">
+                <div id="spine-31">
+                    <div id="spine-artwork-31"
+                        class="spine-artwork"
+                        data-spine-dir="json/JumpingGirlJson/"
+                        data-spine-json="SkinGirl.json"
+                        data-spine-atlas="SkinGirl.atlas"
+                        data-spine-fit="cover"
+                        data-spine-skin="Clawn"
+                    >   
+                        <div class="spine-artwork__fallback">json/JumpingGirlJson/</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
