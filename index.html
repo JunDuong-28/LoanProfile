@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="spine-player.css" />
 </head>
 <body>
-
   <!-- ============ HEADER / MENU ============ -->
   <header class="menu">
     <nav class="menu__left">
@@ -171,67 +170,67 @@
         <h3 class="subsection__title">GAME / APP</h3>
         <div class="product-row">
           <div class="product">
-            <img src="Image/Cut/ga-bantrung.png" alt="Bắn Trứng" />
+            <img class="icon" id="logobantrung" src="Image/Cut/ga-bantrung.png" alt="Bắn Trứng" />
             <div>
               <p>Top 100 doanh thu Facebook<br>Top 50 chơi nhiều Facebook<br>1tr+ lượt tải trên google play</p>
-              <div class="project-link"><a href="#">Xem chi tiết &gt;&gt;</a></div>
+              <div class="project-link" id="bantrung">Xem chi tiết &gt;&gt;</div>
             </div>
           </div>
           <div class="product">
-            <img src="Image/Cut/ga-lichviet.png" alt="Lịch Việt" />
+            <img class="icon" id="logolichviet" src="Image/Cut/ga-lichviet.png" alt="Lịch Việt" />
             <div>
               <p>Doanh thu bền vững từ 2015<br>1tr+ lượt tải trên google play</p>
-              <div class="project-link"><a href="#">Xem chi tiết &gt;&gt;</a></div>
+              <div class="project-link" id="lichviet">Xem chi tiết &gt;&gt;</div>
             </div>
           </div>
           <div class="product">
-            <img src="Image/Cut/ga-noithu.png" alt="Nối Thú" />
+            <img class="icon" id="logonoithu" src="Image/Cut/ga-noithu.png" alt="Nối Thú" />
             <div>
               <p>Top 100 chơi nhiều Facebook<br>Top 200 doanh thu Facebook</p>
-              <div class="project-link"><a href="#">Xem chi tiết &gt;&gt;</a></div>
+              <div class="project-link" id="noithu">Xem chi tiết &gt;&gt;</div>
             </div>
           </div>
           <div class="product">
-            <img src="Image/Cut/ga-banbong.png" alt="Bắn bóng" />
+            <img class="icon" id="logobanbong" src="Image/Cut/ga-banbong.png" alt="Bắn bóng" />
             <div>
               <p>Top 100 chơi nhiều Facebook<br>Top 200 doanh thu Facebook</p>
-              <div class="project-link"><a href="#">Xem chi tiết &gt;&gt;</a></div>
+              <div class="project-link" id="banbong">Xem chi tiết &gt;&gt;</div>
             </div>
           </div>
         </div>
         <div class="product-row">
           <div class="product">
-            <img src="Image/Cut/ga-Kyvuong.png" alt="Cờ Tướng" />
+            <img class="icon" id="logokyvuong" src="Image/Cut/ga-Kyvuong.png" alt="Cờ Tướng" />
             <div><p>Cờ Tướng</p>
-              <div class="project-link"><a href="#">Xem chi tiết &gt;&gt;</a></div>
+              <div class="project-link" id="kyvuong">Xem chi tiết &gt;&gt;</div>
             </div>
           </div>
           <div class="product">
-            <img src="Image/Cut/ga-thachdau.png" alt="Quiz Thách Đấu" />
+            <img class="icon" id="logothachdau" src="Image/Cut/ga-thachdau.png" alt="Quiz Thách Đấu" />
             <div>
               <p>Quiz Thách Đấu</p>
-              <div class="project-link"><a href="#">Xem chi tiết &gt;&gt;</a></div>
+              <div class="project-link" id="thachdau">Xem chi tiết &gt;&gt;</div>
             </div>
           </div>
           <div class="product">
-            <img src="Image/Cut/ga-jumpingirl.png" alt="Jumping Girl" />
+            <img class="icon" id="logojumpingirl" src="Image/Cut/ga-jumpingirl.png" alt="Jumping Girl" />
             <div>
               <p>Jumping Girl</p>
-              <div class="project-link"><a href="#">Xem chi tiết &gt;&gt;</a></div>
+              <div class="project-link" id="jumpingirl">Xem chi tiết &gt;&gt;</div>
             </div>
           </div>
           <div class="product">
-            <img src="Image/Cut/ga-bongso.png" alt="NumbleShooter" />
+            <img class="icon" id="logobongso" src="Image/Cut/ga-bongso.png" alt="NumbleShooter" />
             <div>
               <p>NumbleShooter</p>
-              <div class="project-link"><a href="#">Xem chi tiết &gt;&gt;</a></div>
+              <div class="project-link" id="bongso">Xem chi tiết &gt;&gt;</div>
             </div>
           </div>
           <div class="product">
-            <img src="Image/Cut/ga-basketHit.png" alt="BasketFall" />
+            <img class="icon" id="logobaskethit" src="Image/Cut/ga-basketHit.png" alt="BasketFall" />
             <div>
               <p>BasketFall</p>
-              <div class="project-link"><a href="#">Xem chi tiết &gt;&gt;</a></div>
+              <div class="project-link" id="baskethit">Xem chi tiết &gt;&gt;</div>
             </div>
           </div>
         </div>
@@ -374,6 +373,14 @@
 
   </main>
 
-  <script src="script.js"></script>
+  <div id="popupOverlay" class="popup-overlay hidden">
+    <button id="closePopup" class="close-btn" aria-label="Close">&times;</button>
+    <div id="popup" class="popup-box">
+      <iframe id="projFrame" class="projframe" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js">
+  </script>
 </body>
 </html>

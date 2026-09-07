@@ -48,7 +48,70 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.spine-artwork').forEach(initSpineArtwork);
+
+  const overlay = document.getElementById("popupOverlay");
+  const projectFrame = document.getElementById("projFrame");
+  const closeBtn = document.getElementById("closePopup");
+
+  const projects = [
+    "bantrung",
+    "lichviet",
+    "noithu",
+    "banbong",
+    "kyvuong",
+    "thachdau",
+    "jumpingirl",
+    "bongso",
+    "baskethit"
+  ];
+
+  projects.forEach(project => {
+    const projLink = document.getElementById(project);
+    const projLogo = document.getElementById("logo" + project);
+    
+    projLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      projectFrame.src = "/projects/"+ project + ".html";
+      openModal();
+    });
+
+    projLogo.addEventListener('click', (event) => {
+      event.preventDefault();
+      projectFrame.src = "/projects/"+ project + ".html";
+      openModal();
+    });
+  });
+
+  function openModal() {
+    overlay.classList.remove("hidden");
+    document.body.classList.add("modal-open"); // Locks base page scroll
+  }
+
+  function closeModal() {
+    overlay.classList.add("hidden");
+    document.body.classList.remove("modal-open"); // Restores base page scroll
+    projectFrame.src = ""; // Unloads iframe
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+
+  // Close if clicking outside the modal box
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) {
+      closeModal();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (event) => {
+    if (event.key === "Escape" && !overlay.classList.contains("hidden")) {
+      closeModal();
+    }
+  });
 });
+
+
+
 
 function initSpineArtwork(container) {
 
@@ -57,17 +120,15 @@ function initSpineArtwork(container) {
   const atlasFile = container.dataset.spineAtlas;
   const forcedWidth = container.parentElement.getBoundingClientRect().width;
   const forcedHeight = container.parentElement.getBoundingClientRect().height*1.45;
-  console.log (forcedHeight)
+
   const fitMode = container.dataset.spineFit || 'contain';
 
   if (!baseDir || !jsonFile || !atlasFile) return;
 
-  // Force an exact box size if requested, overriding the CSS aspect-ratio
-  // rule. A bare number is treated as pixels; anything else (e.g. "50%",
-  // "20rem") is used as-is.
   if (forcedWidth) {
     container.style.width = /^\d+$/.test(forcedWidth) ? `${forcedWidth}px` : forcedWidth;
     container.style.aspectRatio = 'auto';
+    console.log (container.style.width);
   }
   if (forcedHeight) {
     container.style.height = /^\d+$/.test(forcedHeight) ? `${forcedHeight}px` : forcedHeight;
@@ -81,12 +142,6 @@ function initSpineArtwork(container) {
     return;
   }
 
-  // Fetch and parse the skeleton JSON ourselves first. We need the name of
-  // an animation (and confirm a skin exists) BEFORE constructing the
-  // SpinePlayer, because the player computes its viewport/bounds from the
-  // setup pose at construction time — if no animation/skin is specified up
-  // front, that setup pose can have zero visible attachments, which is what
-  // throws "Animation bounds are invalid: animation".
   fetch(assetBase + jsonFile)
     .then((res) => {
       if (!res.ok) throw new Error('not found');
@@ -108,7 +163,6 @@ function initSpineArtwork(container) {
 
       console.info(`Spine skeleton "${jsonFile}" — animations found:`, animations, '— using skin:', firstSkin);
 
-      // Clear the fallback label and mount the player.
       container.innerHTML = '';
 
       new spine.SpinePlayer(container, {
@@ -121,11 +175,7 @@ function initSpineArtwork(container) {
         skin: firstSkin,
         animation: firstAnimation,
         loop: true,
-        // "contain" (default): letterbox padding keeps the whole skeleton
-        // visible without distortion. "cover": no padding, so the skeleton
-        // fills the box edge-to-edge (may crop or slightly stretch,
-        // depending on how far the box's aspect ratio differs from the
-        // skeleton's natural bounds).
+        
         viewport: fitMode === 'cover'
           ? { padLeft: '0%', padRight: '0%', padTop: '0%', padBottom: '0%' }
           : { padLeft: '5%', padRight: '5%', padTop: '5%', padBottom: '5%' },
@@ -134,20 +184,12 @@ function initSpineArtwork(container) {
         },
         error: (player, msg) => {
           console.error('Spine player failed to load:', msg);
-          console.error(
-            'If this says "Animation bounds are invalid", the most common cause ' +
-            'is a mismatch between the Spine Editor version used to export the ' +
-            'JSON and the spine-player runtime version loaded in index.html ' +
-            '(currently spine-player@4.2.*). Check Spine > Help > About in the ' +
-            'editor and match the major.minor version in the <script> tag.'
-          );
-          // Leave the fallback label visible on failure.
+          
           container.innerHTML = `<div class="spine-artwork__fallback">${baseDir}</div>`;
         },
       });
     })
     .catch(() => {
-      // Assets not present yet — leave the directory label visible so it's
-      // obvious where to drop the exported Spine files.
+      
     });
 }

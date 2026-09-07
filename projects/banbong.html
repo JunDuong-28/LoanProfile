@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Loan Nguyễn Portfolio</title>
+<!-- Spine WebGL runtime, used to load and play the Spine skeleton referenced in the design -->
+<script src="../spine-player.js"></script>
+<link rel="stylesheet" href="../spine-player.css" />
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1700px;
+    }
+
+    .page-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .infobox {
+        position: relative;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        z-index: 10;
+    }
+
+    #firstgraph {
+        position: relative;
+        top: 260px;
+        width: 34%;
+        left: 55%;
+    }
+    
+    #secondgraph {
+        position: relative;
+        top: 950px;
+        width: 47.9%;
+        transform: translateX(50%);
+    }
+    
+    #redirectbtn {
+        display: flex;
+        position: relative;
+        top: 270px;
+        left: 66%;
+        width: 370px; 
+        height: 50px; 
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        cursor: pointer; 
+        border-radius: 1%;
+    }
+    
+    #fblink {
+        color: #1373AA;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    #spine-container-1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(246px, 1fr));
+        gap: 15px;
+        width: 65%;
+        position:relative;
+        top: 1430px;
+        transform: translateX(28%);
+        z-index: 99;
+    }
+
+    .spine-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .spine-label {
+        color: #fff;
+        opacity: 0.5;
+    }
+
+    .spine-group-1 {
+        margin-top: 15px;
+        width: 246px;
+        height: 211px;
+    }
+
+    .spine-group-1 canvas {
+        transform: scale(1);
+    }
+
+    /*#spine-artwork-05 {
+        transform: scale(2);
+    }*/
+
+    #spine-clock {
+        position: relative;
+        top: 1720px;
+        left: 48.6%;
+        width: 96px;
+        height: 120px;
+    }
+
+    #spine-09 {
+        width: 96px;
+        height: 107px;
+    }
+
+    #spine-09 canvas {
+        transform: scale(1);
+    }
+
+    #spine-treasure {
+        position: relative;
+        top: 1660px;
+        left: 62%;
+        width: 152px;
+        height: 180px;
+    }
+
+    #spine-10 {
+        margin-top: -40px;
+        width: 152px;
+        height: 160px;
+    }
+
+    #spine-container-2 {
+        display: grid;
+        grid-template-columns: 90px 145px;
+        gap: 10px;
+        width: 17%;
+        position:relative;
+        top: 1660px;
+        left: 18%;
+        transform: translateX(28%);
+        z-index: 99;
+    }
+
+    #spine-11 {
+        margin-top: 15px;
+        width: 90px;
+        height: 203px;
+    }
+
+    #spine-12 {
+        margin-top: 15px;
+        width: 145px;
+        height: 169px;
+    }
+
+    #spine-container-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(339px, 1fr));
+        gap: 25px;
+        width: 68%;
+        position:relative;
+        top: 1740px;
+        transform: translateX(23.7%);
+        z-index: 99;
+    }
+
+    .spine-group-3 {
+        margin-top: 15px;
+        width: 339px;
+        height: 620px;
+    }
+    
+    #thirdgraph {
+        position: relative;
+        top: 3010px;
+        width: 50.1%;
+        transform: translateX(47%);
+    }
+</style>
+</head>
+<body>
+    <div class="page-container">
+        <img class="bg" style="width: 100%;" src="../Image/bg/OceanPopbg.jpg" />
+        <div class="infobox">
+            <p id="firstgraph">
+                Năm sản xuất: 2019<br>
+                Thể loại: Hyper casual<br>
+                Nền tảng: Facebook<br>
+                Lượt active hiện tại: 179k (thống kê trên fb)<br><br>
+                Bản thân phụ trách toàn bộ concept, animation và visual cho game trong nhưng năm đầu phát triển và vận hành - đến 2024.<br><br>
+                Game đã từng nằm trong top 20 doanh thu facebook năm 2021, hiện nay vẫn trong top 100 doanh thu Facebook.
+            </p>
+            <div id="redirectbtn">
+                <a 
+                    href="https://www.facebook.com/gaming/play/227788504726017/?source=fb_gg_url&ext=1788704710&hash=AedGSVpGDSBJ7QhJzlLUunkrrPc" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    style="display: block; text-decoration: none;"
+                >
+                    <div id="fblink">Chơi thử trên Facebook &gt;&gt;</div>
+                </a>
+            </div>
+            <p id="secondgraph">
+                Làm sao để ngần này thứ màu sắc vivid light có thể cùng nhau nằm trong 1 màn hình mà ko khiến user nhức mắt là 1 vấn đề vô cùng nan giải. Mà hồi đó mình quá cố chấp vào việc tạo ra những quả bóng nhiều chi tiết cho đúng concept. đây thật sự là 1 concept tự làm khó bản thân.
+            </p>
+            <div id="spine-container-1">
+                <div class="spine-box">
+                    <label class="spine-label">daily gift</label>
+                    <div id="spine-05" class="spine-group-1">
+                        <div id="spine-artwork-05"
+                            class="spine-artwork"
+                            data-spine-dir="json/OceanPopJson/"
+                            data-spine-json="daily-gift.json"
+                            data-spine-atlas="daily-gift.atlas"
+                            data-spine-fit="cover"
+                            data-spine-viewport="setup"
+                        >   
+                            <div class="spine-artwork__fallback">json/OceanPopJson/</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spine-box">
+                    <label class="spine-label">starter-pack</label>
+                    <div id="spine-06" class="spine-group-1">
+                        <div id="spine-artwork-06"
+                            class="spine-artwork"
+                            data-spine-dir="json/OceanPopJson/"
+                            data-spine-json="starter-pack.json"
+                            data-spine-atlas="starter-pack.atlas"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/OceanPopJson/</div>
+                        </div>
+                    </div>
+                </div class="spine-box">
+                <div class="spine-box">
+                    <label class="spine-label">wheel</label>
+                    <div id="spine-07" class="spine-group-1">
+                        <div id="spine-artwork-07"
+                            class="spine-artwork"
+                            data-spine-dir="json/OceanPopJson/"
+                            data-spine-json="wheel.json"
+                            data-spine-atlas="wheel.atlas"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/OceanPopJson/</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spine-box">
+                    <label class="spine-label">tournament button</label>
+                    <div id="spine-08" class="spine-group-1">
+                        <div id="spine-artwork-08"
+                            class="spine-artwork"
+                            data-spine-dir="json/OceanPopJson/"
+                            data-spine-json="button_Tournament.json"
+                            data-spine-atlas="button_Tournament.atlas"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/OceanPopJson/</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-clock">
+                <label class="spine-label">clock</label>
+                <div id="spine-09">
+                    <div id="spine-artwork-09"
+                        class="spine-artwork"
+                        data-spine-dir="json/OceanPopJson/"
+                        data-spine-json="clock.json"
+                        data-spine-atlas="clock.atlas"
+                        data-spine-anim="0"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/OceanPopJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-treasure">
+                <label class="spine-label">treasure</label>
+                <div id="spine-10">
+                    <div id="spine-artwork-10"
+                        class="spine-artwork"
+                        data-spine-dir="json/OceanPopJson/"
+                        data-spine-json="tresure.json"
+                        data-spine-atlas="tresure.atlas"
+                        data-spine-anim="0"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/OceanPopJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div id="spine-container-2">
+                <div class="spine-box">
+                    <label class="spine-label" style="margin-bottom: -8px;">jelly open</label>
+                    <div id="spine-11" class="spine-group-2">
+                        <div id="spine-artwork-11"
+                            class="spine-artwork"
+                            data-spine-dir="json/OceanPopJson/"
+                            data-spine-json="jelly-open2.json"
+                            data-spine-atlas="jelly-open2.atlas"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/OceanPopJson/</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spine-box">
+                    <label class="spine-label" style="margin-bottom: -8px;">octopus</label>
+                    <div id="spine-12" class="spine-group-2">
+                        <div id="spine-artwork-12"
+                            class="spine-artwork"
+                            data-spine-dir="json/OceanPopJson/"
+                            data-spine-json="octopus.json"
+                            data-spine-atlas="octopus.atlas"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/OceanPopJson/</div>
+                        </div>
+                    </div>
+                </div class="spine-box">
+            </div>
+            <div id="spine-container-3">
+                <div class="spine-box">
+                    <label class="spine-label">Result / Popall</label>
+                    <div id="spine-13" class="spine-group-3">
+                        <div id="spine-artwork-11"
+                            class="spine-artwork"
+                            data-spine-dir="json/OceanPopJson/"
+                            data-spine-json="Result.json"
+                            data-spine-atlas="Result.atlas"
+                            data-spine-fit="cover"
+                            data-spine-anim="0"
+                        >   
+                            <div class="spine-artwork__fallback">json/OceanPopJson/</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spine-box">
+                    <label class="spine-label">watch video</label>
+                    <div id="spine-14" class="spine-group-3">
+                        <div id="spine-artwork-12"
+                            class="spine-artwork"
+                            data-spine-dir="json/OceanPopJson/"
+                            data-spine-json="watchvideo2.json"
+                            data-spine-atlas="watchvideo2.atlas"
+                            data-spine-fit="cover"
+                        >   
+                            <div class="spine-artwork__fallback">json/OceanPopJson/</div>
+                        </div>
+                    </div>
+                </div class="spine-box">
+                <div class="spine-box">
+                    <label class="spine-label">Result / X2Bubble</label>
+                    <div id="spine-15" class="spine-group-3">
+                        <div id="spine-artwork-15"
+                            class="spine-artwork"
+                            data-spine-dir="json/OceanPopJson/"
+                            data-spine-json="Result.json"
+                            data-spine-atlas="Result.atlas"
+                            data-spine-fit="cover"
+                            data-spine-anim="1"
+                        >   
+                            <div class="spine-artwork__fallback">json/OceanPopJson/</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p id="thirdgraph">
+                Cảm xúc của mình đối với game này khá lạ.  Vừa bị thử thách trong concept và cân bằng màu (do bản thân tự làm khó khi lựa chọn bảng màu vivit light) , vừa cố chấp vào 1 style art mình đã quen thuộc từ lâu, lại ko đủ thời gian nghiên cứu 1 style khác (mình chỉ có 3 tuần để cho ra bản realese đầu tiên). Nó khiến mình vừa cấn vì làm chưa tới, lại vừa tự hào vì nó là 1 trong 2 game đem lại doanh thu lớn cho cty ở những năm đầu thành lập. Mặc dù sau đó, team product đã tạo ra các sản phẩm bắn bóng khác nhau với các style dễ chịu hơn, Ocean pop vẫn là 1 con game có số lượng người chơi ổn định.<br><br>
+                Và bằng một lý do nào đó, game không thể đổi Ui. giải pháp phía product đưa ra là làm các game bắn bóng khác. tuy nhiên là vẫn chưa có con game bắn bóng nào của cty vượt qua được OceanPop
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

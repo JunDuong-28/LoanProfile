@@ -12,7 +12,7 @@
 body {
   margin: 0;
   min-height: 100vh; /* Ensures the body always covers the full screen height */
-  width: 100vw;
+  width: 1920px;
   font-family: var(--font-base);
   color: var(--color-text);
 
@@ -23,8 +23,8 @@ body {
                     url("Image/Cut/bg-bottom.jpg");
   background-repeat: no-repeat,
                     no-repeat;
-  background-position: center top,
-                      center bottom;
+  background-position: left top,
+                      left bottom;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -38,7 +38,7 @@ a { color: inherit; text-decoration: none; }
   padding: 20px 100px;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 9999;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -86,7 +86,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: flex-start;
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
   padding: 1% 5% 1% 5%;
 }
 
@@ -243,7 +243,7 @@ a { color: inherit; text-decoration: none; }
 
 .capacity-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
   gap: 2%;
   width: 90%;
   align-items: center;
@@ -261,7 +261,7 @@ a { color: inherit; text-decoration: none; }
 .capacity-card {
   position: relative;
   padding: 30px 20px;
-  height: 25.5vw;
+  height: 25.5%;
   overflow: hidden;
   z-index: 1;
 }
@@ -269,18 +269,18 @@ a { color: inherit; text-decoration: none; }
 .capacity-card::before {
   content: "";
   position: absolute;
-  inset: 0;                   /* Stretches across top, right, bottom, left */
+  inset: 0;
   background-image: url("Image/Cut/bg-capacity.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.45;               /* Adjust image opacity here (0.0 to 1.0) */
-  z-index: -1;                /* Keeps the image behind your card content */
+  opacity: 0.45;
+  z-index: -1; 
 }
 
 .capacity-icon {
   position: relative;
-  width: 8vw;
+  width: 8%;
   margin-bottom: -15%;
   z-index: 2;
 }
@@ -368,13 +368,13 @@ a { color: inherit; text-decoration: none; }
 
 .video-wrapper {
   width: 32%;
-  max-width: 800px; /* Adjust maximum width to fit your layout */
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .video-wrapper iframe {
   width: 100%;
-  aspect-ratio: 16 / 9; /* Automatically maintains proper video proportions */
+  aspect-ratio: 16 / 9;
   border: none;
   display: block;
 }
@@ -482,6 +482,23 @@ a { color: inherit; text-decoration: none; }
 
 .project-link {
   text-align: end;
+  color: #A64D35; 
+  text-decoration: none;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.project-link:hover {
+  background-color: #A64D35;
+  color: #ffffff;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon:hover {
+  background-color: #695d57;
 }
 
 /* ======================================================================
@@ -601,7 +618,7 @@ a { color: inherit; text-decoration: none; }
     padding: 24px 16px;
   }
 
-  .capacity-icon { width: clamp(48px, 16vw, 90px); }
+  .capacity-icon { width: clamp(48px, 16%, 90px); }
 
   /* ---------- Công Cụ ---------- */
   .tools-row { gap: 32px; }
@@ -658,4 +675,67 @@ a { color: inherit; text-decoration: none; }
   .hero__heading h1 { font-size: 26px; }
   .section__title { font-size: 26px; }
   .product img { width: 72px; height: 72px; }
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0; /* top: 0, right: 0, bottom: 0, left: 0 */
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+  backdrop-filter: blur(2px);
+}
+
+/* Positioned from center-top of viewport */
+.popup-box {
+  position: fixed;
+  top: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1728px;
+  
+  /* Constrain height to remaining viewport so the iframe scrolls */
+  height: calc(100vh - 77px); 
+  
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+/* Fills the popup container so its internal content scrolls */
+.projframe, #projFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  flex: 1;
+  display: block;
+}
+
+/* Close button */
+.close-btn {
+  position: fixed;
+  top: 97px;
+  right: 0.5vw;
+  background: transparent;
+  border: none;
+  font-size: 80px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1000;
+  line-height: 1;
+  background-color: crimson;
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+}
+
+/* Visibility toggle */
+.hidden {
+  display: none !important;
+}
+
+body.modal-open {
+  overflow: hidden !important;
 }

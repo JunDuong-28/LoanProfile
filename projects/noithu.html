@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Loan Nguyễn Portfolio</title>
+<!-- Spine WebGL runtime, used to load and play the Spine skeleton referenced in the design -->
+<script src="../spine-player.js"></script>
+<link rel="stylesheet" href="../spine-player.css" />
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1700px;
+    }
+
+    .page-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .infobox {
+        position: relative;
+        color: #fff;
+        font-size: 19.5px;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        z-index: 10;
+    }
+
+    #firstgraph {
+        position: relative;
+        top: 200px;
+        width: 35%;
+        left: 50%;
+    }
+
+    #secondgraph {
+        position: relative;
+        top: 850px;
+        width: 55%;
+        transform: translateX(40%);
+    }
+
+    #thirdgraph {
+        position: relative;
+        top: 1340px;
+        width: 55%;
+        transform: translateX(40%);
+    }
+    
+    #forthgraph {
+        position: relative;
+        top: 1800px;
+        width: 45%;
+        transform: translateX(58%);
+    }
+
+    #redirectbtn {
+        display: flex;
+        position: relative;
+        top: 210px;
+        left: 62.5%;
+        width: 370px; 
+        height: 50px; 
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        cursor: pointer; 
+        border-radius: 1%;
+    }
+    
+    #fblink {
+        color: #1373AA;
+        font-weight: 700;
+        text-align: center;
+    }
+
+
+    #spine-02 {
+        position: relative;
+        top: 1830px;
+        left: 38%;
+        transform: translateX(-50%);
+        width: 336px;
+        height: 339px;
+        z-index: 99;
+        overflow: hidden; 
+        border-radius: 10px;
+    }
+
+    #spine-03 {
+        position: relative;
+        top: 1495px;
+        left: 55%;
+        transform: translateX(-50%);
+        width: 197px;
+        height: 76px;
+        z-index: 99;
+        border-radius: 2px;
+    }
+    
+    #spine-artwork-03 canvas {
+        transform: scale(1);
+        transform-origin: 50% 50%;
+    }
+    
+    #spine-04 {
+        position: relative;
+        top: 1520px;
+        left: 55%;
+        transform: translateX(-50%);
+        width: 197px;
+        height: 96px;
+        z-index: 99;
+        border-radius: 2px;
+    }
+    
+    #spine-artwork-04 canvas {
+        transform: scale(1);
+        transform-origin: 50% 50%;
+    }
+</style>
+</head>
+<body>
+    <div class="page-container">
+        <img class="bg" style="width: 100%;" src="../Image/bg/OnetX_bg.jpg" />
+        <div class="infobox">
+            <p id="firstgraph">
+                Năm sản xuất: 2019<br>
+                Thể loại: Hyper casual<br>
+                Nền tảng: Facebook<br>
+                Lượt active hiện tại: 278K active (Thống kê hiển thị trên fb)<br><br>
+                Lúc nặn game này, mình mất khoảng 3 ngày cho Ui, tiền đề là sử dụng lại bộ character gốc và Ux của năm 2015. Mình tham gia vận hành game này cho đến lúc nghỉ ở Hayhay.<br><br>
+                Bởi đây là 1 con game clone theo 1 huyền thoại trên pc trước đó, mình cố gắng giữ lại một số đồ hoạ đặc trưng và stle cổ. vì vậy, xét về mặt artwork, nó ko thể tính là 1 game đẹp. Nhưng xét về góc độ quen thuộc với người chơi, nó đem lại hiệu quả bất ngờ. Đó cũng là lý do vì sao Onet-X luôn trong top 50 game fb cho đến năm 2024.<br><br>
+                Hiện nay, do thay đổi thế hệ chơi, vận hành đã đổi lại UI vài lần để cho ra hình thái hiện tại. Nhưng không thể phủ nhận rằng tiền đề phát triển của game này là do mình tạo ra.
+            </p>
+            <div id="redirectbtn">
+                <a 
+                    href="https://www.facebook.com/gaming/play/220801932630391/?source=fb_gg_url&ext=1788704584&hash=AeegcFLN1a9woRkuHuJ0DK2nAck" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    style="display: block; text-decoration: none;"
+                >
+                    <div id="fblink">Chơi thử trên Facebook &gt;&gt;</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="infobox">
+            <p id="secondgraph">
+                Giai đoạn mình tham gia vận hành, chủ yếu nhất vẫn là hệ thống banner cho cơ chế ranking nhằm sữ chân người chơi quay lại vòng game nhiều hơn.<br><br>
+                Bộ banner dưới đây  thuộc sản phẩm marketing. Mục tiêu là tăng cảm giác thắng thua của người chơi. Giai đoạn thực hiện camping này khá dài và trải đều cho tất cả các game đang phát hành của hayhay. Nên thứ tốn não nhất trong bộ banner không phải là trình bày thế nào, nó lại là làm sao kích thích được người chơi bấm vào và chơi game. mỗi game 1 cocnept khác nhau, style art khác nhau, điều đó khiến con số banner mình phải tạo ra rất lớn, và mỗi banner không được giống nhau.
+            </p>
+        </div>
+        
+        <div class="infobox">
+            <p id="thirdgraph">
+                Đối với hyper casual clone, mình có 2 cách để lựa chọn phong cách và style:<br><br>
+                1: Game có lối chơi hơi mang tính “động” và chưa từng đi vào lịch sử: chọn concept mới và sự dụng style mới, UX cũng mới để phát triển game.  Shoot Bubble / Number Shoot là ví dụ.<br><br>
+                2: Game có lối chơi đã từng là huyện thoại, là game đi theo tuổi thơ của rất nhiều thế hệ: mình lựa chọn giữ lại những gì quen thuộc nhất với người chơi Ux giữ nguyên, Ui làm mới ở mức độ vừa phải. Nó đem lại cảm giác hoài niệm thân thuộc. EggShoot Dynomite / Onet-match được làm theo hướng này.<br><br>
+                Sau khi phát triển một thời gian và có lượng người chơi nhất định,  mình đã đổi bộ thú mới để giữ bản quyền thật sự cho game. Vẫn sử dụng pixel art cho character để giữ lại “chất” của game.
+            </p>
+        </div>
+        
+        <div class="infobox">
+            <p id="forthgraph">
+                Aniation ko có gì nhiều đâu. con gấu này chỉ là 1 thử nghiệm marketing game thôi.
+            </p>
+        </div>
+
+        <div id="spine-02">
+            <div id="spine-artwork-02"
+                class="spine-artwork"
+                data-spine-dir="json/OnetXJson/"
+                data-spine-json="MeFabulous.json"
+                data-spine-atlas="MeFabulous.atlas"
+                data-spine-viewport="setup"
+                data-spine-fit="cover"
+            >   
+                <div class="spine-artwork__fallback">json/OnetXJson/</div>
+            </div>
+        </div>
+
+        <div id="spine-03">
+            <div id="spine-artwork-03"
+                class="spine-artwork"
+                data-spine-dir="json/OnetXJson/"
+                data-spine-json="praise.json"
+                data-spine-atlas="praise.atlas"
+                data-spine-fit="cover"
+            >   
+                <div class="spine-artwork__fallback">json/OnetXJson/</div>
+            </div>
+        </div>
+        
+        <div id="spine-04">
+            <div id="spine-artwork-04"
+                class="spine-artwork"
+                data-spine-dir="json/OnetXJson/"
+                data-spine-json="time_is_up.json"
+                data-spine-atlas="time_is_up.atlas"
+                data-spine-fit="cover"
+            >   
+                <div class="spine-artwork__fallback">json/OnetXJson/</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
