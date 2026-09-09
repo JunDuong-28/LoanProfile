@@ -4,20 +4,445 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Loan Nguyễn Portfolio</title>
-<!-- Spine WebGL runtime, used to load and play the Spine skeleton referenced in the design 
-<script src="spine-player.js"></script>
-<link rel="stylesheet" href="spine-player.css" />-->
+<!-- Spine WebGL runtime, used to load and play the Spine skeleton referenced in the design -->
+<script src="../spine-player.js"></script>
+<link rel="stylesheet" href="../spine-player.css" />
 <style>
     body {
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 1700px;
     }
+
+    .page-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .infobox {
+        position: relative;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        z-index: 10;
+    }
+
+    #firstgraph {
+        position: relative;
+        top: 260px;
+        width: 34%;
+        left: 53%;
+    }
+    
+    #redirectbtn {
+        display: flex;
+        position: absolute;
+        top: 650px;
+        left: 1030px;
+        width: 370px; 
+        height: 50px; 
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        cursor: pointer; 
+        border-radius: 1%;
+    }
+    
+    #fblink {
+        color: #1373AA;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .spine-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .spine-label {
+        color: #fff;
+        opacity: 0.5;
+    }
+
+    #spine-home {
+        position: absolute;
+        top: 900px;
+        left: 100px;
+        width: 520px;
+        height: 911px;
+    }
+
+    #spine-50 {
+        width: 520px;
+        height: 911px;
+    }
+
+    #spine-homeplay {
+        position: absolute;
+        top: 1008px;
+        left: 520px;
+        width: 520px;
+        height: 911px;
+    }
+
+    #spine-51 {
+        width: 520px;
+        height: 911px;
+    }
+
+    #spine-spring {
+        position: absolute;
+        top: 1280px;
+        left: 1020px;
+        width: 270px;
+        height: 381px;
+    }
+
+    #spine-52 {
+        width: 270px;
+        height: 381px;
+    }
+
+    #spine-soclose {
+        position: absolute;
+        top: 1508px;
+        left: 520px;
+        width: 520px;
+        height: 911px;
+    }
+
+    #spine-53 {
+        width: 520px;
+        height: 911px;
+    }
+
+    #spine-getpoint {
+        position: absolute;
+        top: 1680px;
+        left: 660px;
+        width: 329px;
+        height: 168px;/* background-color: #1373AA; opacity: 0.5;*/
+    }
+
+    #spine-54 {
+        width: 329px;
+        height: 168px;
+    }
+
+    #spine-awesome {
+        position: absolute;
+        top: 1680px;
+        left: 1000px;
+        width: 280px;
+        height: 208px;
+    }
+
+    #spine-55 {
+        width: 226px;
+        height: 208px;
+    }
+
+    #spine-raimeball {
+        position: absolute;
+        top: 1850px;
+        left: 700px;
+        width: 140px;
+        height: 148px;
+    }
+
+    #spine-56 {
+        width: 140px;
+        height: 148px;
+    }
+
+    #spine-comet {
+        position: absolute;
+        top: 1850px;
+        left: 780px;
+        width: 575px;
+        height: 148px;
+    }
+
+    #spine-57 {
+        width: 575px;
+        height: 148px;
+    }
+
+    #spine-star {
+        position: absolute;
+        top: 1990px;
+        left: 700px;
+        width: 140px;
+        height: 148px;
+    }
+
+    #spine-58 {
+        margin-bottom: -100%;
+        width: 140px;
+        height: 148px;
+    }
+
+    #spine-59 {
+        width: 140px;
+        height: 148px;
+    }
+
+    #spine-tapplay {
+        position: absolute;
+        top: 2020px;
+        left: 880px;
+        width: 376px;
+        height: 148px;
+    }
+
+    #spine-60 {
+        width: 376px;
+        height: 148px;
+    }
+
+    #spine-explode1 {
+        position: absolute;
+        top: 2150px;
+        left: 660px;
+        width: 314px;
+        height: 330px;
+    }
+
+    #spine-61 {
+        width: 314px;
+        height: 330px;
+    }
+
+    #spine-explode2 {
+        position: absolute;
+        top: 2170px;
+        left: 1000px;
+        width: 314px;
+        height: 330px;
+    }
+
+    #spine-62 {
+        width: 314px;
+        height: 330px;
+    }
+ /*   
+    #spine-container-1 {
+        display: grid;
+        grid-template-columns: 338px 207px;
+        gap: 30px;
+        width: 575px;
+        position:absolute;
+        top: 2000px;
+        left: 500px;
+        z-index: 30;
+    }
+
+    .spine-group-1 {
+        width: 198px;
+        height: 181px;
+    }
+
+    #spine-artwork-40 {
+        margin-bottom: -181px;
+    }*/
 </style>
 </head>
 <body>
-    <div>
-        <img style="width: 100%;" src="../Image/Bg/BasketBallBg.jpg" />
+    <div class="page-container">
+        <img class="bg" style="width: 100%;" src="../Image/Bg/BasketBallBg.jpg" />
+        <div class="infobox">
+            <div id="redirectbtn">
+                <a 
+                    href="https://www.facebook.com/gaming/play/1224362211248752?source=fb_gg_url&ext=1788704979&hash=Aec99lnakuhm0HdTaDeOJ0rMmJg" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    style="display: block; text-decoration: none;"
+                >
+                    <div id="fblink">Chơi thử trên Facebook &gt;&gt;</div>
+                </a>
+            </div>
+            <div class="spine-box" id="spine-home">
+                <div id="spine-50">
+                    <div id="spine-artwork-50"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="Home.json"
+                        data-spine-atlas="Home.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-homeplay">
+                <div id="spine-51">
+                    <div id="spine-artwork-51"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="HomeToPlay.json"
+                        data-spine-atlas="HomeToPlay.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-spring">
+                <div id="spine-52">
+                    <div id="spine-artwork-52"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="spring.json"
+                        data-spine-atlas="spring.atlas"
+                        data-spine-anim="1"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="spine-box" id="spine-soclose">
+                <div id="spine-53">
+                    <div id="spine-artwork-53"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="so_close.json"
+                        data-spine-atlas="so_close.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+            </div>-->
+            <div class="spine-box" id="spine-getpoint">
+                <div id="spine-54">
+                    <div id="spine-artwork-54"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="get-point.json"
+                        data-spine-atlas="get-point.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-awesome">
+                <div id="spine-55">
+                    <div id="spine-artwork-55"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="Awesome.json"
+                        data-spine-atlas="Awesome.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-raimeball">
+                <div id="spine-56">
+                    <div id="spine-artwork-56"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="RaimeBall.json"
+                        data-spine-atlas="RaimeBall.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-comet">
+                <div id="spine-57">
+                    <div id="spine-artwork-57"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="comet.json"
+                        data-spine-atlas="comet.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-star">
+                <div id="spine-58">
+                    <div id="spine-artwork-58"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="star.json"
+                        data-spine-atlas="star.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+                <div id="spine-59">
+                    <div id="spine-artwork-59"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="stareat.json"
+                        data-spine-atlas="stareat.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-tapplay">
+                <div id="spine-60">
+                    <div id="spine-artwork-60"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="TapToPlay.json"
+                        data-spine-atlas="TapToPlay.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-explode1">
+                <div id="spine-61">
+                    <div id="spine-artwork-61"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="Explosion.json"
+                        data-spine-atlas="Explosion.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-explode2">
+                <div id="spine-62">
+                    <div id="spine-artwork-62"
+                        class="spine-artwork"
+                        data-spine-dir="json/BasketBallJson/"
+                        data-spine-json="Explowsion2.json"
+                        data-spine-atlas="Explowsion2.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/BasketBallJson/</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
