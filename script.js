@@ -71,13 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     projLink.addEventListener('click', (event) => {
       event.preventDefault();
-      projectFrame.src = "/LoanProfile/projects/"+ project + ".html" + Date.now();
+      projectFrame.src = "/LoanProfile/projects/"+ project + ".html?t=" + Date.now();
       openModal();
     });
 
     projLogo.addEventListener('click', (event) => {
       event.preventDefault();
-      projectFrame.src = "/LoanProfile/projects/"+ project + ".html" + Date.now();
+      projectFrame.src = "/LoanProfile/projects/"+ project + ".html?t=" + Date.now();
       openModal();
     });
   });
