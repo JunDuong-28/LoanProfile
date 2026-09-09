@@ -71,13 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     projLink.addEventListener('click', (event) => {
       event.preventDefault();
-      projectFrame.src = "/projects/"+ project + ".html";
+      projectFrame.src = "/LoanProfile/projects/"+ project + ".html";
       openModal();
     });
 
     projLogo.addEventListener('click', (event) => {
       event.preventDefault();
-      projectFrame.src = "/projects/"+ project + ".html";
+      projectFrame.src = "/LoanProfile/projects/"+ project + ".html";
       openModal();
     });
   });
@@ -109,9 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-
-
 
 function initSpineArtwork(container) {
 

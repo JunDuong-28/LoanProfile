@@ -4,20 +4,297 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Loan Nguyễn Portfolio</title>
-<!-- Spine WebGL runtime, used to load and play the Spine skeleton referenced in the design 
-<script src="spine-player.js"></script>
-<link rel="stylesheet" href="spine-player.css" />-->
+<!-- Spine WebGL runtime, used to load and play the Spine skeleton referenced in the design -->
+<script src="../spine-player.js"></script>
+<link rel="stylesheet" href="../spine-player.css" />
 <style>
     body {
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 1700px;
     }
+
+    .page-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .infobox {
+        position: relative;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        z-index: 10;
+    }
+
+    #firstgraph {
+        position: relative;
+        top: 260px;
+        width: 34%;
+        left: 53%;
+    }
+    
+    #redirectbtn {
+        display: flex;
+        position: absolute;
+        top: 685px;
+        left: 1200px;
+        width: 370px; 
+        height: 50px; 
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        cursor: pointer; 
+        border-radius: 1%;
+    }
+    
+    #fblink {
+        color: #1373AA;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .spine-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .spine-label {
+        color: #fff;
+        opacity: 0.5;
+    }
+
+    #spine-logo {
+        position: absolute;
+        top: 320px;
+        left: 420px;
+        width: 650px;
+        height: 301px;
+    }
+
+    #spine-43 {
+        width: 650px;
+        height: 301px;
+    }
+
+    #spine-racing {
+        position:absolute;
+        top: 2285px;
+        left: 160px;
+        width: 1065px;
+        height: 344px;
+    }
+
+    #spine-44 {
+        width: 1065px;
+        height: 344px;
+    }
+
+    #spine-praise {
+        position: absolute;
+        top: 2230px;
+        left: 800px;
+        width: 485px;
+        height: 255px;
+    }
+
+    #spine-45 {
+        width: 485px;
+        height: 255px;
+    }
+
+    #spine-ship {
+        position:absolute;
+        top: 2430px;
+        left: 310px;
+        width: 559px;
+        height: 500px;
+    }
+
+    #spine-46 {
+        width: 559px;
+        height: 500px;
+    }
+
+    #spine-best {
+        position: absolute;
+        top: 2500px;
+        left: 870px;
+        width: 480px;
+        height: 404px;
+    }
+
+    #spine-47 {
+        width: 480px;
+        height: 404px;
+    }
+
+    #spine-blackhole {
+        position:absolute;
+        top: 2930px;
+        left: 400px;
+        width: 293px;
+        height: 215px;
+    }
+
+    #spine-48 {
+        width: 293px;
+        height: 215px;
+    }
+
+    #spine-treasure {
+        position: absolute;
+        top: 3000px;
+        left: 733px;
+        width: 109px;
+        height: 100px;
+    }
+
+    #spine-49 {
+        width: 109px;
+        height: 100px;
+    }
+ /*   
+    #spine-container-1 {
+        display: grid;
+        grid-template-columns: 338px 207px;
+        gap: 30px;
+        width: 575px;
+        position:absolute;
+        top: 2000px;
+        left: 500px;
+        z-index: 30;
+    }
+
+    .spine-group-1 {
+        width: 198px;
+        height: 181px;
+    }
+
+    #spine-artwork-40 {
+        margin-bottom: -181px;
+    }*/
 </style>
 </head>
 <body>
-    <div>
-        <img style="width: 100%;" src="../Image/Bg/NumberShoot_bg.jpg" />
+    <div class="page-container">
+        <img class="bg" style="width: 100%;" src="../Image/Bg/NumberShoot_bg.jpg" />
+        <div class="infobox">
+            <div id="redirectbtn">
+                <a 
+                    href="https://www.facebook.com/gaming/play/134374228549110?source=fb_gg_url&ext=1788704944&hash=Aec4BRE-TvFBY44ctxcVoaV21P8" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    style="display: block; text-decoration: none;"
+                >
+                    <div id="fblink">Chơi thử trên Facebook &gt;&gt;</div>
+                </a>
+            </div>
+            <div class="spine-box" id="spine-logo">
+                <div id="spine-43">
+                    <div id="spine-artwork-43"
+                        class="spine-artwork"
+                        data-spine-dir="json/NumberShootJson/"
+                        data-spine-json="Number-logo.json"
+                        data-spine-atlas="Number-logo.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/NumberShootJson/</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spine-box" id="spine-racing">
+                <div id="spine-44">
+                    <div id="spine-artwork-44"
+                        class="spine-artwork"
+                        data-spine-dir="json/NumberShootJson/"
+                        data-spine-json="Racing.json"
+                        data-spine-atlas="Racing.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/NumberShootJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-praise">
+                <div id="spine-45">
+                    <div id="spine-artwork-45"
+                        class="spine-artwork"
+                        data-spine-dir="json/NumberShootJson/"
+                        data-spine-json="praise.json"
+                        data-spine-atlas="praise.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/NumberShootJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-ship">
+                <div id="spine-46">
+                    <div id="spine-artwork-46"
+                        class="spine-artwork"
+                        data-spine-dir="json/NumberShootJson/"
+                        data-spine-json="spaceship.json"
+                        data-spine-atlas="spaceship.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/NumberShootJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-best">
+                <div id="spine-47">
+                    <div id="spine-artwork-47"
+                        class="spine-artwork"
+                        data-spine-dir="json/NumberShootJson/"
+                        data-spine-json="new best.json"
+                        data-spine-atlas="new best.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/NumberShootJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-blackhole">
+                <div id="spine-48">
+                    <div id="spine-artwork-48"
+                        class="spine-artwork"
+                        data-spine-dir="json/NumberShootJson/"
+                        data-spine-json="blackHole.json"
+                        data-spine-atlas="blackHole.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/NumberShootJson/</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spine-box" id="spine-treasure">
+                <div id="spine-49">
+                    <div id="spine-artwork-49"
+                        class="spine-artwork"
+                        data-spine-dir="json/NumberShootJson/"
+                        data-spine-json="Treasure.json"
+                        data-spine-atlas="Treasure.atlas"
+                        data-spine-fit="cover"
+                    >   
+                        <div class="spine-artwork__fallback">json/NumberShootJson/</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
