@@ -153,14 +153,17 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   overflow: hidden;
   border-radius: 16px;
-  touch-action: pan-y pinch-zoom;
 }
 
 .spine-artwork canvas {
   width: 100%;
   height: 100%;
   display: block;
-  touch-action:  pan-y pinch-zoom;
+}
+
+.spine-artwork,
+.spine-artwork canvas {
+  pointer-events: none;
 }
 
 .spine-artwork__fallback {
@@ -520,9 +523,6 @@ a { color: inherit; text-decoration: none; }
     margin-bottom: 24px;
   }
 
-  /* Overrides the hardcoded inline `style="width: 950px"` / `"width: 1200px"`
-     on .section__lede in index.html — inline styles need !important from a
-     stylesheet to be overridden. */
   .section__lede {
     width: auto !important;
     max-width: 100% !important;
@@ -540,12 +540,6 @@ a { color: inherit; text-decoration: none; }
   }
 
   .hero__avatar-wrap {
-    /* Bleeds slightly past the page's side padding to make the Spine
-       artwork bigger on mobile without touching the desktop rule above.
-       script.js reads this element's *rendered* width/height at load time,
-       so making the box bigger here is enough — no JS changes needed.
-       Tune the width % to make it larger/smaller; keep margin-left/right
-       at half the (width - 100%) so it stays centered. */
     width: 122%;
     margin-left: -11%;
     margin-right: -11%;
@@ -553,14 +547,6 @@ a { color: inherit; text-decoration: none; }
     aspect-ratio: 1112 / 902;
   }
 
-  /* The Spine player auto-fits the whole animation's bounds into the box
-     ("contain"), so if any part of the animation (e.g. mist/particle
-     effects) reaches wider than the character itself, the player zooms out
-     to fit that too — leaving the character small in a mostly-empty frame.
-     Since .spine-artwork already clips overflow, we can crop back in with a
-     CSS zoom on the canvas instead of fighting Spine's own fit math.
-     Tune this scale value up/down until the character fills the frame the
-     way you want; overflow is simply cropped by the container. */
   .spine-artwork canvas {
     transform: scale(2.2);
     transform-origin: 50% 50%;
@@ -571,8 +557,6 @@ a { color: inherit; text-decoration: none; }
     height: auto;
   }
 
-  /* Overrides the inline `padding-left: 35%; padding-right: 10%;` set on
-     this element in index.html. */
   #hero__info_Block {
     padding-left: 4% !important;
     padding-right: 4% !important;
