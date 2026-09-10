@@ -59,16 +59,7 @@ function initSpineArtwork(container) {
       const targetAnim = parseInt(container.dataset.spineAnim, 10) || 0;
       const firstAnimation = animations[targetAnim];
 
-      // Skin selection mirrors animation selection: data-spine-skin can be a
-      // numeric index into the skins array (like data-spine-anim), the skin's
-      // actual name (e.g. "Skin1"), or a COMMA-SEPARATED LIST of either to merge
-      // multiple skins together (e.g. "default,Skin1" or "0,1"). Some skeletons
-      // (e.g. one where decoration lives in "default" but the actual characters
-      // and other set pieces only exist in "Skin1"/"Skin2") split their content
-      // across skins rather than putting everything in one — a single skin name
-      // alone silently omits any slot whose only attachment lives in a different
-      // skin, no error, just an incomplete render. Listing more than one entry
-      // here builds a combined skin from all of them instead of picking just one.
+      
       function resolveSkinEntry(entry) {
         const trimmed = entry.trim();
         if (!trimmed) return null;
@@ -93,9 +84,7 @@ function initSpineArtwork(container) {
       if (!skinsToUse.length) {
         skinsToUse = skins.length ? [skins[0]] : ['default'];
       }
-      // Player construction needs one starting skin name; if we're merging,
-      // the success callback below replaces it with the combined skin right
-      // after mount, so this initial pick just needs to be valid, not final.
+      
       const firstSkin = skinsToUse[0];
       const skinsToMerge = skinsToUse;
 
@@ -139,16 +128,6 @@ function initSpineArtwork(container) {
             skeleton.setSkin(combined);
             skeleton.setSlotsToSetupPose();
 
-            // CRITICAL: the player already computed its camera viewport BEFORE
-            // this callback ran, using only the first skin (skinsToMerge[0]). If
-            // that starting skin doesn't contain the full artwork, the camera
-            // locks onto that smaller bounding box, and merging in the rest of
-            // the content afterwards doesn't grow the frame — anything outside
-            // the original small box gets cropped, especially with fit="cover"
-            // (0% padding = hard crop). So we recompute bounds ourselves AFTER
-            // merging, sampling across the whole animation duration (not just
-            // the setup pose, since elements may move) — the same technique
-            // SpinePlayer uses internally to auto-size its viewport.
             const animationObj = skeletonData.findAnimation(firstAnimation);
             if (animationObj && typeof skeleton.getBounds === 'function') {
               const duration = animationObj.duration || 0;
@@ -218,8 +197,7 @@ function initSpineArtwork(container) {
           player.config.viewport.y = offset.y;
           player.config.viewport.width = size.x;
           player.config.viewport.height = size.y;
-          // Re-apply the current animation so setAnimation() picks up the viewport override
-          // we just set on player.config.viewport (it checks these fields every call).
+          
           player.setAnimation(firstAnimation, true);
         },
         error: (player, msg) => {

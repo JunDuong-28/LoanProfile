@@ -17,9 +17,24 @@
   <header class="menu">
     <nav class="menu__left">
       <button class="btn btn--solid">Loan Nguyễn Portfolio</button>
-      <a href="#nang-luc" class="btn btn--link">Năng Lực</a>
-      <a href="#san-pham" class="btn btn--link">Sản Phẩm</a>
-      <a href="#su-nghiep" class="btn btn--link">Sự Nghiệp</a>
+
+      <div id="spanmenu">
+        <a href="#nang-luc" class="btn btn--link">Năng Lực</a>
+        <a href="#san-pham" class="btn btn--link">Sản Phẩm</a>
+        <a href="#su-nghiep" class="btn btn--link">Sự Nghiệp</a>
+      </div>
+
+      <!-- NEW: hamburger trigger, only visible on mobile -->
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="dropmenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- removed inline style; visibility is now controlled by CSS + JS class -->
+      <div id="dropmenu">
+        <a href="#nang-luc" class="btn btn--link">Năng Lực</a>
+        <a href="#san-pham" class="btn btn--link">Sản Phẩm</a>
+        <a href="#su-nghiep" class="btn btn--link">Sự Nghiệp</a>
+      </div>
     </nav>
     <div class="menu__right">
       <a href="#" class="btn btn--link">English</a>
@@ -37,7 +52,9 @@
              class="spine-artwork"
              data-spine-dir="json/ProfileWebJson/"
              data-spine-json="ProfileAvatar.json"
-             data-spine-atlas="ProfileAvatar.atlas">
+             data-spine-atlas="ProfileAvatar.atlas"
+             data-spine-fit="cover"
+        >
              
           <div class="spine-artwork__fallback">json/ProfileWebJson/</div>
         </div>

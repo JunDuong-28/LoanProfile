@@ -50,6 +50,37 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 
+.menu-toggle {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* animate into an "X" when open */
+.menu-toggle.is-open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+.menu-toggle.is-open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+#dropmenu {
+  display: none; /* default: hidden on all sizes unless mobile+open */
+}
+
 .btn {
   font-family: inherit;
   font-size: 18px;
@@ -473,7 +504,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 700px) {
-  .menu { padding: 16px 20px; flex-direction: column; align-items: flex-start; }
+  .menu { padding: 16px 20px; }
   .page { padding: 40px 16px 0; }
 }
 
@@ -501,20 +532,44 @@ a { color: inherit; text-decoration: none; }
 /* ======================================================================
    MOBILE PHONE LAYOUT
    ----------------------------------------------------------------------
-   Everything below only applies at phone-sized viewports. It overrides
-   several rules above that assume a wide desktop canvas: a fixed-height
-   hero with percentage-based negative margins, viewport-width-based card
-   heights, 3-across video embeds, and a couple of hardcoded pixel widths
-   set inline in index.html (those need !important to win over an inline
-   style attribute — that's expected and safe here, not a hack).
    ====================================================================== */
 
 @media (max-width: 768px) {
 
-  html, body { overflow-x: hidden; }
+  html, body { overflow-x: hidden; width: 100vw}
 
   /* ---------- General page rhythm ---------- */
   .page { padding: 6% 5% 0; }
+
+  #spanmenu { display: none; }
+
+  .menu-toggle { display: flex; }
+
+  #dropmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--color-white);
+    flex-direction: column;
+    padding: 12px 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    z-index: 9998;
+  }
+
+  #dropmenu.is-open {
+    display: flex;
+  }
+
+  #dropmenu a.btn--link {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(73, 83, 93, 0.1);
+  }
+
+  .menu__left {
+    position: relative; /* anchors #dropmenu's absolute positioning */
+  }
 
   .section { padding: 48px 0; }
 
@@ -540,16 +595,11 @@ a { color: inherit; text-decoration: none; }
   }
 
   .hero__avatar-wrap {
-    width: 122%;
-    margin-left: -11%;
-    margin-right: -11%;
+    width: 200%;
     height: auto;
-    aspect-ratio: 1112 / 902;
-  }
-
-  .spine-artwork canvas {
-    transform: scale(2.2);
-    transform-origin: 50% 50%;
+    margin: 0 -55% -100% -45%;
+    padding: 0;
+    aspect-ratio: 1 / 1;
   }
 
   .hero__info {

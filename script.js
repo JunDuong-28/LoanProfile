@@ -190,3 +190,44 @@ function initSpineArtwork(container) {
       
     });
 }
+
+
+(function () {
+  const toggle = document.getElementById('menuToggle');
+  const dropmenu = document.getElementById('dropmenu');
+  if (!toggle || !dropmenu) return;
+
+  function closeMenu() {
+    dropmenu.classList.remove('is-open');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleMenu() {
+    const isOpen = dropmenu.classList.toggle('is-open');
+    toggle.classList.toggle('is-open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // close after tapping a link
+  dropmenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // close on outside tap
+  document.addEventListener('click', (e) => {
+    if (!dropmenu.contains(e.target) && e.target !== toggle) {
+      closeMenu();
+    }
+  });
+
+  // close if resized back to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) closeMenu();
+  });
+})();
