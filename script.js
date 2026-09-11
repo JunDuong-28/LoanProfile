@@ -1,10 +1,16 @@
+let mobile = false;
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.spine-artwork').forEach(initSpineArtwork);
+  
+  createPopupLink();
+});
 
+function createPopupLink () {
   const overlay = document.getElementById("popupOverlay");
   const projectFrame = document.getElementById("projFrame");
   const closeBtn = document.getElementById("closePopup");
+  const notice = document.getElementById("projNotice");
 
   const projects = [
     "bantrung",
@@ -23,9 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const projLogo = document.getElementById("logo" + project);
     
     projLink.addEventListener('click', (event) => {
-      event.preventDefault();
-      projectFrame.src = "/LoanProfile/projects/"+ project + ".html?t=" + Date.now();
-      openModal();
+      if (!mobile) {
+        event.preventDefault();
+        projectFrame.src = "/LoanProfile/projects/"+ project + ".html?t=" + Date.now();
+        closeNotice();
+        openModal();
+      } else {
+        projectFrame.src = "";
+        openNotice();
+        openModal();
+      }
     });
 
     projLogo.addEventListener('click', (event) => {
@@ -46,6 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
     projectFrame.src = ""; // Unloads iframe
   }
 
+  function openNotice() {
+    notice.classList.remove("hidden");
+    /*projectFrame.classList.add("hidden");*/
+  }
+
+  function closeNotice() {
+    notice.classList.add("hidden");
+    /*projectFrame.classList.add("hidden");*/
+  }
+
   closeBtn.addEventListener('click', closeModal);
 
   // Close if clicking outside the modal box
@@ -61,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal();
     }
   });
-});
+}
 
 function initSpineArtwork(container) {
 
@@ -244,4 +267,20 @@ function initSpineArtwork(container) {
   }
  
   document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+
+  const mediaQuery = window.matchMedia('(max-width: 800px)');
+
+  function handleScreenChange(e) {
+    if (e.matches) {
+      console.log("Viewport dropped under 800px");
+      mobile = true;
+      createPopupLink();
+    } else {
+      console.log("Viewport is wider than 800px");
+      mobile = false;
+      createPopupLink();
+    }
+  }
+
+  mediaQuery.addEventListener('change', handleScreenChange);
 })();

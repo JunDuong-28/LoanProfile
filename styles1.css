@@ -35,12 +35,13 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 100px;
-  position: sticky;
+  padding: 10px 100px;
+  position: fixed;
   top: 0;
   z-index: 9999;
   flex-wrap: wrap;
   gap: 20px;
+  width: 100%;
 }
 
 .menu__left, .menu__right {
@@ -51,7 +52,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .menu-toggle {
-  display: none; /* hidden on desktop */
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -97,11 +98,15 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   border-radius: 15px;
 }
-/*
+
 .btn--link {
   color: var(--color-text);
   text-decoration: underline;
-}*/
+}
+
+.btn--link:hover {
+  font-weight: bold;
+}
 
 /* ============ LANGUAGE FLAG TOGGLE ============ */
 .flag-btn {
@@ -189,6 +194,7 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
   margin-bottom: 60px;
   height: 720px;
+  margin-top: 120px;
 }
 
 .hero__avatar-wrap {
@@ -509,8 +515,9 @@ a { color: inherit; text-decoration: none; }
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .menu { padding: 16px 20px; }
+  .menu { padding: 16px 20px; font-size: 18px;}
   .hero__intro, .hero__card { text-align: center; }
+  .btn { font-size: 15px; }
 }
 
 /* ============ FOOTER CTA ============ */
@@ -538,7 +545,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 700px) {
-  .menu { padding: 16px 20px; }
+  .menu { padding: 16px 20px; font-size: 18px;}
   .page { padding: 40px 16px 0; }
 }
 
@@ -744,6 +751,11 @@ a { color: inherit; text-decoration: none; }
   .hero__heading h1 { font-size: 26px; }
   .section__title { font-size: 26px; }
   .product img { width: 72px; height: 72px; }
+  .btn { font-size: 12px; }
+  .flag-btn {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .popup-overlay {
@@ -757,13 +769,13 @@ a { color: inherit; text-decoration: none; }
 /* Positioned from center-top of viewport */
 .popup-box {
   position: fixed;
-  top: 85px;
+  top: 65px;
   left: 50%;
   transform: translateX(-50%);
   width: 1728px;
   
   /* Constrain height to remaining viewport so the iframe scrolls */
-  height: calc(100vh - 77px); 
+  height: calc(100vh - 67px); 
   
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
@@ -807,4 +819,21 @@ a { color: inherit; text-decoration: none; }
 
 body.modal-open {
   overflow: hidden !important;
+}
+
+#projNotice {
+  width: 350px;
+  height: auto;
+  aspect-ratio: 1 / 0.8;
+  background-color: #fff;
+  background-image: url("Image/Cut/bg-capacity-top.jpg"),
+                    url("Image/Cut/bg-capacity-bottom.jpg");
+  background-repeat: no-repeat,
+                    no-repeat;
+  background-position: center top,
+                      center bottom;
+  background-size: cover;
+
+  position: fixed;
+  top: 300px;
 }

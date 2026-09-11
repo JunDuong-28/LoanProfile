@@ -16,7 +16,7 @@
   <!-- ============ HEADER / MENU ============ -->
   <header class="menu">
     <nav class="menu__left">
-      <button class="btn btn--solid" data-i18n="brand.name">Loan Nguyễn Portfolio</button>
+      <a href="#" class="btn btn--solid" data-i18n="brand.name">Loan Nguyễn Portfolio</a>
 
       <div id="spanmenu">
         <a href="#nang-luc" class="btn btn--link" data-i18n="nav.nangluc">Năng Lực</a>
@@ -400,10 +400,27 @@
     <button id="closePopup" class="close-btn" aria-label="Close">&times;</button>
     <div id="popup" class="popup-box">
       <iframe id="projFrame" class="projframe" src="" frameborder="0"></iframe>
+      <div id="projNotice" class="hidden">
+        <label>Vui lòng xem trình bày sản phẩm<br>trên màn hình máy tính</label>
+      </div>
     </div>
   </div>
 
   <script src="script.js">
+  </script>
+  <script>
+    const btns = document.querySelectorAll(".btn");
+
+    btns.forEach (btn => {
+      btn.addEventListener("click", () => {
+        const pickedbtn = document.querySelector(".btn--solid");
+        pickedbtn.classList.remove("btn--solid")
+        pickedbtn.classList.add("btn--link")
+
+        btn.classList.remove("btn--link");
+        btn.classList.add("btn--solid");
+      })
+    })
   </script>
 </body>
 </html>
