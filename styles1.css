@@ -97,10 +97,39 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   border-radius: 15px;
 }
-
+/*
 .btn--link {
   color: var(--color-text);
   text-decoration: underline;
+}*/
+
+/* ============ LANGUAGE FLAG TOGGLE ============ */
+.flag-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+  outline: 2px solid #a1a1a1;    /* default: 1px grey */
+  outline-offset: 2px;
+  transition: outline-color 0.2s ease, outline-width 0.2s ease;
+  opacity: 0.3;
+}
+
+.flag-btn .fi {
+  display: block;
+  width: 140%;
+  height: 140%;
+  margin: -20%;
+  border-radius: 50%;
+}
+
+.flag-btn.is-active {
+  /*outline: 3px solid ;  selected: 3px white */
+  opacity: 1;
 }
 
 .menu__divider {
@@ -298,17 +327,21 @@ a { color: inherit; text-decoration: none; }
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("Image/Cut/bg-capacity.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: white;
+  background-image: url("Image/Cut/bg-capacity-top.jpg"),
+                    url("Image/Cut/bg-capacity-bottom.jpg");
+  background-repeat: no-repeat,
+                    no-repeat;
+  background-position: center top,
+                      center bottom;
+  background-size: contain;
   opacity: 0.45;
   z-index: -1; 
 }
 
 .capacity-icon {
   position: relative;
-  width: 8%;
+  width: 90px;
   margin-bottom: -15%;
   z-index: 2;
 }
@@ -476,6 +509,7 @@ a { color: inherit; text-decoration: none; }
     grid-template-columns: 1fr;
     text-align: center;
   }
+  .menu { padding: 16px 20px; }
   .hero__intro, .hero__card { text-align: center; }
 }
 
@@ -643,10 +677,17 @@ a { color: inherit; text-decoration: none; }
 
   .capacity-card {
     height: auto;
-    padding: 24px 16px;
+    padding: 0px 16px 20px 16px;
   }
 
-  .capacity-icon { width: clamp(48px, 16%, 90px); }
+  .capacity-card::before {
+    background-image: url("Image/Cut/bg-capacity-top.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .capacity-icon { width: 90px; margin-bottom: -30px;}
 
   /* ---------- Công Cụ ---------- */
   .tools-row { gap: 32px; }

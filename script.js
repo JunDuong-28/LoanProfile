@@ -1,50 +1,3 @@
-/**
- * Spine artwork loader
- * ---------------------
- * In the Figma file, the component named "Spine Artwork 01" contains a text
- * node whose content is the LOCAL DIRECTORY where the exported Spine assets
- * for that artwork live:
- *
- *      json/ProfileWebJson/ProfileAvatar
- *
- * This script reads that path straight off the container's data attributes
- * and tries to boot a Spine WebGL player pointed at it. If the exported
- * .json / .atlas / .png files aren't there yet, it just keeps showing the
- * fallback label so the layout still looks right.
- *
- * To make this work on your machine:
- *   1. Export your Spine skeleton (Spine editor -> Export -> JSON + atlas + texture).
- *   2. Drop the exported files into: ./assets/json/ProfileWebJson/ProfileAvatar/
- *      so you end up with, e.g.:
- *        assets/json/ProfileWebJson/ProfileAvatar/ProfileAvatar.json
- *        assets/json/ProfileWebJson/ProfileAvatar/ProfileAvatar.atlas
- *        assets/json/ProfileWebJson/ProfileAvatar/ProfileAvatar.png
- *   3. Reload the page — the fallback label will be replaced by the animation.
- *
- * If your exported file names differ from "ProfileAvatar", just edit the
- * data-spine-json / data-spine-atlas attributes on the container in index.html.
- *
- * FORCING A FIXED SIZE
- * ---------------------
- * By default the container's size comes from styles.css (currently locked
- * to the hero image's aspect ratio via `aspect-ratio`). To force the
- * animation into an exact box instead, add width/height data attributes to
- * the container in index.html:
- *
- *   <div class="spine-artwork"
- *        data-spine-dir="json/ProfileWebJson/ProfileAvatar"
- *        data-spine-json="ProfileAvatar.json"
- *        data-spine-atlas="ProfileAvatar.atlas"
- *        data-spine-width="400"
- *        data-spine-height="400">
- *
- * Accepts a bare number (treated as px) or any CSS length ("50%", "20rem",
- * "400px"). The player then auto-fits the skeleton's bounds inside that
- * exact box each frame — it scales uniformly and letterboxes whichever axis
- * doesn't match, so the artwork is never stretched/distorted. If you
- * instead want it to fill the box edge-to-edge even if that means cropping
- * or slightly distorting, set data-spine-fit="cover" (default is "contain").
- */
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.spine-artwork').forEach(initSpineArtwork);
@@ -230,4 +183,65 @@ function initSpineArtwork(container) {
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768) closeMenu();
   });
+
+  /* -------------------------------------------------------
+  --------------- Switch languages -------------------------
+  --------------------------------------------------------*/
+
+  const DICT_URL = 'translations.json';
+ 
+  let dict = null;
+ 
+  // Pulls the dictionary once per page load.
+  async function loadDictionary() {
+    const res = await fetch(DICT_URL, { cache: 'no-store' });
+    if (!res.ok) throw new Error('Failed to load ' + DICT_URL);
+    return res.json();
+  }
+ 
+  // Applies a language to every element carrying data-i18n.
+  function applyLanguage(lang) {
+    if (!dict || !dict[lang]) return;
+ 
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const key = el.dataset.i18n;
+      const value = dict[lang][key];
+      if (value === undefined) return; // key not translated, leave as-is
+ 
+      if (el.dataset.i18nHtml === 'true') {
+        el.innerHTML = value;
+      } else {
+        el.textContent = value;
+      }
+    });
+ 
+    document.documentElement.lang = lang;
+    localStorage.setItem('lang', lang);
+ 
+    // Sync the flag buttons' active state.
+    document.querySelectorAll('.flag-btn').forEach((btn) => {
+      btn.classList.toggle('is-active', btn.dataset.lang === lang);
+    });
+  }
+ 
+  async function initLanguageSwitcher() {
+    try {
+      dict = await loadDictionary();
+    } catch (err) {
+      console.error('i18n: could not load translations', err);
+      return;
+    }
+ 
+    const saved = localStorage.getItem('lang');
+    const initialLang = saved || document.documentElement.lang || 'vi';
+    applyLanguage(initialLang);
+ 
+    document.querySelectorAll('.flag-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        applyLanguage(btn.dataset.lang);
+      });
+    });
+  }
+ 
+  document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
 })();
