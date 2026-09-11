@@ -510,6 +510,71 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
 }
 
+.popup-overlay {
+  position: fixed;
+  inset: 0; /* top: 0, right: 0, bottom: 0, left: 0 */
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+  backdrop-filter: blur(2px);
+}
+
+/* Positioned from center-top of viewport */
+.popup-box {
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1728px;
+  
+  /* Constrain height to remaining viewport so the iframe scrolls */
+  height: calc(100vh - 67px); 
+  
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fills the popup container so its internal content scrolls */
+.projframe, #projFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  flex: 1;
+  display: block;
+}
+
+/* Close button */
+.close-btn {
+  position: fixed;
+  top: 97px;
+  right: 0.5vw;
+  background: transparent;
+  border: none;
+  font-size: 80px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1000;
+  line-height: 1;
+  background-color: crimson;
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+}
+
+/* Visibility toggle */
+.hidden {
+  display: none !important;
+}
+
+body.modal-open {
+  overflow: hidden !important;
+}
+
 @media (max-width: 860px) {
   .timeline__item {
     grid-template-columns: 1fr;
@@ -610,6 +675,10 @@ a { color: inherit; text-decoration: none; }
 
   .menu__left {
     position: relative; /* anchors #dropmenu's absolute positioning */
+  }
+
+  .popup-box {
+    width: 100vw;
   }
 
   .section { padding: 48px 0; }
@@ -756,71 +825,11 @@ a { color: inherit; text-decoration: none; }
     width: 30px;
     height: 30px;
   }
-}
-
-.popup-overlay {
-  position: fixed;
-  inset: 0; /* top: 0, right: 0, bottom: 0, left: 0 */
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 9998;
-  backdrop-filter: blur(2px);
-}
-
-/* Positioned from center-top of viewport */
-.popup-box {
-  position: fixed;
-  top: 65px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1728px;
-  
-  /* Constrain height to remaining viewport so the iframe scrolls */
-  height: calc(100vh - 67px); 
-  
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  z-index: 999;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Fills the popup container so its internal content scrolls */
-.projframe, #projFrame {
-  width: 100%;
-  height: 100%;
-  border: none;
-  flex: 1;
-  display: block;
-}
-
-/* Close button */
-.close-btn {
-  position: fixed;
-  top: 97px;
-  right: 0.5vw;
-  background: transparent;
-  border: none;
-  font-size: 80px;
-  cursor: pointer;
-  color: #fff;
-  z-index: 1000;
-  line-height: 1;
-  background-color: crimson;
-  width: 80px;
-  height: 80px;
-  border-radius: 10%;
-}
-
-/* Visibility toggle */
-.hidden {
-  display: none !important;
-}
-
-body.modal-open {
-  overflow: hidden !important;
+  .close-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
 }
 
 #projNotice {
@@ -837,5 +846,7 @@ body.modal-open {
   background-size: cover;
 
   position: fixed;
-  top: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* explicit, no auto/static-position fallback */
 }
