@@ -283,4 +283,6 @@ function initSpineArtwork(container) {
   }
 
   mediaQuery.addEventListener('change', handleScreenChange);
+
+  handleScreenChange(mediaQuery);
 })();
