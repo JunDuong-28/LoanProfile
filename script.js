@@ -3,7 +3,15 @@ let mobile = false;
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.spine-artwork').forEach(initSpineArtwork);
   
-  createPopupLink();
+  const firstLoadSize = document.querySelector("body").getBoundingClientRect().width;
+  console.log(firstLoadSize);
+  if (firstLoadSize <= 800) {
+    mobile=true;
+    createPopupLink();
+  } else {
+    mobile=false;
+    createPopupLink();
+  }
 });
 
 function createPopupLink () {
@@ -42,9 +50,16 @@ function createPopupLink () {
     });
 
     projLogo.addEventListener('click', (event) => {
-      event.preventDefault();
-      projectFrame.src = "/LoanProfile/projects/"+ project + ".html?t=" + Date.now();
-      openModal();
+      if (!mobile) {
+        event.preventDefault();
+        projectFrame.src = "/LoanProfile/projects/"+ project + ".html?t=" + Date.now();
+        closeNotice();
+        openModal();
+      } else {
+        projectFrame.src = "";
+        openNotice();
+        openModal();
+      }
     });
   });
 
@@ -284,5 +299,5 @@ function initSpineArtwork(container) {
 
   mediaQuery.addEventListener('change', handleScreenChange);
 
-  handleScreenChange(mediaQuery);
+  //handleScreenChange(mediaQuery);
 })();

@@ -783,6 +783,8 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   flex-direction: column;
   z-index: 999;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Fills the popup container so its internal content scrolls */
@@ -835,5 +837,5 @@ body.modal-open {
   background-size: cover;
 
   position: fixed;
-  top: 300px;
+  top: 200px;
 }
