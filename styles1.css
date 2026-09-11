@@ -811,6 +811,12 @@ body.modal-open {
     padding-left: 0;
     font-size: 15px;
   }
+  
+  .close-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 50px;
+  }
 
   /* ---------- Footer ---------- */
   .footer-cta__title { font-size: 24px; }
@@ -837,16 +843,45 @@ body.modal-open {
   height: auto;
   aspect-ratio: 1 / 0.8;
   background-color: #fff;
-  background-image: url("Image/Cut/bg-capacity-top.jpg"),
-                    url("Image/Cut/bg-capacity-bottom.jpg");
-  background-repeat: no-repeat,
-                    no-repeat;
-  background-position: center top,
-                      center bottom;
+  background-image: url("Image/Cut/bg-capacity.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);  /* explicit, no auto/static-position fallback */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#notice {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-green);
+}
+    
+#redirectbtn {
+  margin-top: 30px;
+  display: flex;
+  position: relative;
+  width: 300px; 
+  height: 40px; 
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-green);
+  cursor: pointer; 
+  border-radius: 5px;
+}
+
+#fblink {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
 }

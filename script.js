@@ -19,6 +19,8 @@ function createPopupLink () {
   const projectFrame = document.getElementById("projFrame");
   const closeBtn = document.getElementById("closePopup");
   const notice = document.getElementById("projNotice");
+  const playbtn = document.getElementById("redirectbtn");
+  const playlink = playbtn.querySelector("a");
 
   const projects = [
     "bantrung",
@@ -32,6 +34,18 @@ function createPopupLink () {
     "baskethit"
   ];
 
+  const links = {
+    "bantrung": "https://www.facebook.com/gaming/play/2492644277420233?source=fb_gg_url&ext=1788704903&hash=AedmK95W_r2twmeqZxLbVROJYPE",
+    "lichviet": "https://play.google.com/store/apps/details?id=com.ctv.vn.lichviet&hl=vi",
+    "noithu": "https://www.facebook.com/gaming/play/220801932630391/?source=fb_gg_url&ext=1788704584&hash=AeegcFLN1a9woRkuHuJ0DK2nAck",
+    "banbong": "https://www.facebook.com/gaming/play/227788504726017/?source=fb_gg_url&ext=1788704710&hash=AedGSVpGDSBJ7QhJzlLUunkrrPc",
+    "kyvuong": "",
+    "thachdau": "",
+    "jumpingirl": "https://www.facebook.com/gaming/play/347909499499999/?source=www_games_hub_recently_played",
+    "bongso": "https://www.facebook.com/gaming/play/134374228549110?source=fb_gg_url&ext=1788704944&hash=Aec4BRE-TvFBY44ctxcVoaV21P8",
+    "baskethit": "https://www.facebook.com/gaming/play/1224362211248752?source=fb_gg_url&ext=1788704979&hash=Aec99lnakuhm0HdTaDeOJ0rMmJg"
+  };
+
   projects.forEach(project => {
     const projLink = document.getElementById(project);
     const projLogo = document.getElementById("logo" + project);
@@ -44,6 +58,12 @@ function createPopupLink () {
         openModal();
       } else {
         projectFrame.src = "";
+        if (links[project]) {
+          playbtn.classList.remove("hidden");
+          playlink.href=links[project];
+        } else {
+          playbtn.classList.add("hidden");
+        }
         openNotice();
         openModal();
       }
@@ -57,6 +77,12 @@ function createPopupLink () {
         openModal();
       } else {
         projectFrame.src = "";
+        if (links[project]) {
+          playbtn.classList.remove("hidden");
+          playlink.href=links[project];
+        } else {
+          playbtn.classList.add("hidden");
+        }
         openNotice();
         openModal();
       }
