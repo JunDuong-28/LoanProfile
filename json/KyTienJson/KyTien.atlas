@@ -1,209 +1,146 @@
 
 KyTien.png
-size: 1972,860
+size: 1308,544
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 CHESS BOARD
-  rotate: true
-  xy: 392, 393
-  size: 465, 171
-  orig: 467, 173
+  rotate: false
+  xy: 246, 121
+  size: 309, 113
+  orig: 311, 115
   offset: 1, 1
   index: -1
 CLOUD
-  rotate: true
-  xy: 565, 395
-  size: 463, 148
-  orig: 467, 150
-  offset: 2, 1
+  rotate: false
+  xy: 246, 21
+  size: 309, 98
+  orig: 311, 100
+  offset: 1, 1
   index: -1
 CLOUD2
-  rotate: false
-  xy: 190, 5
-  size: 219, 75
-  orig: 222, 78
+  rotate: true
+  xy: 1254, 261
+  size: 146, 50
+  orig: 148, 52
   offset: 1, 1
   index: -1
 CLOUD3
-  rotate: true
-  xy: 2, 28
-  size: 830, 186
-  orig: 833, 188
-  offset: 2, 1
+  rotate: false
+  xy: 2, 236
+  size: 553, 123
+  orig: 555, 125
+  offset: 1, 1
   index: -1
 CLOUD4
   rotate: false
-  xy: 787, 586
-  size: 1175, 272
-  orig: 1178, 275
+  xy: 2, 361
+  size: 783, 181
+  orig: 785, 183
   offset: 1, 1
   index: -1
 Logo
-  rotate: true
-  xy: 984, 31
-  size: 366, 453
-  orig: 366, 453
+  rotate: false
+  xy: 557, 57
+  size: 244, 302
+  orig: 244, 302
   offset: 0, 0
   index: -1
 STICK
   rotate: true
-  xy: 1439, 6
-  size: 435, 94
-  orig: 437, 96
+  xy: 1190, 118
+  size: 289, 62
+  orig: 291, 64
   offset: 1, 1
-  index: -1
-body
-  rotate: true
-  xy: 1155, 407
-  size: 177, 90
-  orig: 177, 90
-  offset: 0, 0
   index: -1
 cu1/Arm
   rotate: true
-  xy: 1247, 412
-  size: 172, 137
-  orig: 213, 141
-  offset: 0, 4
+  xy: 803, 2
+  size: 115, 91
+  orig: 142, 94
+  offset: 0, 3
   index: -1
 cu1/Body
   rotate: false
-  xy: 1607, 269
-  size: 363, 315
-  orig: 363, 381
+  xy: 2, 24
+  size: 242, 210
+  orig: 242, 254
   offset: 0, 0
   index: -1
 cu1/Hand
   rotate: true
-  xy: 1878, 174
-  size: 93, 75
-  orig: 93, 86
-  offset: 0, 5
+  xy: 1254, 197
+  size: 62, 51
+  orig: 62, 57
+  offset: 0, 3
   index: -1
 cu1/Hand2
   rotate: true
-  xy: 715, 393
-  size: 191, 198
-  orig: 191, 198
+  xy: 1044, 26
+  size: 127, 132
+  orig: 127, 132
   offset: 0, 0
   index: -1
 cu1/Head
   rotate: true
-  xy: 1386, 443
-  size: 141, 219
-  orig: 141, 228
+  xy: 896, 23
+  size: 94, 146
+  orig: 94, 152
   offset: 0, 0
   index: -1
 cu2/body
-  rotate: true
-  xy: 411, 11
-  size: 380, 374
-  orig: 380, 374
+  rotate: false
+  xy: 803, 158
+  size: 253, 249
+  orig: 253, 249
   offset: 0, 0
   index: -1
 cu2/hand
-  rotate: true
-  xy: 715, 800
-  size: 58, 70
-  orig: 60, 72
+  rotate: false
+  xy: 1254, 149
+  size: 38, 46
+  orig: 40, 48
   offset: 1, 1
   index: -1
 cu2/head
   rotate: false
-  xy: 1593, 132
-  size: 111, 135
-  orig: 113, 137
+  xy: 1178, 27
+  size: 73, 89
+  orig: 75, 91
   offset: 1, 1
   index: -1
-head
-  rotate: true
-  xy: 1829, 19
-  size: 115, 47
-  orig: 117, 47
-  offset: 1, 0
-  index: -1
-leg1
-  rotate: true
-  xy: 1043, 401
-  size: 183, 110
-  orig: 183, 110
-  offset: 0, 0
-  index: -1
-leg2
-  rotate: true
-  xy: 715, 615
-  size: 183, 69
-  orig: 183, 69
-  offset: 0, 0
-  index: -1
 may1
-  rotate: true
-  xy: 190, 82
-  size: 776, 200
-  orig: 776, 200
+  rotate: false
+  xy: 787, 409
+  size: 517, 133
+  orig: 517, 133
   offset: 0, 0
   index: -1
 may2
   rotate: true
-  xy: 787, 13
-  size: 378, 195
-  orig: 378, 195
+  xy: 1058, 155
+  size: 252, 130
+  orig: 252, 130
   offset: 0, 0
   index: -1
 may3
-  rotate: true
-  xy: 1535, 29
-  size: 354, 56
-  orig: 354, 56
-  offset: 0, 0
-  index: -1
-neck
   rotate: false
-  xy: 1878, 121
-  size: 56, 51
-  orig: 56, 51
+  xy: 803, 119
+  size: 236, 37
+  orig: 236, 37
   offset: 0, 0
   index: -1
 shakura
   rotate: false
-  xy: 1535, 385
-  size: 59, 56
-  orig: 59, 56
+  xy: 557, 18
+  size: 39, 37
+  orig: 39, 37
   offset: 0, 0
   index: -1
 smoke2
   rotate: true
-  xy: 2, 6
-  size: 20, 66
-  orig: 20, 66
-  offset: 0, 0
-  index: -1
-wing-1
-  rotate: false
-  xy: 1706, 136
-  size: 125, 131
-  orig: 125, 131
-  offset: 0, 0
-  index: -1
-wing-1a
-  rotate: false
-  xy: 915, 399
-  size: 126, 185
-  orig: 126, 185
-  offset: 0, 0
-  index: -1
-wing-2
-  rotate: false
-  xy: 1717, 3
-  size: 110, 131
-  orig: 110, 131
-  offset: 0, 0
-  index: -1
-wing-2a
-  rotate: true
-  xy: 1593, 2
-  size: 128, 122
-  orig: 128, 122
+  xy: 2, 9
+  size: 13, 44
+  orig: 13, 44
   offset: 0, 0
   index: -1
